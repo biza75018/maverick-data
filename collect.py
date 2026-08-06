@@ -8,154 +8,164 @@ import urllib.request
 import xml.etree.ElementTree as ET
 import json
 import math
+import csv
+import io
 from datetime import datetime
 
-# ── URL flux DATEX Traficolor IDF ──
-TRAFICOLOR_URL = "https://transport.data.gouv.fr/resources/79166/download"
+TRAFICOLOR_URL  = "https://transport.data.gouv.fr/resources/79166/download"
 REFERENTIEL_URL = "https://transport.data.gouv.fr/resources/79167/download"
 
-# ── Bounding box autour des 4 lignes (avec marge de 500m) ──
-# Couvre : Argenteuil → CDG, Ermont → CDG, Nation → CDG, Porte Chapelle → CDG
 BBOX = {
-    "min_lat": 48.830,
-    "max_lat": 49.020,
-    "min_lng": 2.240,
-    "max_lng": 2.580,
+    "min_lat": 48.830, "max_lat": 49.020,
+    "min_lng": 2.240,  "max_lng": 2.580,
 }
 
-# ── Points du tracé des 4 lignes (sous-échantillon pour filtrage fin) ──
 LINE_TRACES = {
-    "9509": [
-        [48.980085, 2.271463], [48.992343, 2.285093], [48.995262, 2.302928],
-        [48.993481, 2.319965], [48.991015, 2.374095], [48.976879, 2.391711],
-        [48.973906, 2.401307], [49.010316, 2.559315],
-    ],
-    "9517": [
-        [48.948169, 2.255212], [48.937166, 2.258783], [48.919999, 2.343823],
-        [48.917690, 2.344139], [48.917824, 2.352229], [48.919564, 2.361336],
-        [48.975823, 2.506361], [48.990645, 2.515786], [49.010533, 2.559397],
-    ],
-    "350": [
-        [48.897746, 2.359558], [48.943245, 2.433633], [48.948302, 2.438097],
-        [48.950284, 2.450364], [48.956492, 2.461032], [48.961128, 2.488829],
-        [48.972857, 2.511116], [48.983909, 2.515643], [49.010533, 2.559397],
-        [49.003339, 2.564324], [49.004370, 2.570944],
-    ],
-    "351": [
-        [48.848355, 2.397844], [48.847221, 2.410367], [48.864686, 2.411968],
-        [48.858493, 2.414546], [48.922124, 2.469657], [48.925436, 2.474305],
-        [48.929210, 2.479671], [48.917866, 2.485024], [48.994642, 2.523592],
-        [49.010533, 2.559397], [49.003339, 2.564324],
-    ],
+    "9509": [[48.980,2.271],[48.992,2.285],[48.995,2.303],[48.993,2.320],
+             [48.991,2.374],[48.977,2.392],[48.974,2.401],[49.010,2.559]],
+    "9517": [[48.948,2.255],[48.937,2.259],[48.920,2.344],[48.918,2.344],
+             [48.918,2.352],[48.920,2.361],[48.976,2.506],[48.991,2.516],[49.011,2.559]],
+    "350":  [[48.898,2.360],[48.943,2.434],[48.948,2.438],[48.950,2.450],
+             [48.957,2.461],[48.961,2.489],[48.973,2.511],[48.984,2.516],
+             [49.011,2.559],[49.003,2.564],[49.004,2.571]],
+    "351":  [[48.848,2.398],[48.847,2.410],[48.865,2.412],[48.858,2.415],
+             [48.922,2.470],[48.925,2.474],[48.929,2.480],[48.918,2.485],
+             [48.995,2.524],[49.011,2.559],[49.003,2.564]],
 }
 
-TRAFICOLOR_LABELS = {
-    "unknown":     {"label": "Inconnu",      "congestion": 0,  "status": "unknown"},
-    "freeFlow":    {"label": "Fluide",        "congestion": 10, "status": "green"},
-    "heavy":       {"label": "Dense",         "congestion": 50, "status": "orange"},
-    "congested":   {"label": "Congestionné",  "congestion": 75, "status": "red"},
-    "impossible":  {"label": "Impossible",    "congestion": 95, "status": "red"},
+TRAFICOLOR_MAP = {
+    "freeFlow":   {"label":"Fluide",       "congestion":10, "status":"green"},
+    "heavy":      {"label":"Dense",        "congestion":50, "status":"orange"},
+    "congested":  {"label":"Congestionné", "congestion":75, "status":"red"},
+    "impossible": {"label":"Impossible",   "congestion":95, "status":"red"},
+    "unknown":    {"label":"Inconnu",      "congestion":0,  "status":"unknown"},
 }
 
-def distance_m(lat1, lng1, lat2, lng2):
-    """Distance approx en mètres entre deux points GPS."""
+def dist_m(lat1, lng1, lat2, lng2):
     dlat = (lat2 - lat1) * 111320
     dlng = (lng2 - lng1) * 111320 * math.cos(math.radians(lat1))
     return math.sqrt(dlat**2 + dlng**2)
 
-def near_any_line(lat, lng, radius_m=300):
-    """Vrai si le point est à moins de radius_m d'un tracé de ligne."""
-    for line_id, pts in LINE_TRACES.items():
+def near_line(lat, lng, radius=400):
+    for lid, pts in LINE_TRACES.items():
         for pt in pts:
-            if distance_m(lat, lng, pt[0], pt[1]) < radius_m:
-                return line_id
+            if dist_m(lat, lng, pt[0], pt[1]) < radius:
+                return lid
     return None
 
 def in_bbox(lat, lng):
-    return (BBOX["min_lat"] <= lat <= BBOX["max_lat"] and
-            BBOX["min_lng"] <= lng <= BBOX["max_lng"])
+    return BBOX["min_lat"] <= lat <= BBOX["max_lat"] and BBOX["min_lng"] <= lng <= BBOX["max_lng"]
+
+def fetch_url(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Maverick/1.0"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read()
 
 def fetch_referentiel():
-    """Télécharge le référentiel CSV des stations (id → lat/lng)."""
     stations = {}
     try:
-        with urllib.request.urlopen(REFERENTIEL_URL, timeout=30) as r:
-            lines = r.read().decode("utf-8").splitlines()
-        header = None
-        for line in lines:
-            cols = line.split(";")
-            if header is None:
-                header = {c.strip().lower(): i for i, c in enumerate(cols)}
+        raw = fetch_url(REFERENTIEL_URL).decode("utf-8-sig")
+        # Détecter le séparateur
+        sep = ";" if ";" in raw.splitlines()[0] else ","
+        reader = csv.DictReader(io.StringIO(raw), delimiter=sep)
+        # Normaliser les noms de colonnes (minuscules, sans espaces)
+        for row in reader:
+            norm = {k.strip().lower().replace(" ", "_"): v.strip() for k, v in row.items()}
+            # Chercher les colonnes lat/lng sous différents noms possibles
+            lat_key = next((k for k in norm if k in ["lat","latitude","y","wgs84_lat"]), None)
+            lng_key = next((k for k in norm if k in ["lon","lng","longitude","x","wgs84_lon","wgs84_lng"]), None)
+            id_key  = next((k for k in norm if k in ["id","iu_ac","identifiant","numero","ref"]), None)
+            nm_key  = next((k for k in norm if k in ["libelle","nom","name","label","description"]), None)
+            if not (lat_key and lng_key and id_key):
                 continue
             try:
-                sid  = cols[header.get("iu_ac", 0)].strip()
-                lat  = float(cols[header.get("lat", 1)].strip().replace(",", "."))
-                lng  = float(cols[header.get("lon", 2)].strip().replace(",", "."))
-                name = cols[header.get("libelle", 3)].strip() if "libelle" in header else sid
-                stations[sid] = {"lat": lat, "lng": lng, "name": name}
+                lat = float(norm[lat_key].replace(",", "."))
+                lng = float(norm[lng_key].replace(",", "."))
+                sid = norm[id_key]
+                name = norm.get(nm_key, sid) if nm_key else sid
+                if in_bbox(lat, lng):
+                    stations[sid] = {"lat": lat, "lng": lng, "name": name}
             except Exception:
                 continue
+        print(f"  {len(stations)} stations dans la bbox IDF")
     except Exception as e:
-        print(f"Erreur référentiel : {e}")
+        print(f"  Erreur référentiel: {e}")
     return stations
 
 def fetch_traficolor(stations):
-    """Parse le XML DATEX Traficolor et retourne les mesures filtrées."""
-    results = []
+    measures = []
     try:
-        with urllib.request.urlopen(TRAFICOLOR_URL, timeout=30) as r:
-            content = r.read()
-        root = ET.fromstring(content)
-        ns = {"d": "http://datex2.eu/schema/2/2_0"}
+        raw = fetch_url(TRAFICOLOR_URL)
+        # Nettoyer les namespaces pour simplifier le parsing
+        content = raw.decode("utf-8").replace(' xmlns="', ' xmlns_ignored="')
+        # Re-encoder
+        raw_clean = content.encode("utf-8")
+        root = ET.fromstring(raw_clean)
 
-        # Parcourir les publications de mesures
-        for pub in root.iter():
-            tag = pub.tag.split("}")[-1] if "}" in pub.tag else pub.tag
+        def strip(tag):
+            return tag.split("}")[-1] if "}" in tag else tag
 
-            if tag == "siteMeasurements":
-                site_ref = None
-                traf_val = None
-                for child in pub:
-                    ctag = child.tag.split("}")[-1]
-                    if ctag == "measurementSiteReference":
-                        site_ref = child.get("id") or child.text
-                    elif ctag == "measuredValue":
-                        for sub in child.iter():
-                            stag = sub.tag.split("}")[-1]
-                            if stag == "trafficConcentration" or stag == "levelOfService":
-                                traf_val = sub.text
-                            if stag in TRAFICOLOR_LABELS:
-                                traf_val = stag
+        # Parcourir tous les éléments siteMeasurements
+        for site in root.iter():
+            if strip(site.tag) != "siteMeasurements":
+                continue
 
-                if site_ref and traf_val and site_ref in stations:
-                    st = stations[site_ref]
-                    if not in_bbox(st["lat"], st["lng"]):
-                        continue
-                    line_id = near_any_line(st["lat"], st["lng"])
-                    if not line_id:
-                        continue
-                    info = TRAFICOLOR_LABELS.get(traf_val, TRAFICOLOR_LABELS["unknown"])
-                    results.append({
-                        "id":         site_ref,
-                        "name":       st["name"],
-                        "lat":        st["lat"],
-                        "lng":        st["lng"],
-                        "line":       line_id,
-                        "status":     info["status"],
-                        "label":      info["label"],
-                        "congestion": info["congestion"],
-                        "raw":        traf_val,
-                    })
+            site_ref = None
+            traf_status = None
+
+            for child in site:
+                ctag = strip(child.tag)
+                if ctag == "measurementSiteReference":
+                    site_ref = child.get("id") or child.get("ref") or child.text
+                    if site_ref:
+                        site_ref = site_ref.strip()
+
+                elif ctag == "measuredValue":
+                    # Chercher le levelOfService en profondeur
+                    for sub in child.iter():
+                        stag = strip(sub.tag)
+                        if stag == "levelOfService" and sub.text:
+                            traf_status = sub.text.strip()
+                        elif stag in TRAFICOLOR_MAP:
+                            traf_status = stag
+
+            if not site_ref or not traf_status:
+                continue
+
+            # Géolocaliser via le référentiel
+            if site_ref not in stations:
+                continue
+            st = stations[site_ref]
+            lid = near_line(st["lat"], st["lng"])
+            if not lid:
+                continue
+
+            info = TRAFICOLOR_MAP.get(traf_status, TRAFICOLOR_MAP["unknown"])
+            measures.append({
+                "id": site_ref, "name": st["name"],
+                "lat": st["lat"], "lng": st["lng"],
+                "line": lid, "status": info["status"],
+                "label": info["label"], "congestion": info["congestion"],
+                "raw": traf_status,
+            })
+
     except Exception as e:
-        print(f"Erreur traficolor : {e}")
-    return results
+        print(f"  Erreur traficolor: {e}")
+        import traceback; traceback.print_exc()
+    return measures
 
 def main():
     print("Téléchargement référentiel...")
     stations = fetch_referentiel()
-    print(f"  {len(stations)} stations chargées")
+    print(f"  Total: {len(stations)} stations")
 
-    print("Téléchargement Traficolor...")
+    # Debug: afficher les premières clés
+    if stations:
+        sample = list(stations.items())[:3]
+        for sid, st in sample:
+            print(f"    {sid}: {st['name']} — {st['lat']},{st['lng']}")
+
+    print("Téléchargement Traficolor XML...")
     measures = fetch_traficolor(stations)
     print(f"  {len(measures)} mesures filtrées sur nos lignes")
 
