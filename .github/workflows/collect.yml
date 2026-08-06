@@ -1,0 +1,32 @@
+name: Collecte DATEX Traficolor
+
+on:
+  schedule:
+    - cron: "*/6 * * * *"   # toutes les 6 minutes
+  workflow_dispatch:          # déclenchement manuel possible
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Collecter les données DATEX
+        run: python collect.py
+
+      - name: Commit et push traffic.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add traffic.json
+          git diff --staged --quiet || git commit -m "chore: mise à jour trafic $(date -u '+%H:%M:%S')"
+          git push
