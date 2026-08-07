@@ -13,18 +13,16 @@ import re
 from datetime import datetime
 from pyproj import Transformer
 
-# Convertisseur Lambert 93 → WGS84
 transformer = Transformer.from_crs("EPSG:2154", "EPSG:4326", always_xy=True)
 
 def lambert93_to_wgs84(x, y):
     lon, lat = transformer.transform(x, y)
     return round(lat, 6), round(lon, 6)
 
-# URL de base du répertoire Traficolor
-BASE_URL = "https://transport.data.gouv.fr/resources/79166/download"
+# URL du répertoire parent des publications DIR
+PARENT_URL   = "https://transport.data.gouv.fr/publication/bison-fute-ouvert/publicationsDIR/"
 REFERENTIEL_URL = "https://transport.data.gouv.fr/resources/79167/download"
 
-# Bounding box IDF autour des 4 lignes
 BBOX = {
     "min_lat": 48.830, "max_lat": 49.020,
     "min_lng": 2.240,  "max_lng": 2.580,
@@ -44,11 +42,11 @@ LINE_TRACES = {
 }
 
 TRAFICOLOR_MAP = {
-    "freeFlow":   {"label":"Fluide",        "congestion":10, "status":"green"},
-    "heavy":      {"label":"Dense",         "congestion":50, "status":"orange"},
-    "congested":  {"label":"Congestionné",  "congestion":75, "status":"red"},
-    "impossible": {"label":"Impossible",    "congestion":95, "status":"red"},
-    "unknown":    {"label":"Inconnu",       "congestion":0,  "status":"unknown"},
+    "freeFlow":   {"label":"Fluide",       "congestion":10, "status":"green"},
+    "heavy":      {"label":"Dense",        "congestion":50, "status":"orange"},
+    "congested":  {"label":"Congestionné", "congestion":75, "status":"red"},
+    "impossible": {"label":"Impossible",   "congestion":95, "status":"red"},
+    "unknown":    {"label":"Inconnu",      "congestion":0,  "status":"unknown"},
 }
 
 def fetch_url(url):
@@ -72,21 +70,19 @@ def in_bbox(lat, lng):
     return BBOX["min_lat"] <= lat <= BBOX["max_lat"] and BBOX["min_lng"] <= lng <= BBOX["max_lng"]
 
 def fetch_referentiel():
-    """Parse le CSV référentiel avec coordonnées Lambert 93."""
     stations = {}
     try:
         raw = fetch_url(REFERENTIEL_URL).decode("utf-8-sig", errors="replace")
         sep = ";" if raw.count(";") > raw.count(",") else ","
         reader = csv.DictReader(io.StringIO(raw), delimiter=sep)
         for row in reader:
-            norm = {k.strip().lower(): v.strip() for k, v in row.items() if k}
-            # ID de la station
+            # Filtrer les valeurs None
+            norm = {k.strip().lower(): (v.strip() if v else "") for k, v in row.items() if k and k.strip()}
             sid = norm.get("code_pme") or norm.get("id") or norm.get("identifiant")
-            if not sid or not sid.strip():
+            if not sid:
                 continue
-            # Coordonnées Lambert 93
-            x_str = norm.get("x_deb") or norm.get("x")
-            y_str = norm.get("y_deb") or norm.get("y")
+            x_str = norm.get("x_deb") or norm.get("x") or ""
+            y_str = norm.get("y_deb") or norm.get("y") or ""
             if not x_str or not y_str:
                 continue
             try:
@@ -105,62 +101,59 @@ def fetch_referentiel():
             print(f"    {sid}: {st['name']} → {st['lat']},{st['lng']}")
     except Exception as e:
         import traceback; traceback.print_exc()
-        print(f"  Erreur référentiel: {e}")
     return stations
 
-def find_dirif_url():
-    """Cherche le fichier XML DiRIF dans le répertoire Traficolor."""
+def find_dirif_xml():
+    """Explore le répertoire parent pour trouver le XML DiRIF."""
     try:
-        html = fetch_url(BASE_URL).decode("utf-8", errors="replace")
-        # Chercher les liens vers des dossiers IDF/DIRIF
-        folders = re.findall(r'href="([^"]+/)"', html)
-        print(f"  Dossiers disponibles: {folders}")
-        # Priorité aux dossiers IDF ou DIRIF
-        idf_folder = None
+        html = fetch_url(PARENT_URL).decode("utf-8", errors="replace")
+        folders = re.findall(r'href="([A-Za-z][^"]+/)"', html)
+        print(f"  Dossiers dans parent: {folders}")
+
+        # Chercher dossier IDF/DiRIF/Sytadin
+        keywords = ["idf", "dirif", "sytadin", "paris", "ile", "trafico"]
+        target = None
         for f in folders:
-            fname = f.lower()
-            if any(k in fname for k in ["idf", "dirif", "paris", "sytadin", "ile"]):
-                idf_folder = f
+            if any(k in f.lower() for k in keywords):
+                target = f
                 break
-        if not idf_folder:
-            print("  Pas de dossier IDF trouvé, liste complète:")
-            for f in folders:
-                print(f"    {f}")
-            return None
-        # Explorer le dossier IDF
-        folder_url = BASE_URL.rstrip("/download") + "/" + idf_folder
-        print(f"  Dossier IDF: {folder_url}")
-        html2 = fetch_url(folder_url).decode("utf-8", errors="replace")
-        xmls = re.findall(r'href="([^"]+\.xml)"', html2)
-        print(f"  Fichiers XML: {xmls}")
-        if xmls:
-            return folder_url + xmls[0]
-        return None
+
+        # Si pas trouvé, prendre tous et chercher XML dedans
+        candidates = [target] if target else folders
+        for folder in candidates:
+            url = PARENT_URL + folder if not folder.startswith("http") else folder
+            print(f"  Explorer: {url}")
+            try:
+                h2 = fetch_url(url).decode("utf-8", errors="replace")
+                xmls = re.findall(r'href="([^"]+\.xml)"', h2)
+                subdirs = re.findall(r'href="([A-Za-z][^"]+/)"', h2)
+                # Explorer sous-dossiers si besoin
+                for sd in subdirs[:3]:
+                    sd_url = url + sd if not sd.startswith("http") else sd
+                    try:
+                        h3 = fetch_url(sd_url).decode("utf-8", errors="replace")
+                        xmls += [sd_url + x for x in re.findall(r'href="([^"/][^"]+\.xml)"', h3)]
+                    except Exception:
+                        pass
+                if xmls:
+                    xml_url = url + xmls[0] if not xmls[0].startswith("http") else xmls[0]
+                    print(f"  XML trouvé: {xml_url}")
+                    return xml_url
+            except Exception as e:
+                print(f"  Erreur {folder}: {e}")
+                continue
     except Exception as e:
-        print(f"  Erreur recherche DiRIF: {e}")
-        return None
+        print(f"  Erreur exploration: {e}")
+    return None
 
-def fetch_traficolor(stations):
-    """Parse le XML DATEX Traficolor DiRIF."""
-    measures = []
+def parse_xml(raw):
+    measures_data = []
     try:
-        # Trouver l'URL du fichier XML DiRIF
-        xml_url = find_dirif_url()
-        if not xml_url:
-            print("  URL DiRIF introuvable — tentative directe sur le flux principal")
-            xml_url = BASE_URL
-
-        print(f"  Téléchargement: {xml_url}")
-        raw = fetch_url(xml_url)
-        print(f"  Taille XML: {len(raw)} bytes")
-        print(f"  Début: {raw[:200]}")
-
-        # Parser le XML en gérant les namespaces
         text = raw.decode("utf-8", errors="replace")
-        # Supprimer les namespaces pour simplifier
-        text = re.sub(r'\sxmlns[^"]*"[^"]*"', '', text)
-        text = re.sub(r'<[a-zA-Z]+:', '<', text)
-        text = re.sub(r'</[a-zA-Z]+:', '</', text)
+        # Nettoyer namespaces
+        text = re.sub(r'\sxmlns[:\w]*="[^"]*"', '', text)
+        text = re.sub(r'<(\w+:)', '<', text)
+        text = re.sub(r'</(\w+:)', '</', text)
         root = ET.fromstring(text.encode("utf-8"))
 
         def stag(t):
@@ -169,8 +162,7 @@ def fetch_traficolor(stations):
         for site in root.iter():
             if stag(site.tag) != "siteMeasurements":
                 continue
-            site_ref = None
-            traf_status = None
+            site_ref, traf_status = None, None
             for child in site:
                 ct = stag(child.tag)
                 if ct == "measurementSiteReference":
@@ -182,9 +174,26 @@ def fetch_traficolor(stations):
                             traf_status = sub.text.strip()
                         elif st in TRAFICOLOR_MAP:
                             traf_status = st
+            if site_ref and traf_status:
+                measures_data.append((site_ref, traf_status))
+        print(f"  {len(measures_data)} mesures XML parsées")
+    except Exception as e:
+        import traceback; traceback.print_exc()
+    return measures_data
 
-            if not site_ref or not traf_status:
-                continue
+def fetch_traficolor(stations):
+    measures = []
+    try:
+        xml_url = find_dirif_xml()
+        if not xml_url:
+            print("  Aucun XML DiRIF trouvé")
+            return measures
+
+        raw = fetch_url(xml_url)
+        print(f"  Taille XML: {len(raw)} bytes")
+        measures_data = parse_xml(raw)
+
+        for site_ref, traf_status in measures_data:
             if site_ref not in stations:
                 continue
             s = stations[site_ref]
@@ -197,11 +206,9 @@ def fetch_traficolor(stations):
                 "lat": s["lat"], "lng": s["lng"],
                 "line": lid, "status": info["status"],
                 "label": info["label"], "congestion": info["congestion"],
-                "raw": traf_status,
             })
     except Exception as e:
         import traceback; traceback.print_exc()
-        print(f"  Erreur traficolor: {e}")
     return measures
 
 def main():
@@ -210,7 +217,7 @@ def main():
 
     print("\nRecherche flux DiRIF...")
     measures = fetch_traficolor(stations)
-    print(f"\n{len(measures)} mesures filtrées sur nos lignes")
+    print(f"\n{len(measures)} mesures sur nos lignes")
 
     by_line = {}
     for m in measures:
@@ -224,7 +231,7 @@ def main():
         avg = round(sum(vals) / len(vals)) if vals else 0
         data["congestion"] = avg
         data["status"] = "green" if avg < 30 else "orange" if avg < 60 else "red"
-        print(f"  Ligne {lid}: {avg}% ({data['status']}) — {len(data['measures'])} stations")
+        print(f"  Ligne {lid}: {avg}% — {len(data['measures'])} stations")
 
     output = {
         "updated_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
