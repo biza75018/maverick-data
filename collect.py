@@ -1,32 +1,27 @@
 #!/usr/bin/env python3
 """
-Maverick — Collecteur DATEX II Traficolor DiRIF
+Maverick — Collecteur Sytadin (DiRIF Île-de-France)
+Flux publics XML, mis à jour toutes les minutes.
 """
 
 import urllib.request
 import xml.etree.ElementTree as ET
 import json
 import math
-import csv
-import io
 import re
 from datetime import datetime
-from pyproj import Transformer
 
-transformer = Transformer.from_crs("EPSG:2154", "EPSG:4326", always_xy=True)
-
-def lambert93_to_wgs84(x, y):
-    lon, lat = transformer.transform(x, y)
-    return round(lat, 6), round(lon, 6)
-
-# URL du répertoire parent des publications DIR
-PARENT_URL   = "https://transport.data.gouv.fr/publication/bison-fute-ouvert/publicationsDIR/"
-REFERENTIEL_URL = "https://transport.data.gouv.fr/resources/79167/download"
-
-BBOX = {
-    "min_lat": 48.830, "max_lat": 49.020,
-    "min_lng": 2.240,  "max_lng": 2.580,
+BASE = "https://www.sytadin.fr/diffusion"
+URLS = {
+    "segments":    f"{BASE}/xml/segments_dyn.xml",
+    "arcs":        f"{BASE}/xml/arcs_dyn.xml",
+    "evenements":  f"{BASE}/xml/evenements.xml",
+    "chantiers":   f"{BASE}/xml/Chantier.xml",
+    "geom_seg":    f"{BASE}/mifmid/modelisation/Segment.mif",
+    "geom_seg_id": f"{BASE}/mifmid/modelisation/Segment.mid",
 }
+
+BBOX = {"min_lat":48.830,"max_lat":49.020,"min_lng":2.240,"max_lng":2.580}
 
 LINE_TRACES = {
     "9509": [[48.980,2.271],[48.992,2.285],[48.995,2.303],[48.993,2.320],
@@ -41,206 +36,205 @@ LINE_TRACES = {
              [48.995,2.524],[49.011,2.559],[49.003,2.564]],
 }
 
-TRAFICOLOR_MAP = {
-    "freeFlow":   {"label":"Fluide",       "congestion":10, "status":"green"},
-    "heavy":      {"label":"Dense",        "congestion":50, "status":"orange"},
-    "congested":  {"label":"Congestionné", "congestion":75, "status":"red"},
-    "impossible": {"label":"Impossible",   "congestion":95, "status":"red"},
-    "unknown":    {"label":"Inconnu",      "congestion":0,  "status":"unknown"},
+# États de trafic Sytadin
+ETAT_MAP = {
+    "1": {"label":"Fluide",       "congestion":10, "status":"green"},
+    "2": {"label":"Dense",        "congestion":45, "status":"orange"},
+    "3": {"label":"Ralenti",      "congestion":65, "status":"orange"},
+    "4": {"label":"Bouché",       "congestion":85, "status":"red"},
+    "0": {"label":"Inconnu",      "congestion":0,  "status":"unknown"},
+    "fluide":       {"label":"Fluide","congestion":10,"status":"green"},
+    "dense":        {"label":"Dense","congestion":45,"status":"orange"},
+    "ralenti":      {"label":"Ralenti","congestion":65,"status":"orange"},
+    "bouche":       {"label":"Bouché","congestion":85,"status":"red"},
+    "bouché":       {"label":"Bouché","congestion":85,"status":"red"},
 }
 
-def fetch_url(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Maverick/1.0"})
+def fetch(url):
+    req = urllib.request.Request(url, headers={"User-Agent":"Maverick/1.0"})
     with urllib.request.urlopen(req, timeout=30) as r:
         return r.read()
 
-def dist_m(lat1, lng1, lat2, lng2):
-    dlat = (lat2 - lat1) * 111320
-    dlng = (lng2 - lng1) * 111320 * math.cos(math.radians(lat1))
-    return math.sqrt(dlat**2 + dlng**2)
+def dist_m(a1,o1,a2,o2):
+    d1=(a2-a1)*111320; d2=(o2-o1)*111320*math.cos(math.radians(a1))
+    return math.sqrt(d1*d1+d2*d2)
 
-def near_line(lat, lng, radius=400):
-    for lid, pts in LINE_TRACES.items():
-        for pt in pts:
-            if dist_m(lat, lng, pt[0], pt[1]) < radius:
-                return lid
+def near_line(lat,lng,radius=500):
+    for lid,pts in LINE_TRACES.items():
+        for p in pts:
+            if dist_m(lat,lng,p[0],p[1])<radius: return lid
     return None
 
-def in_bbox(lat, lng):
-    return BBOX["min_lat"] <= lat <= BBOX["max_lat"] and BBOX["min_lng"] <= lng <= BBOX["max_lng"]
+def in_bbox(lat,lng):
+    return BBOX["min_lat"]<=lat<=BBOX["max_lat"] and BBOX["min_lng"]<=lng<=BBOX["max_lng"]
 
-def fetch_referentiel():
-    stations = {}
+def stag(t):
+    return t.split("}")[-1] if "}" in t else t
+
+def load_geometry():
+    """Charge la géométrie des segments depuis MIF/MID (Lambert 93 → WGS84)."""
+    geom = {}
     try:
-        raw = fetch_url(REFERENTIEL_URL).decode("utf-8-sig", errors="replace")
-        sep = ";" if raw.count(";") > raw.count(",") else ","
-        reader = csv.DictReader(io.StringIO(raw), delimiter=sep)
-        for row in reader:
-            # Filtrer les valeurs None
-            norm = {k.strip().lower(): (v.strip() if v else "") for k, v in row.items() if k and k.strip()}
-            sid = norm.get("code_pme") or norm.get("id") or norm.get("identifiant")
-            if not sid:
-                continue
-            x_str = norm.get("x_deb") or norm.get("x") or ""
-            y_str = norm.get("y_deb") or norm.get("y") or ""
-            if not x_str or not y_str:
-                continue
-            try:
-                x = float(x_str.replace(",", "."))
-                y = float(y_str.replace(",", "."))
-                if x == 0 or y == 0:
-                    continue
-                lat, lng = lambert93_to_wgs84(x, y)
-                if in_bbox(lat, lng):
-                    name = norm.get("axe") or norm.get("libelle") or sid
-                    stations[sid] = {"lat": lat, "lng": lng, "name": name}
-            except Exception:
-                continue
-        print(f"  {len(stations)} stations dans la bbox IDF")
-        for sid, st in list(stations.items())[:3]:
-            print(f"    {sid}: {st['name']} → {st['lat']},{st['lng']}")
-    except Exception as e:
-        import traceback; traceback.print_exc()
-    return stations
+        from pyproj import Transformer
+        tr = Transformer.from_crs("EPSG:2154","EPSG:4326",always_xy=True)
 
-def find_dirif_xml():
-    """Explore le répertoire parent pour trouver le XML DiRIF."""
-    try:
-        html = fetch_url(PARENT_URL).decode("utf-8", errors="replace")
-        folders = re.findall(r'href="([A-Za-z][^"]+/)"', html)
-        print(f"  Dossiers dans parent: {folders}")
+        mif = fetch(URLS["geom_seg"]).decode("latin-1",errors="replace")
+        mid = fetch(URLS["geom_seg_id"]).decode("latin-1",errors="replace")
 
-        # Chercher dossier IDF/DiRIF/Sytadin
-        keywords = ["idf", "dirif", "sytadin", "paris", "ile", "trafico"]
-        target = None
-        for f in folders:
-            if any(k in f.lower() for k in keywords):
-                target = f
-                break
+        # Le MID contient les IDs (une ligne par objet)
+        ids = [l.split(",")[0].strip().strip('"') for l in mid.splitlines() if l.strip()]
 
-        # Si pas trouvé, prendre tous et chercher XML dedans
-        candidates = [target] if target else folders
-        for folder in candidates:
-            url = PARENT_URL + folder if not folder.startswith("http") else folder
-            print(f"  Explorer: {url}")
-            try:
-                h2 = fetch_url(url).decode("utf-8", errors="replace")
-                xmls = re.findall(r'href="([^"]+\.xml)"', h2)
-                subdirs = re.findall(r'href="([A-Za-z][^"]+/)"', h2)
-                # Explorer sous-dossiers si besoin
-                for sd in subdirs[:3]:
-                    sd_url = url + sd if not sd.startswith("http") else sd
+        # Le MIF contient les géométries
+        idx = 0
+        lines = mif.splitlines()
+        i = 0
+        while i < len(lines) and idx < len(ids):
+            l = lines[i].strip()
+            if l.upper().startswith("PLINE") or l.upper().startswith("LINE"):
+                parts = l.split()
+                if l.upper().startswith("PLINE") and len(parts)>1:
                     try:
-                        h3 = fetch_url(sd_url).decode("utf-8", errors="replace")
-                        xmls += [sd_url + x for x in re.findall(r'href="([^"/][^"]+\.xml)"', h3)]
+                        n = int(parts[1])
+                        coords=[]
+                        for j in range(1,n+1):
+                            if i+j < len(lines):
+                                xy = lines[i+j].split()
+                                if len(xy)>=2:
+                                    x,y = float(xy[0]), float(xy[1])
+                                    lon,lat = tr.transform(x,y)
+                                    coords.append((round(lat,6),round(lon,6)))
+                        if coords:
+                            mid_pt = coords[len(coords)//2]
+                            geom[ids[idx]] = {"lat":mid_pt[0],"lng":mid_pt[1]}
+                        idx += 1
+                        i += n
                     except Exception:
                         pass
-                if xmls:
-                    xml_url = url + xmls[0] if not xmls[0].startswith("http") else xmls[0]
-                    print(f"  XML trouvé: {xml_url}")
-                    return xml_url
-            except Exception as e:
-                print(f"  Erreur {folder}: {e}")
-                continue
-    except Exception as e:
-        print(f"  Erreur exploration: {e}")
-    return None
-
-def parse_xml(raw):
-    measures_data = []
-    try:
-        text = raw.decode("utf-8", errors="replace")
-        # Nettoyer namespaces
-        text = re.sub(r'\sxmlns[:\w]*="[^"]*"', '', text)
-        text = re.sub(r'<(\w+:)', '<', text)
-        text = re.sub(r'</(\w+:)', '</', text)
-        root = ET.fromstring(text.encode("utf-8"))
-
-        def stag(t):
-            return t.split("}")[-1] if "}" in t else t
-
-        for site in root.iter():
-            if stag(site.tag) != "siteMeasurements":
-                continue
-            site_ref, traf_status = None, None
-            for child in site:
-                ct = stag(child.tag)
-                if ct == "measurementSiteReference":
-                    site_ref = (child.get("id") or child.get("ref") or child.text or "").strip()
-                elif ct == "measuredValue":
-                    for sub in child.iter():
-                        st = stag(sub.tag)
-                        if st == "levelOfService" and sub.text:
-                            traf_status = sub.text.strip()
-                        elif st in TRAFICOLOR_MAP:
-                            traf_status = st
-            if site_ref and traf_status:
-                measures_data.append((site_ref, traf_status))
-        print(f"  {len(measures_data)} mesures XML parsées")
+                elif l.upper().startswith("LINE") and len(parts)>=5:
+                    try:
+                        x1,y1,x2,y2 = map(float,parts[1:5])
+                        lon,lat = tr.transform((x1+x2)/2,(y1+y2)/2)
+                        geom[ids[idx]] = {"lat":round(lat,6),"lng":round(lon,6)}
+                        idx += 1
+                    except Exception:
+                        pass
+            i += 1
+        print(f"  {len(geom)} segments géolocalisés")
     except Exception as e:
         import traceback; traceback.print_exc()
-    return measures_data
+    return geom
 
-def fetch_traficolor(stations):
-    measures = []
+def parse_segments(geom):
+    """Parse segments_dyn.xml — état de trafic par segment."""
+    out = []
     try:
-        xml_url = find_dirif_xml()
-        if not xml_url:
-            print("  Aucun XML DiRIF trouvé")
-            return measures
+        raw = fetch(URLS["segments"])
+        print(f"  segments_dyn.xml : {len(raw)} bytes")
+        txt = raw.decode("utf-8",errors="replace")
+        txt = re.sub(r'\sxmlns[:\w]*="[^"]*"','',txt)
+        root = ET.fromstring(txt.encode("utf-8"))
 
-        raw = fetch_url(xml_url)
-        print(f"  Taille XML: {len(raw)} bytes")
-        measures_data = parse_xml(raw)
-
-        for site_ref, traf_status in measures_data:
-            if site_ref not in stations:
-                continue
-            s = stations[site_ref]
-            lid = near_line(s["lat"], s["lng"])
-            if not lid:
-                continue
-            info = TRAFICOLOR_MAP.get(traf_status, TRAFICOLOR_MAP["unknown"])
-            measures.append({
-                "id": site_ref, "name": s["name"],
-                "lat": s["lat"], "lng": s["lng"],
-                "line": lid, "status": info["status"],
-                "label": info["label"], "congestion": info["congestion"],
+        count=0
+        for el in root.iter():
+            if stag(el.tag).lower() not in ("segment","seg"): continue
+            count+=1
+            sid = el.get("id") or el.get("Id") or el.get("code") or ""
+            etat = el.get("etat") or el.get("Etat") or el.get("etatTrafic") or ""
+            if not etat:
+                for c in el:
+                    if stag(c.tag).lower() in ("etat","etattrafic","couleur") and c.text:
+                        etat = c.text.strip()
+            if not sid or not etat: continue
+            g = geom.get(sid)
+            if not g: continue
+            if not in_bbox(g["lat"],g["lng"]): continue
+            lid = near_line(g["lat"],g["lng"])
+            if not lid: continue
+            info = ETAT_MAP.get(str(etat).lower(), ETAT_MAP["0"])
+            out.append({
+                "id":sid,"lat":g["lat"],"lng":g["lng"],"line":lid,
+                "status":info["status"],"label":info["label"],
+                "congestion":info["congestion"],
             })
+        print(f"  {count} segments dans le XML, {len(out)} sur nos lignes")
     except Exception as e:
         import traceback; traceback.print_exc()
-    return measures
+    return out
+
+def parse_evenements():
+    """Parse evenements.xml — incidents et accidents."""
+    out=[]
+    try:
+        raw = fetch(URLS["evenements"])
+        print(f"  evenements.xml : {len(raw)} bytes")
+        txt = raw.decode("utf-8",errors="replace")
+        txt = re.sub(r'\sxmlns[:\w]*="[^"]*"','',txt)
+        root = ET.fromstring(txt.encode("utf-8"))
+        count=0
+        for el in root.iter():
+            if "even" not in stag(el.tag).lower(): continue
+            count+=1
+            d = {stag(c.tag).lower():(c.text or "").strip() for c in el}
+            d.update({k.lower():v for k,v in el.attrib.items()})
+            # Chercher lat/lng
+            lat = d.get("lat") or d.get("latitude") or d.get("y")
+            lng = d.get("lon") or d.get("lng") or d.get("longitude") or d.get("x")
+            if not lat or not lng: continue
+            try:
+                lat,lng = float(lat), float(lng)
+            except Exception: continue
+            if not in_bbox(lat,lng): continue
+            lid = near_line(lat,lng)
+            if not lid: continue
+            out.append({
+                "lat":lat,"lng":lng,"line":lid,
+                "type": d.get("type") or d.get("nature") or "Incident",
+                "desc": d.get("description") or d.get("libelle") or "",
+            })
+        print(f"  {count} événements dans le XML, {len(out)} sur nos lignes")
+    except Exception as e:
+        import traceback; traceback.print_exc()
+    return out
 
 def main():
-    print("Téléchargement référentiel...")
-    stations = fetch_referentiel()
+    print("=== Chargement géométrie segments ===")
+    geom = load_geometry()
 
-    print("\nRecherche flux DiRIF...")
-    measures = fetch_traficolor(stations)
-    print(f"\n{len(measures)} mesures sur nos lignes")
+    print("\n=== État de trafic (segments_dyn) ===")
+    segments = parse_segments(geom)
 
-    by_line = {}
-    for m in measures:
-        lid = m["line"]
-        if lid not in by_line:
-            by_line[lid] = {"measures": [], "congestion": 0, "status": "green"}
-        by_line[lid]["measures"].append(m)
+    print("\n=== Événements ===")
+    evenements = parse_evenements()
 
-    for lid, data in by_line.items():
-        vals = [m["congestion"] for m in data["measures"]]
-        avg = round(sum(vals) / len(vals)) if vals else 0
-        data["congestion"] = avg
-        data["status"] = "green" if avg < 30 else "orange" if avg < 60 else "red"
-        print(f"  Ligne {lid}: {avg}% — {len(data['measures'])} stations")
+    # Agrégation par ligne
+    by_line={}
+    for s in segments:
+        lid=s["line"]
+        by_line.setdefault(lid,{"segments":[],"congestion":0,"status":"green","evenements":[]})
+        by_line[lid]["segments"].append(s)
+    for e in evenements:
+        lid=e["line"]
+        by_line.setdefault(lid,{"segments":[],"congestion":0,"status":"green","evenements":[]})
+        by_line[lid]["evenements"].append(e)
 
-    output = {
-        "updated_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "source": "DiRIF / DATEX II Traficolor",
-        "lines": by_line, "measures": measures,
+    print("\n=== Résultats ===")
+    for lid,d in by_line.items():
+        vals=[s["congestion"] for s in d["segments"]]
+        avg=round(sum(vals)/len(vals)) if vals else 0
+        d["congestion"]=avg
+        d["status"]="green" if avg<30 else "orange" if avg<60 else "red"
+        print(f"  Ligne {lid}: {avg}% — {len(d['segments'])} segments, {len(d['evenements'])} événements")
+
+    output={
+        "updated_at":datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "source":"Sytadin / DiRIF",
+        "lines":by_line,
+        "segments":segments,
+        "evenements":evenements,
     }
-    with open("traffic.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-    print("traffic.json écrit !")
+    with open("traffic.json","w",encoding="utf-8") as f:
+        json.dump(output,f,ensure_ascii=False,indent=2)
+    print("\ntraffic.json écrit !")
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
