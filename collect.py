@@ -57,7 +57,7 @@ def dist_m(a1,o1,a2,o2):
     d1=(a2-a1)*111320; d2=(o2-o1)*111320*math.cos(math.radians(a1))
     return math.sqrt(d1*d1+d2*d2)
 
-def near_line(lat,lng,radius=500):
+def on_line(lat,lng,radius=500):
     for lid,pts in LINE_TRACES.items():
         for p in pts:
             if dist_m(lat,lng,p[0],p[1])<radius: return lid
@@ -162,8 +162,8 @@ def load_geometry():
             i += 1
 
         in_bbox_count = sum(1 for g in geom.values() if in_bbox(g["lat"],g["lng"]))
-        near_count = sum(1 for g in geom.values() if in_bbox(g["lat"],g["lng"]) and near_line(g["lat"],g["lng"]))
-        print(f"  {len(geom)} segments total, {in_bbox_count} bbox, {near_count} proches lignes")
+        near_count = sum(1 for g in geom.values() if in_bbox(g["lat"],g["lng"]) and on_line(g["lat"],g["lng"]))
+        print(f"  {len(geom)} segments total, {in_bbox_count} bbox, {near_count} sur les tracés")
     except Exception as e:
         import traceback; traceback.print_exc()
     return geom
@@ -187,7 +187,7 @@ def parse_segments(geom):
             g = geom[sid]
             if not in_bbox(g["lat"], g["lng"]):
                 continue
-            lid = near_line(g["lat"], g["lng"])
+            lid = on_line(g["lat"], g["lng"])
             if not lid:
                 continue
 
@@ -286,7 +286,7 @@ def parse_evenements(geom):
                     g = geom[sid]
                     if not in_bbox(g["lat"], g["lng"]):
                         continue
-                    lid = near_line(g["lat"], g["lng"])
+                    lid = on_line(g["lat"], g["lng"])
                     if lid:
                         # Récupérer le nom de la route depuis le segment si pas dans l'événement
                         road = axe or g["road"]
