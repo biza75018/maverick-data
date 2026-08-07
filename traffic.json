@@ -1,1 +1,2882 @@
-{"updated_at": "2026-08-07T10:34:06Z", "source": "Sytadin / DiRIF \u2014 debug", "lines": {}, "segments": [], "evenements": []}
+{
+  "updated_at": "2026-08-07T10:41:39Z",
+  "source": "Sytadin / DiRIF",
+  "lines": {
+    "351": {
+      "segments": [
+        {
+          "id": "12012567",
+          "lat": 48.865185,
+          "lng": 2.418434,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012568",
+          "lat": 48.864988,
+          "lng": 2.416711,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12016951",
+          "lat": 48.916822,
+          "lng": 2.478427,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012493",
+          "lat": 48.845102,
+          "lng": 2.402382,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12018188",
+          "lat": 48.997942,
+          "lng": 2.520338,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012564",
+          "lat": 48.86428,
+          "lng": 2.414193,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012049",
+          "lat": 48.866052,
+          "lng": 2.412236,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004999",
+          "lat": 48.926722,
+          "lng": 2.481864,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012565",
+          "lat": 48.864498,
+          "lng": 2.414596,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012566",
+          "lat": 48.865245,
+          "lng": 2.417157,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12016961",
+          "lat": 48.927072,
+          "lng": 2.48155,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12016965",
+          "lat": 48.931835,
+          "lng": 2.481347,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019753",
+          "lat": 48.863231,
+          "lng": 2.413233,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019754",
+          "lat": 48.858033,
+          "lng": 2.414029,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012215",
+          "lat": 48.927524,
+          "lng": 2.481363,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017029",
+          "lat": 48.867217,
+          "lng": 2.413215,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017081",
+          "lat": 48.866201,
+          "lng": 2.414648,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12011778",
+          "lat": 48.996498,
+          "lng": 2.519362,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12011723",
+          "lat": 48.864265,
+          "lng": 2.413322,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017080",
+          "lat": 48.865823,
+          "lng": 2.41651,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12011724",
+          "lat": 48.863243,
+          "lng": 2.413371,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12011779",
+          "lat": 48.866427,
+          "lng": 2.413426,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019755",
+          "lat": 48.854287,
+          "lng": 2.413758,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019757",
+          "lat": 48.844551,
+          "lng": 2.413867,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019758",
+          "lat": 48.843791,
+          "lng": 2.413704,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12011780",
+          "lat": 48.86583,
+          "lng": 2.418309,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12011781",
+          "lat": 48.865835,
+          "lng": 2.416983,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017039",
+          "lat": 48.844506,
+          "lng": 2.413836,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12004385",
+          "lat": 48.846467,
+          "lng": 2.414993,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019705",
+          "lat": 48.855338,
+          "lng": 2.414284,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019706",
+          "lat": 48.854193,
+          "lng": 2.414749,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019707",
+          "lat": 48.854593,
+          "lng": 2.413418,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019708",
+          "lat": 48.85428,
+          "lng": 2.412981,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019751",
+          "lat": 48.867196,
+          "lng": 2.41317,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019752",
+          "lat": 48.865008,
+          "lng": 2.413122,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004384",
+          "lat": 48.847095,
+          "lng": 2.414017,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019768",
+          "lat": 48.848896,
+          "lng": 2.415129,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004607",
+          "lat": 48.930973,
+          "lng": 2.48073,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004468",
+          "lat": 48.846583,
+          "lng": 2.413948,
+          "line": "351",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12004606",
+          "lat": 48.927567,
+          "lng": 2.481075,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019772",
+          "lat": 48.862749,
+          "lng": 2.413717,
+          "line": "351",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019773",
+          "lat": 48.864673,
+          "lng": 2.413451,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019774",
+          "lat": 48.868021,
+          "lng": 2.413501,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12016920",
+          "lat": 48.864906,
+          "lng": 2.416836,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004604",
+          "lat": 48.917819,
+          "lng": 2.478322,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019770",
+          "lat": 48.854377,
+          "lng": 2.414108,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019771",
+          "lat": 48.858924,
+          "lng": 2.414306,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12016953",
+          "lat": 48.91828,
+          "lng": 2.478641,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12016963",
+          "lat": 48.931443,
+          "lng": 2.481175,
+          "line": "351",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004467",
+          "lat": 48.847034,
+          "lng": 2.415061,
+          "line": "351",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        }
+      ],
+      "congestion": 15,
+      "status": "green",
+      "evenements": [
+        {
+          "id": "15096202",
+          "lat": 48.844551,
+          "lng": 2.413867,
+          "line": "351",
+          "type": "Bouchon",
+          "desc": "A6B-Y/07+0700/07+0900\n",
+          "date": "2026-08-07T11:40:40"
+        },
+        {
+          "id": "15096156",
+          "lat": 48.863231,
+          "lng": 2.413233,
+          "line": "351",
+          "type": "Bouchon",
+          "desc": "A86-E/26+0260/26+0000\n",
+          "date": "2026-08-07T10:41:20"
+        },
+        {
+          "id": "15096229",
+          "lat": 48.86583,
+          "lng": 2.418309,
+          "line": "351",
+          "type": "Bouchon",
+          "desc": "N118-W/03+0900/03+0400\n",
+          "date": "2026-08-07T12:19:20"
+        }
+      ]
+    },
+    "9517": {
+      "segments": [
+        {
+          "id": "12005274",
+          "lat": 48.935449,
+          "lng": 2.264449,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12012251",
+          "lat": 48.99176,
+          "lng": 2.511104,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12005461",
+          "lat": 48.922049,
+          "lng": 2.365934,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12011981",
+          "lat": 48.921944,
+          "lng": 2.358888,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017836",
+          "lat": 48.992697,
+          "lng": 2.516411,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017837",
+          "lat": 48.992997,
+          "lng": 2.516334,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12005272",
+          "lat": 48.934558,
+          "lng": 2.258382,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12011982",
+          "lat": 48.921942,
+          "lng": 2.361576,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12011983",
+          "lat": 48.921841,
+          "lng": 2.365615,
+          "line": "9517",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12011984",
+          "lat": 48.921674,
+          "lng": 2.364156,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12005460",
+          "lat": 48.922115,
+          "lng": 2.36155,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019821",
+          "lat": 48.935492,
+          "lng": 2.260747,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017422",
+          "lat": 48.923769,
+          "lng": 2.342602,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12011776",
+          "lat": 48.992156,
+          "lng": 2.513919,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017163",
+          "lat": 48.921317,
+          "lng": 2.35738,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017165",
+          "lat": 48.920529,
+          "lng": 2.35722,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12011777",
+          "lat": 48.993689,
+          "lng": 2.516055,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017282",
+          "lat": 48.922864,
+          "lng": 2.34431,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12004321",
+          "lat": 48.990541,
+          "lng": 2.511409,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12019411",
+          "lat": 48.922801,
+          "lng": 2.346393,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12004336",
+          "lat": 48.916455,
+          "lng": 2.357524,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017283",
+          "lat": 48.923599,
+          "lng": 2.342624,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12004338",
+          "lat": 48.923172,
+          "lng": 2.356881,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004322",
+          "lat": 48.992155,
+          "lng": 2.513222,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017288",
+          "lat": 48.9221,
+          "lng": 2.358374,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017289",
+          "lat": 48.921684,
+          "lng": 2.365279,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12013054",
+          "lat": 48.935829,
+          "lng": 2.264285,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12011868",
+          "lat": 48.918738,
+          "lng": 2.357347,
+          "line": "9517",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12013052",
+          "lat": 48.935822,
+          "lng": 2.262891,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12013053",
+          "lat": 48.935553,
+          "lng": 2.26481,
+          "line": "9517",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        }
+      ],
+      "congestion": 16,
+      "status": "green",
+      "evenements": [
+        {
+          "id": "15096016",
+          "lat": 48.922801,
+          "lng": 2.346393,
+          "line": "9517",
+          "type": "Bouchon",
+          "desc": "A4-W/05+0748/05+0450\n",
+          "date": "2026-08-07T07:04:00"
+        }
+      ]
+    },
+    "350": {
+      "segments": [
+        {
+          "id": "12004079",
+          "lat": 48.950654,
+          "lng": 2.440104,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017850",
+          "lat": 48.941865,
+          "lng": 2.431814,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017852",
+          "lat": 48.942106,
+          "lng": 2.429235,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017853",
+          "lat": 48.942224,
+          "lng": 2.429071,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12005470",
+          "lat": 48.940066,
+          "lng": 2.43068,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004110",
+          "lat": 48.899382,
+          "lng": 2.359359,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017851",
+          "lat": 48.941942,
+          "lng": 2.431476,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12012089",
+          "lat": 48.901511,
+          "lng": 2.358656,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12004929",
+          "lat": 48.950436,
+          "lng": 2.447323,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004075",
+          "lat": 48.950489,
+          "lng": 2.440163,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004076",
+          "lat": 48.950515,
+          "lng": 2.439802,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012537",
+          "lat": 48.950278,
+          "lng": 2.454259,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12005467",
+          "lat": 48.945902,
+          "lng": 2.435715,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004077",
+          "lat": 48.950515,
+          "lng": 2.439802,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12004078",
+          "lat": 48.950654,
+          "lng": 2.440104,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017426",
+          "lat": 48.950472,
+          "lng": 2.440724,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017443",
+          "lat": 48.948754,
+          "lng": 2.438396,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017444",
+          "lat": 48.946432,
+          "lng": 2.436336,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017445",
+          "lat": 48.944132,
+          "lng": 2.434253,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017446",
+          "lat": 48.942518,
+          "lng": 2.432902,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017439",
+          "lat": 48.941023,
+          "lng": 2.431513,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017438",
+          "lat": 48.943394,
+          "lng": 2.433433,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017425",
+          "lat": 48.95019,
+          "lng": 2.454313,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12013076",
+          "lat": 48.947707,
+          "lng": 2.437356,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017026",
+          "lat": 48.900819,
+          "lng": 2.357886,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12004789",
+          "lat": 48.956128,
+          "lng": 2.459229,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012120",
+          "lat": 48.901511,
+          "lng": 2.360074,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12012121",
+          "lat": 48.901295,
+          "lng": 2.359539,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019681",
+          "lat": 48.900766,
+          "lng": 2.357416,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019683",
+          "lat": 48.900735,
+          "lng": 2.364703,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12017280",
+          "lat": 48.900982,
+          "lng": 2.359352,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12017281",
+          "lat": 48.901285,
+          "lng": 2.361146,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12005488",
+          "lat": 48.940023,
+          "lng": 2.430767,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12004334",
+          "lat": 48.901248,
+          "lng": 2.357919,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12005487",
+          "lat": 48.940952,
+          "lng": 2.431649,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12014758",
+          "lat": 48.898667,
+          "lng": 2.359159,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004331",
+          "lat": 48.900181,
+          "lng": 2.360149,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004349",
+          "lat": 48.942377,
+          "lng": 2.431861,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12014753",
+          "lat": 48.898447,
+          "lng": 2.358994,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004476",
+          "lat": 48.900118,
+          "lng": 2.359592,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12004511",
+          "lat": 48.90131,
+          "lng": 2.358604,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004473",
+          "lat": 48.900459,
+          "lng": 2.357263,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12004474",
+          "lat": 48.900322,
+          "lng": 2.361859,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12004548",
+          "lat": 48.902235,
+          "lng": 2.358859,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004470",
+          "lat": 48.901087,
+          "lng": 2.360958,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12004471",
+          "lat": 48.901649,
+          "lng": 2.359339,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12019783",
+          "lat": 48.900952,
+          "lng": 2.363848,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12019784",
+          "lat": 48.900969,
+          "lng": 2.360098,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004478",
+          "lat": 48.90082,
+          "lng": 2.359106,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12004472",
+          "lat": 48.901177,
+          "lng": 2.35762,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12004477",
+          "lat": 48.900621,
+          "lng": 2.363135,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12011869",
+          "lat": 48.902368,
+          "lng": 2.358595,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004475",
+          "lat": 48.90041,
+          "lng": 2.360163,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        },
+        {
+          "id": "12014672",
+          "lat": 48.902038,
+          "lng": 2.358702,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12014673",
+          "lat": 48.901467,
+          "lng": 2.358711,
+          "line": "350",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false
+        },
+        {
+          "id": "12014659",
+          "lat": 48.902367,
+          "lng": 2.35888,
+          "line": "350",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false
+        },
+        {
+          "id": "12004479",
+          "lat": 48.901292,
+          "lng": 2.362058,
+          "line": "350",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true
+        }
+      ],
+      "congestion": 34,
+      "status": "orange",
+      "evenements": [
+        {
+          "id": "15096100",
+          "lat": 48.940952,
+          "lng": 2.431649,
+          "line": "350",
+          "type": "Bouchon",
+          "desc": "",
+          "date": "2026-08-07T09:44:00"
+        },
+        {
+          "id": "600076740",
+          "lat": 48.901292,
+          "lng": 2.362058,
+          "line": "350",
+          "type": "Travaux",
+          "desc": "",
+          "date": "2026-08-03T11:39:17"
+        }
+      ]
+    }
+  },
+  "segments": [
+    {
+      "id": "12012567",
+      "lat": 48.865185,
+      "lng": 2.418434,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12012568",
+      "lat": 48.864988,
+      "lng": 2.416711,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12005274",
+      "lat": 48.935449,
+      "lng": 2.264449,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004079",
+      "lat": 48.950654,
+      "lng": 2.440104,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12012251",
+      "lat": 48.99176,
+      "lng": 2.511104,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017850",
+      "lat": 48.941865,
+      "lng": 2.431814,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017852",
+      "lat": 48.942106,
+      "lng": 2.429235,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12005461",
+      "lat": 48.922049,
+      "lng": 2.365934,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011981",
+      "lat": 48.921944,
+      "lng": 2.358888,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017836",
+      "lat": 48.992697,
+      "lng": 2.516411,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017837",
+      "lat": 48.992997,
+      "lng": 2.516334,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017853",
+      "lat": 48.942224,
+      "lng": 2.429071,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12005272",
+      "lat": 48.934558,
+      "lng": 2.258382,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12005470",
+      "lat": 48.940066,
+      "lng": 2.43068,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12016951",
+      "lat": 48.916822,
+      "lng": 2.478427,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004110",
+      "lat": 48.899382,
+      "lng": 2.359359,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12012493",
+      "lat": 48.845102,
+      "lng": 2.402382,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12018188",
+      "lat": 48.997942,
+      "lng": 2.520338,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12012564",
+      "lat": 48.86428,
+      "lng": 2.414193,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017851",
+      "lat": 48.941942,
+      "lng": 2.431476,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12012089",
+      "lat": 48.901511,
+      "lng": 2.358656,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12011982",
+      "lat": 48.921942,
+      "lng": 2.361576,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12012049",
+      "lat": 48.866052,
+      "lng": 2.412236,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011983",
+      "lat": 48.921841,
+      "lng": 2.365615,
+      "line": "9517",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12011984",
+      "lat": 48.921674,
+      "lng": 2.364156,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004999",
+      "lat": 48.926722,
+      "lng": 2.481864,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12012565",
+      "lat": 48.864498,
+      "lng": 2.414596,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12012566",
+      "lat": 48.865245,
+      "lng": 2.417157,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004929",
+      "lat": 48.950436,
+      "lng": 2.447323,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12005460",
+      "lat": 48.922115,
+      "lng": 2.36155,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12016961",
+      "lat": 48.927072,
+      "lng": 2.48155,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12016965",
+      "lat": 48.931835,
+      "lng": 2.481347,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004075",
+      "lat": 48.950489,
+      "lng": 2.440163,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004076",
+      "lat": 48.950515,
+      "lng": 2.439802,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019753",
+      "lat": 48.863231,
+      "lng": 2.413233,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019754",
+      "lat": 48.858033,
+      "lng": 2.414029,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12012537",
+      "lat": 48.950278,
+      "lng": 2.454259,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12005467",
+      "lat": 48.945902,
+      "lng": 2.435715,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004077",
+      "lat": 48.950515,
+      "lng": 2.439802,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004078",
+      "lat": 48.950654,
+      "lng": 2.440104,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12012215",
+      "lat": 48.927524,
+      "lng": 2.481363,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019821",
+      "lat": 48.935492,
+      "lng": 2.260747,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017422",
+      "lat": 48.923769,
+      "lng": 2.342602,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017426",
+      "lat": 48.950472,
+      "lng": 2.440724,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017443",
+      "lat": 48.948754,
+      "lng": 2.438396,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017444",
+      "lat": 48.946432,
+      "lng": 2.436336,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017445",
+      "lat": 48.944132,
+      "lng": 2.434253,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017446",
+      "lat": 48.942518,
+      "lng": 2.432902,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017439",
+      "lat": 48.941023,
+      "lng": 2.431513,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017438",
+      "lat": 48.943394,
+      "lng": 2.433433,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017425",
+      "lat": 48.95019,
+      "lng": 2.454313,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12013076",
+      "lat": 48.947707,
+      "lng": 2.437356,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017026",
+      "lat": 48.900819,
+      "lng": 2.357886,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017029",
+      "lat": 48.867217,
+      "lng": 2.413215,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017081",
+      "lat": 48.866201,
+      "lng": 2.414648,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004789",
+      "lat": 48.956128,
+      "lng": 2.459229,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011778",
+      "lat": 48.996498,
+      "lng": 2.519362,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011776",
+      "lat": 48.992156,
+      "lng": 2.513919,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017163",
+      "lat": 48.921317,
+      "lng": 2.35738,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017165",
+      "lat": 48.920529,
+      "lng": 2.35722,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12012120",
+      "lat": 48.901511,
+      "lng": 2.360074,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12012121",
+      "lat": 48.901295,
+      "lng": 2.359539,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011723",
+      "lat": 48.864265,
+      "lng": 2.413322,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017080",
+      "lat": 48.865823,
+      "lng": 2.41651,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12011777",
+      "lat": 48.993689,
+      "lng": 2.516055,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011724",
+      "lat": 48.863243,
+      "lng": 2.413371,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011779",
+      "lat": 48.866427,
+      "lng": 2.413426,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019755",
+      "lat": 48.854287,
+      "lng": 2.413758,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019757",
+      "lat": 48.844551,
+      "lng": 2.413867,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019758",
+      "lat": 48.843791,
+      "lng": 2.413704,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011780",
+      "lat": 48.86583,
+      "lng": 2.418309,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12011781",
+      "lat": 48.865835,
+      "lng": 2.416983,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017039",
+      "lat": 48.844506,
+      "lng": 2.413836,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019681",
+      "lat": 48.900766,
+      "lng": 2.357416,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019683",
+      "lat": 48.900735,
+      "lng": 2.364703,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017280",
+      "lat": 48.900982,
+      "lng": 2.359352,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017281",
+      "lat": 48.901285,
+      "lng": 2.361146,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017282",
+      "lat": 48.922864,
+      "lng": 2.34431,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004385",
+      "lat": 48.846467,
+      "lng": 2.414993,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12005488",
+      "lat": 48.940023,
+      "lng": 2.430767,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004334",
+      "lat": 48.901248,
+      "lng": 2.357919,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019705",
+      "lat": 48.855338,
+      "lng": 2.414284,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019706",
+      "lat": 48.854193,
+      "lng": 2.414749,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019707",
+      "lat": 48.854593,
+      "lng": 2.413418,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019708",
+      "lat": 48.85428,
+      "lng": 2.412981,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004321",
+      "lat": 48.990541,
+      "lng": 2.511409,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019411",
+      "lat": 48.922801,
+      "lng": 2.346393,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12005487",
+      "lat": 48.940952,
+      "lng": 2.431649,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004336",
+      "lat": 48.916455,
+      "lng": 2.357524,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12014758",
+      "lat": 48.898667,
+      "lng": 2.359159,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017283",
+      "lat": 48.923599,
+      "lng": 2.342624,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004331",
+      "lat": 48.900181,
+      "lng": 2.360149,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004338",
+      "lat": 48.923172,
+      "lng": 2.356881,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019751",
+      "lat": 48.867196,
+      "lng": 2.41317,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019752",
+      "lat": 48.865008,
+      "lng": 2.413122,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004384",
+      "lat": 48.847095,
+      "lng": 2.414017,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004349",
+      "lat": 48.942377,
+      "lng": 2.431861,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019768",
+      "lat": 48.848896,
+      "lng": 2.415129,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004322",
+      "lat": 48.992155,
+      "lng": 2.513222,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12014753",
+      "lat": 48.898447,
+      "lng": 2.358994,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12017288",
+      "lat": 48.9221,
+      "lng": 2.358374,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12017289",
+      "lat": 48.921684,
+      "lng": 2.365279,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004476",
+      "lat": 48.900118,
+      "lng": 2.359592,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12004607",
+      "lat": 48.930973,
+      "lng": 2.48073,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004511",
+      "lat": 48.90131,
+      "lng": 2.358604,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004473",
+      "lat": 48.900459,
+      "lng": 2.357263,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12004474",
+      "lat": 48.900322,
+      "lng": 2.361859,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12004468",
+      "lat": 48.846583,
+      "lng": 2.413948,
+      "line": "351",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12004606",
+      "lat": 48.927567,
+      "lng": 2.481075,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004548",
+      "lat": 48.902235,
+      "lng": 2.358859,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12013054",
+      "lat": 48.935829,
+      "lng": 2.264285,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004470",
+      "lat": 48.901087,
+      "lng": 2.360958,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12004471",
+      "lat": 48.901649,
+      "lng": 2.359339,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12019772",
+      "lat": 48.862749,
+      "lng": 2.413717,
+      "line": "351",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12019773",
+      "lat": 48.864673,
+      "lng": 2.413451,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019774",
+      "lat": 48.868021,
+      "lng": 2.413501,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019783",
+      "lat": 48.900952,
+      "lng": 2.363848,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019784",
+      "lat": 48.900969,
+      "lng": 2.360098,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12016920",
+      "lat": 48.864906,
+      "lng": 2.416836,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004478",
+      "lat": 48.90082,
+      "lng": 2.359106,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12004472",
+      "lat": 48.901177,
+      "lng": 2.35762,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12004604",
+      "lat": 48.917819,
+      "lng": 2.478322,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004477",
+      "lat": 48.900621,
+      "lng": 2.363135,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12019770",
+      "lat": 48.854377,
+      "lng": 2.414108,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12019771",
+      "lat": 48.858924,
+      "lng": 2.414306,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011868",
+      "lat": 48.918738,
+      "lng": 2.357347,
+      "line": "9517",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12011869",
+      "lat": 48.902368,
+      "lng": 2.358595,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12016953",
+      "lat": 48.91828,
+      "lng": 2.478641,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004475",
+      "lat": 48.90041,
+      "lng": 2.360163,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12014672",
+      "lat": 48.902038,
+      "lng": 2.358702,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12014673",
+      "lat": 48.901467,
+      "lng": 2.358711,
+      "line": "350",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12014659",
+      "lat": 48.902367,
+      "lng": 2.35888,
+      "line": "350",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12013052",
+      "lat": 48.935822,
+      "lng": 2.262891,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12013053",
+      "lat": 48.935553,
+      "lng": 2.26481,
+      "line": "9517",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false
+    },
+    {
+      "id": "12004479",
+      "lat": 48.901292,
+      "lng": 2.362058,
+      "line": "350",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    },
+    {
+      "id": "12016963",
+      "lat": 48.931443,
+      "lng": 2.481175,
+      "line": "351",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false
+    },
+    {
+      "id": "12004467",
+      "lat": 48.847034,
+      "lng": 2.415061,
+      "line": "351",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true
+    }
+  ],
+  "evenements": [
+    {
+      "id": "15096202",
+      "lat": 48.844551,
+      "lng": 2.413867,
+      "line": "351",
+      "type": "Bouchon",
+      "desc": "A6B-Y/07+0700/07+0900\n",
+      "date": "2026-08-07T11:40:40"
+    },
+    {
+      "id": "15096100",
+      "lat": 48.940952,
+      "lng": 2.431649,
+      "line": "350",
+      "type": "Bouchon",
+      "desc": "",
+      "date": "2026-08-07T09:44:00"
+    },
+    {
+      "id": "15096156",
+      "lat": 48.863231,
+      "lng": 2.413233,
+      "line": "351",
+      "type": "Bouchon",
+      "desc": "A86-E/26+0260/26+0000\n",
+      "date": "2026-08-07T10:41:20"
+    },
+    {
+      "id": "15096229",
+      "lat": 48.86583,
+      "lng": 2.418309,
+      "line": "351",
+      "type": "Bouchon",
+      "desc": "N118-W/03+0900/03+0400\n",
+      "date": "2026-08-07T12:19:20"
+    },
+    {
+      "id": "600076740",
+      "lat": 48.901292,
+      "lng": 2.362058,
+      "line": "350",
+      "type": "Travaux",
+      "desc": "",
+      "date": "2026-08-03T11:39:17"
+    },
+    {
+      "id": "15096016",
+      "lat": 48.922801,
+      "lng": 2.346393,
+      "line": "9517",
+      "type": "Bouchon",
+      "desc": "A4-W/05+0748/05+0450\n",
+      "date": "2026-08-07T07:04:00"
+    }
+  ]
+}
