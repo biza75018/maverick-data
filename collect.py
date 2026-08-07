@@ -57,7 +57,7 @@ def dist_m(a1,o1,a2,o2):
     d1=(a2-a1)*111320; d2=(o2-o1)*111320*math.cos(math.radians(a1))
     return math.sqrt(d1*d1+d2*d2)
 
-def near_line(lat,lng,radius=200):
+def near_line(lat,lng,radius=500):
     for lid,pts in LINE_TRACES.items():
         for p in pts:
             if dist_m(lat,lng,p[0],p[1])<radius: return lid
