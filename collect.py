@@ -292,13 +292,20 @@ def main():
     evenements = parse_evenements(geom)
 
     by_line = {}
+    def mkline():
+        return {"segments":[],"congestion":0,"status":"green","evenements":[],"aller":{"segments":[],"congestion":0,"status":"green"},"retour":{"segments":[],"congestion":0,"status":"green"}}
     for s in segments:
         lid = s["line"]
-        by_line.setdefault(lid,{"segments":[],"congestion":0,"status":"green","evenements":[]})
+        by_line.setdefault(lid, mkline())
         by_line[lid]["segments"].append(s)
+        sens = s.get("sens","")
+        if "Province" in sens or chr(8595) in sens:
+            by_line[lid]["aller"]["segments"].append(s)
+        else:
+            by_line[lid]["retour"]["segments"].append(s)
     for e in evenements:
         lid = e["line"]
-        by_line.setdefault(lid,{"segments":[],"congestion":0,"status":"green","evenements":[]})
+        by_line.setdefault(lid, mkline())
         by_line[lid]["evenements"].append(e)
 
     print("\n=== Résultats ===")
@@ -307,8 +314,13 @@ def main():
         avg = round(sum(vals)/len(vals)) if vals else 0
         d["congestion"] = avg
         d["status"] = "green" if avg<30 else "orange" if avg<60 else "red"
+        for dr in ("aller","retour"):
+            dd=d[dr]; vv=[x["congestion"] for x in dd["segments"] if x["congestion"]>0]
+            dd["congestion"]=round(sum(vv)/len(vv)) if vv else 0
+            dd["status"]="green" if dd["congestion"]<30 else "orange" if dd["congestion"]<60 else "red"
         closed = sum(1 for s in d["segments"] if s.get("closed"))
-        print(f"  Ligne {lid}: {avg}% — {len(d['segments'])} seg, {len(d['evenements'])} évts, {closed} fermés")
+        a,r=d["aller"],d["retour"]
+        print(f"  Ligne {lid}: Aller {a['congestion']}% ({len(a['segments'])}) | Retour {r['congestion']}% ({len(r['segments'])}) | {closed} fermés")
 
     output = {
         "updated_at":datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
