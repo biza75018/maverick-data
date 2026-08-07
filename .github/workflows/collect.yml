@@ -2,8 +2,8 @@ name: Collecte DATEX Traficolor
 
 on:
   schedule:
-    - cron: "*/6 * * * *"   # toutes les 6 minutes
-  workflow_dispatch:          # déclenchement manuel possible
+    - cron: "*/6 * * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,6 +19,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Installer dépendances
+        run: pip install pyproj
 
       - name: Collecter les données DATEX
         run: python collect.py
