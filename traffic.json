@@ -1,6 +1,7 @@
 {
-  "updated_at": "2026-08-07T10:15:20Z",
-  "source": "DiRIF / DATEX II Traficolor",
+  "updated_at": "2026-08-07T10:25:21Z",
+  "source": "Sytadin / DiRIF",
   "lines": {},
-  "measures": []
+  "segments": [],
+  "evenements": []
 }
