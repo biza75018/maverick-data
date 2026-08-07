@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T14:53:47Z",
+  "updated_at": "2026-08-07T15:11:53Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -7549,7 +7549,7 @@
           "date": "2026-08-07T10:41:20",
           "road": "11000016",
           "sens": "⟲ Ext",
-          "pr_debut": "PR28+200",
+          "pr_debut": "PR28+500",
           "pr_fin": "PR25+190",
           "coords": [
             [
@@ -12758,7 +12758,7 @@
       "date": "2026-08-07T10:41:20",
       "road": "11000016",
       "sens": "⟲ Ext",
-      "pr_debut": "PR28+200",
+      "pr_debut": "PR28+500",
       "pr_fin": "PR25+190",
       "coords": [
         [
