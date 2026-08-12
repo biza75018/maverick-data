@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T11:24:36Z",
+  "updated_at": "2026-08-12T12:07:33Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -7506,12 +7506,12 @@
           "lat": 48.967056,
           "lng": 2.511919,
           "line": "351",
-          "status": "red",
-          "label": "Fermé (Travaux)",
-          "congestion": 95,
-          "closed": true,
-          "closure_type": "nocturne",
-          "fermeture": "Travaux",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false,
+          "closure_type": "",
+          "fermeture": "",
           "road": "N13",
           "sens": "",
           "pr": "",
@@ -7536,41 +7536,9 @@
           ]
         }
       ],
-      "congestion": 14,
+      "congestion": 10,
       "status": "green",
-      "evenements": [
-        {
-          "id": "500560594",
-          "lat": 48.967056,
-          "lng": 2.511919,
-          "line": "351",
-          "type": "Travaux",
-          "desc": "",
-          "date": "2026-08-12T09:37:03",
-          "road": "11001050",
-          "sens": "W",
-          "pr_debut": "PR8+695",
-          "pr_fin": "PR8+332",
-          "coords": [
-            [
-              48.968579,
-              2.506789
-            ],
-            [
-              48.96744,
-              2.51067
-            ],
-            [
-              48.967056,
-              2.511919
-            ],
-            [
-              48.966472,
-              2.513848
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -8278,12 +8246,12 @@
             "lat": 48.967056,
             "lng": 2.511919,
             "line": "351",
-            "status": "red",
-            "label": "Fermé (Travaux)",
-            "congestion": 95,
-            "closed": true,
-            "closure_type": "nocturne",
-            "fermeture": "Travaux",
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
+            "closed": false,
+            "closure_type": "",
+            "fermeture": "",
             "road": "N13",
             "sens": "",
             "pr": "",
@@ -8308,7 +8276,7 @@
             ]
           }
         ],
-        "congestion": 15,
+        "congestion": 10,
         "status": "green"
       }
     }
@@ -12019,12 +11987,12 @@
       "lat": 48.967056,
       "lng": 2.511919,
       "line": "351",
-      "status": "red",
-      "label": "Fermé (Travaux)",
-      "congestion": 95,
-      "closed": true,
-      "closure_type": "nocturne",
-      "fermeture": "Travaux",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false,
+      "closure_type": "",
+      "fermeture": "",
       "road": "N13",
       "sens": "",
       "pr": "",
@@ -12382,37 +12350,6 @@
         [
           48.853788,
           2.333455
-        ]
-      ]
-    },
-    {
-      "id": "500560594",
-      "lat": 48.967056,
-      "lng": 2.511919,
-      "line": "351",
-      "type": "Travaux",
-      "desc": "",
-      "date": "2026-08-12T09:37:03",
-      "road": "11001050",
-      "sens": "W",
-      "pr_debut": "PR8+695",
-      "pr_fin": "PR8+332",
-      "coords": [
-        [
-          48.968579,
-          2.506789
-        ],
-        [
-          48.96744,
-          2.51067
-        ],
-        [
-          48.967056,
-          2.511919
-        ],
-        [
-          48.966472,
-          2.513848
         ]
       ]
     },
