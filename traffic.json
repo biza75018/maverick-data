@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T13:20:55Z",
+  "updated_at": "2026-08-13T14:34:49Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -7232,9 +7232,9 @@
           "lat": 48.906732,
           "lng": 2.456786,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
+          "status": "unknown",
+          "label": "bouchon",
+          "congestion": 0,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7538,7 +7538,31 @@
       ],
       "congestion": 10,
       "status": "green",
-      "evenements": [],
+      "evenements": [
+        {
+          "id": "15099113",
+          "lat": 48.906732,
+          "lng": 2.456786,
+          "line": "351",
+          "type": "Bouchon",
+          "desc": "A86-E/35+0157/35+0105\n",
+          "date": "2026-08-13T15:47:00",
+          "road": "11000016",
+          "sens": "⟲ Ext",
+          "pr_debut": "PR35+157",
+          "pr_fin": "PR35+105",
+          "coords": [
+            [
+              48.907028,
+              2.455493
+            ],
+            [
+              48.906732,
+              2.456786
+            ]
+          ]
+        }
+      ],
       "aller": {
         "segments": [
           {
@@ -7998,9 +8022,9 @@
             "lat": 48.906732,
             "lng": 2.456786,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
+            "status": "unknown",
+            "label": "bouchon",
+            "congestion": 0,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -11073,9 +11097,9 @@
       "lat": 48.906732,
       "lng": 2.456786,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
+      "status": "unknown",
+      "label": "bouchon",
+      "congestion": 0,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12457,6 +12481,29 @@
         [
           48.940952,
           2.431649
+        ]
+      ]
+    },
+    {
+      "id": "15099113",
+      "lat": 48.906732,
+      "lng": 2.456786,
+      "line": "351",
+      "type": "Bouchon",
+      "desc": "A86-E/35+0157/35+0105\n",
+      "date": "2026-08-13T15:47:00",
+      "road": "11000016",
+      "sens": "⟲ Ext",
+      "pr_debut": "PR35+157",
+      "pr_fin": "PR35+105",
+      "coords": [
+        [
+          48.907028,
+          2.455493
+        ],
+        [
+          48.906732,
+          2.456786
         ]
       ]
     }
