@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T11:58:24Z",
+  "updated_at": "2026-08-13T13:20:55Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -7172,9 +7172,9 @@
           "lat": 48.865935,
           "lng": 2.421324,
           "line": "351",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7538,39 +7538,7 @@
       ],
       "congestion": 10,
       "status": "green",
-      "evenements": [
-        {
-          "id": "15099071",
-          "lat": 48.865935,
-          "lng": 2.421324,
-          "line": "351",
-          "type": "Bouchon",
-          "desc": "",
-          "date": "2026-08-13T13:50:20",
-          "road": "11000018",
-          "sens": "⟲ Ext",
-          "pr_debut": "PR53+500",
-          "pr_fin": "PR50+470",
-          "coords": [
-            [
-              48.86626,
-              2.422722
-            ],
-            [
-              48.866197,
-              2.422457
-            ],
-            [
-              48.865935,
-              2.421324
-            ],
-            [
-              48.865773,
-              2.420475
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -7996,9 +7964,9 @@
             "lat": 48.865935,
             "lng": 2.421324,
             "line": "351",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -10715,9 +10683,9 @@
       "lat": 48.865935,
       "lng": 2.421324,
       "line": "351",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12489,37 +12457,6 @@
         [
           48.940952,
           2.431649
-        ]
-      ]
-    },
-    {
-      "id": "15099071",
-      "lat": 48.865935,
-      "lng": 2.421324,
-      "line": "351",
-      "type": "Bouchon",
-      "desc": "",
-      "date": "2026-08-13T13:50:20",
-      "road": "11000018",
-      "sens": "⟲ Ext",
-      "pr_debut": "PR53+500",
-      "pr_fin": "PR50+470",
-      "coords": [
-        [
-          48.86626,
-          2.422722
-        ],
-        [
-          48.866197,
-          2.422457
-        ],
-        [
-          48.865935,
-          2.421324
-        ],
-        [
-          48.865773,
-          2.420475
         ]
       ]
     }
