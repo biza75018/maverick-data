@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T18:03:40Z",
+  "updated_at": "2026-08-14T19:08:17Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -5202,21 +5202,9 @@
           "date": "2026-08-14T14:22:20",
           "road": "11000016",
           "sens": "⟲ Ext",
-          "pr_debut": "PR30+379",
+          "pr_debut": "PR30+105",
           "pr_fin": "PR29+0",
           "coords": [
-            [
-              48.5506,
-              1.921892
-            ],
-            [
-              48.551243,
-              1.923751
-            ],
-            [
-              48.552939,
-              1.930505
-            ],
             [
               48.870938,
               2.3226
@@ -7172,12 +7160,12 @@
           "lat": 48.865935,
           "lng": 2.421324,
           "line": "351",
-          "status": "red",
-          "label": "Fermé (Ferme)",
-          "congestion": 95,
-          "closed": true,
-          "closure_type": "fermeture",
-          "fermeture": "Ferme",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false,
+          "closure_type": "",
+          "fermeture": "",
           "road": "N104",
           "sens": "⟲ Ext",
           "pr": "PR52+0420 → PR51+0200",
@@ -7536,53 +7524,9 @@
           ]
         }
       ],
-      "congestion": 14,
+      "congestion": 10,
       "status": "green",
-      "evenements": [
-        {
-          "id": "500560835",
-          "lat": 48.865935,
-          "lng": 2.421324,
-          "line": "351",
-          "type": "EvenementExceptionnel",
-          "desc": "",
-          "date": "2026-08-14T13:21:02",
-          "road": "11000018",
-          "sens": "⟲ Ext",
-          "pr_debut": "PR58+0",
-          "pr_fin": "PR50+470",
-          "coords": [
-            [
-              48.875269,
-              2.294785
-            ],
-            [
-              48.875203,
-              2.294282
-            ],
-            [
-              48.875078,
-              2.293864
-            ],
-            [
-              48.86626,
-              2.422722
-            ],
-            [
-              48.866197,
-              2.422457
-            ],
-            [
-              48.865935,
-              2.421324
-            ],
-            [
-              48.865773,
-              2.420475
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -8008,12 +7952,12 @@
             "lat": 48.865935,
             "lng": 2.421324,
             "line": "351",
-            "status": "red",
-            "label": "Fermé (Ferme)",
-            "congestion": 95,
-            "closed": true,
-            "closure_type": "fermeture",
-            "fermeture": "Ferme",
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
+            "closed": false,
+            "closure_type": "",
+            "fermeture": "",
             "road": "N104",
             "sens": "⟲ Ext",
             "pr": "PR52+0420 → PR51+0200",
@@ -8320,7 +8264,7 @@
             ]
           }
         ],
-        "congestion": 15,
+        "congestion": 10,
         "status": "green"
       }
     }
@@ -10727,12 +10671,12 @@
       "lat": 48.865935,
       "lng": 2.421324,
       "line": "351",
-      "status": "red",
-      "label": "Fermé (Ferme)",
-      "congestion": 95,
-      "closed": true,
-      "closure_type": "fermeture",
-      "fermeture": "Ferme",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false,
+      "closure_type": "",
+      "fermeture": "",
       "road": "N104",
       "sens": "⟲ Ext",
       "pr": "PR52+0420 → PR51+0200",
@@ -12407,21 +12351,9 @@
       "date": "2026-08-14T14:22:20",
       "road": "11000016",
       "sens": "⟲ Ext",
-      "pr_debut": "PR30+379",
+      "pr_debut": "PR30+105",
       "pr_fin": "PR29+0",
       "coords": [
-        [
-          48.5506,
-          1.921892
-        ],
-        [
-          48.551243,
-          1.923751
-        ],
-        [
-          48.552939,
-          1.930505
-        ],
         [
           48.870938,
           2.3226
@@ -12501,49 +12433,6 @@
         [
           48.940952,
           2.431649
-        ]
-      ]
-    },
-    {
-      "id": "500560835",
-      "lat": 48.865935,
-      "lng": 2.421324,
-      "line": "351",
-      "type": "EvenementExceptionnel",
-      "desc": "",
-      "date": "2026-08-14T13:21:02",
-      "road": "11000018",
-      "sens": "⟲ Ext",
-      "pr_debut": "PR58+0",
-      "pr_fin": "PR50+470",
-      "coords": [
-        [
-          48.875269,
-          2.294785
-        ],
-        [
-          48.875203,
-          2.294282
-        ],
-        [
-          48.875078,
-          2.293864
-        ],
-        [
-          48.86626,
-          2.422722
-        ],
-        [
-          48.866197,
-          2.422457
-        ],
-        [
-          48.865935,
-          2.421324
-        ],
-        [
-          48.865773,
-          2.420475
         ]
       ]
     }
