@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T10:14:40Z",
+  "updated_at": "2026-08-14T11:10:24Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -1789,12 +1789,12 @@
           "lat": 48.918738,
           "lng": 2.357347,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Securite)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "securite",
+          "fermeture": "Securite",
           "road": "A13",
           "sens": "↓ Province",
           "pr": "PR09+0800 → PR10+0300",
@@ -2033,9 +2033,33 @@
           ]
         }
       ],
-      "congestion": 13,
+      "congestion": 16,
       "status": "green",
-      "evenements": [],
+      "evenements": [
+        {
+          "id": "500560826",
+          "lat": 48.918738,
+          "lng": 2.357347,
+          "line": "9517",
+          "type": "IncidentPanne",
+          "desc": "",
+          "date": "2026-08-14T12:49:27",
+          "road": "11000029",
+          "sens": "↓ Province",
+          "pr_debut": "PR10+0",
+          "pr_fin": "PR10+0",
+          "coords": [
+            [
+              48.920529,
+              2.35722
+            ],
+            [
+              48.918738,
+              2.357347
+            ]
+          ]
+        }
+      ],
       "aller": {
         "segments": [
           {
@@ -2173,12 +2197,12 @@
             "lat": 48.918738,
             "lng": 2.357347,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Securite)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "securite",
+            "fermeture": "Securite",
             "road": "A13",
             "sens": "↓ Province",
             "pr": "PR09+0800 → PR10+0300",
@@ -2195,7 +2219,7 @@
             ]
           }
         ],
-        "congestion": 10,
+        "congestion": 27,
         "status": "green"
       },
       "retour": {
@@ -4144,9 +4168,9 @@
           "lat": 48.940066,
           "lng": 2.43068,
           "line": "350",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
+          "status": "unknown",
+          "label": "bouchon",
+          "congestion": 0,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -5298,6 +5322,53 @@
               2.431649
             ]
           ]
+        },
+        {
+          "id": "15099473",
+          "lat": 48.940066,
+          "lng": 2.43068,
+          "line": "350",
+          "type": "Bouchon",
+          "desc": "",
+          "date": "2026-08-14T12:46:00",
+          "road": "11000016",
+          "sens": "⟲ Ext",
+          "pr_debut": "PR23+1070",
+          "pr_fin": "PR23+240",
+          "coords": [
+            [
+              49.128395,
+              2.254861
+            ],
+            [
+              49.127567,
+              2.254666
+            ],
+            [
+              49.127346,
+              2.254385
+            ],
+            [
+              49.127346,
+              2.254012
+            ],
+            [
+              49.127499,
+              2.253647
+            ],
+            [
+              49.128199,
+              2.253534
+            ],
+            [
+              48.941023,
+              2.431513
+            ],
+            [
+              48.940066,
+              2.43068
+            ]
+          ]
         }
       ],
       "aller": {
@@ -5593,9 +5664,9 @@
             "lat": 48.940066,
             "lng": 2.43068,
             "line": "350",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
+            "status": "unknown",
+            "label": "bouchon",
+            "congestion": 0,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -6375,7 +6446,7 @@
             ]
           }
         ],
-        "congestion": 15,
+        "congestion": 16,
         "status": "green"
       }
     },
@@ -8741,9 +8812,9 @@
       "lat": 48.940066,
       "lng": 2.43068,
       "line": "350",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
+      "status": "unknown",
+      "label": "bouchon",
+      "congestion": 0,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11923,12 +11994,12 @@
       "lat": 48.918738,
       "lng": 2.357347,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Securite)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "securite",
+      "fermeture": "Securite",
       "road": "A13",
       "sens": "↓ Province",
       "pr": "PR09+0800 → PR10+0300",
@@ -12457,6 +12528,76 @@
         [
           48.940952,
           2.431649
+        ]
+      ]
+    },
+    {
+      "id": "15099473",
+      "lat": 48.940066,
+      "lng": 2.43068,
+      "line": "350",
+      "type": "Bouchon",
+      "desc": "",
+      "date": "2026-08-14T12:46:00",
+      "road": "11000016",
+      "sens": "⟲ Ext",
+      "pr_debut": "PR23+1070",
+      "pr_fin": "PR23+240",
+      "coords": [
+        [
+          49.128395,
+          2.254861
+        ],
+        [
+          49.127567,
+          2.254666
+        ],
+        [
+          49.127346,
+          2.254385
+        ],
+        [
+          49.127346,
+          2.254012
+        ],
+        [
+          49.127499,
+          2.253647
+        ],
+        [
+          49.128199,
+          2.253534
+        ],
+        [
+          48.941023,
+          2.431513
+        ],
+        [
+          48.940066,
+          2.43068
+        ]
+      ]
+    },
+    {
+      "id": "500560826",
+      "lat": 48.918738,
+      "lng": 2.357347,
+      "line": "9517",
+      "type": "IncidentPanne",
+      "desc": "",
+      "date": "2026-08-14T12:49:27",
+      "road": "11000029",
+      "sens": "↓ Province",
+      "pr_debut": "PR10+0",
+      "pr_fin": "PR10+0",
+      "coords": [
+        [
+          48.920529,
+          2.35722
+        ],
+        [
+          48.918738,
+          2.357347
         ]
       ]
     }
