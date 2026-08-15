@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T20:31:55Z",
+  "updated_at": "2026-08-15T20:52:51Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -789,12 +789,12 @@
           "lat": 48.921841,
           "lng": 2.365615,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "S",
           "sens": "",
           "pr": "",
@@ -2033,8 +2033,8 @@
           ]
         }
       ],
-      "congestion": 0,
-      "status": "green",
+      "congestion": 95,
+      "status": "red",
       "evenements": [],
       "aller": {
         "segments": [
@@ -2985,12 +2985,12 @@
             "lat": 48.921841,
             "lng": 2.365615,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "S",
             "sens": "",
             "pr": "",
@@ -4073,8 +4073,8 @@
             ]
           }
         ],
-        "congestion": 0,
-        "status": "green"
+        "congestion": 95,
+        "status": "red"
       }
     },
     "350": {
@@ -5042,12 +5042,12 @@
           "lat": 48.969855,
           "lng": 2.50254,
           "line": "350",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Travaux)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "nocturne",
+          "fermeture": "Travaux",
           "road": "N13",
           "sens": "",
           "pr": "",
@@ -5146,9 +5146,53 @@
           ]
         }
       ],
-      "congestion": 0,
-      "status": "green",
-      "evenements": [],
+      "congestion": 95,
+      "status": "red",
+      "evenements": [
+        {
+          "id": "500549957",
+          "lat": 48.969855,
+          "lng": 2.50254,
+          "line": "350",
+          "type": "Travaux",
+          "desc": "",
+          "date": "2026-03-17T12:34:53",
+          "road": "11001050",
+          "sens": "W",
+          "pr_debut": "PR8+332",
+          "pr_fin": "PR7+612",
+          "coords": [
+            [
+              48.971111,
+              2.498488
+            ],
+            [
+              48.971018,
+              2.498875
+            ],
+            [
+              48.969855,
+              2.50254
+            ],
+            [
+              48.968929,
+              2.505557
+            ],
+            [
+              48.968579,
+              2.506789
+            ],
+            [
+              48.85386,
+              2.333128
+            ],
+            [
+              48.853788,
+              2.333455
+            ]
+          ]
+        }
+      ],
       "aller": {
         "segments": [
           {
@@ -6190,12 +6234,12 @@
             "lat": 48.969855,
             "lng": 2.50254,
             "line": "350",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Travaux)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "nocturne",
+            "fermeture": "Travaux",
             "road": "N13",
             "sens": "",
             "pr": "",
@@ -6224,8 +6268,8 @@
             ]
           }
         ],
-        "congestion": 0,
-        "status": "green"
+        "congestion": 95,
+        "status": "red"
       }
     },
     "9509": {
@@ -9348,12 +9392,12 @@
       "lat": 48.921841,
       "lng": 2.365615,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "S",
       "sens": "",
       "pr": "",
@@ -11798,12 +11842,12 @@
       "lat": 48.969855,
       "lng": 2.50254,
       "line": "350",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Travaux)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "nocturne",
+      "fermeture": "Travaux",
       "road": "N13",
       "sens": "",
       "pr": "",
@@ -12158,5 +12202,49 @@
       ]
     }
   ],
-  "evenements": []
+  "evenements": [
+    {
+      "id": "500549957",
+      "lat": 48.969855,
+      "lng": 2.50254,
+      "line": "350",
+      "type": "Travaux",
+      "desc": "",
+      "date": "2026-03-17T12:34:53",
+      "road": "11001050",
+      "sens": "W",
+      "pr_debut": "PR8+332",
+      "pr_fin": "PR7+612",
+      "coords": [
+        [
+          48.971111,
+          2.498488
+        ],
+        [
+          48.971018,
+          2.498875
+        ],
+        [
+          48.969855,
+          2.50254
+        ],
+        [
+          48.968929,
+          2.505557
+        ],
+        [
+          48.968579,
+          2.506789
+        ],
+        [
+          48.85386,
+          2.333128
+        ],
+        [
+          48.853788,
+          2.333455
+        ]
+      ]
+    }
+  ]
 }
