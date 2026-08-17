@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T11:39:26Z",
+  "updated_at": "2026-08-17T11:58:51Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -5203,7 +5203,7 @@
           "road": "11000016",
           "sens": "⟲ Ext",
           "pr_debut": "PR30+379",
-          "pr_fin": "PR27+800",
+          "pr_fin": "PR27+426",
           "coords": [
             [
               48.5506,
@@ -5320,6 +5320,26 @@
             [
               49.174841,
               2.226288
+            ],
+            [
+              48.865008,
+              2.413122
+            ],
+            [
+              48.863231,
+              2.413233
+            ],
+            [
+              48.538609,
+              1.88434
+            ],
+            [
+              48.537342,
+              1.877923
+            ],
+            [
+              48.535545,
+              1.87136
             ]
           ]
         }
@@ -6996,9 +7016,9 @@
           "lat": 48.863231,
           "lng": 2.413233,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
+          "status": "unknown",
+          "label": "bouchon",
+          "congestion": 0,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7814,9 +7834,9 @@
             "lat": 48.863231,
             "lng": 2.413233,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
+            "status": "unknown",
+            "label": "bouchon",
+            "congestion": 0,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -9839,9 +9859,9 @@
       "lat": 48.863231,
       "lng": 2.413233,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
+      "status": "unknown",
+      "label": "bouchon",
+      "congestion": 0,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12388,7 +12408,7 @@
       "road": "11000016",
       "sens": "⟲ Ext",
       "pr_debut": "PR30+379",
-      "pr_fin": "PR27+800",
+      "pr_fin": "PR27+426",
       "coords": [
         [
           48.5506,
@@ -12505,6 +12525,26 @@
         [
           49.174841,
           2.226288
+        ],
+        [
+          48.865008,
+          2.413122
+        ],
+        [
+          48.863231,
+          2.413233
+        ],
+        [
+          48.538609,
+          1.88434
+        ],
+        [
+          48.537342,
+          1.877923
+        ],
+        [
+          48.535545,
+          1.87136
         ]
       ]
     }
