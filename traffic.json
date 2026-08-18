@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T09:41:13Z",
+  "updated_at": "2026-08-18T10:03:41Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -4680,9 +4680,9 @@
           "lat": 48.940952,
           "lng": 2.431649,
           "line": "350",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -5189,29 +5189,6 @@
             [
               48.853788,
               2.333455
-            ]
-          ]
-        },
-        {
-          "id": "15101248",
-          "lat": 48.940952,
-          "lng": 2.431649,
-          "line": "350",
-          "type": "Bouchon",
-          "desc": "A86-E/29+1030/29+0830\n",
-          "date": "2026-08-18T07:24:40",
-          "road": "11000016",
-          "sens": "⟲ Ext",
-          "pr_debut": "PR29+300",
-          "pr_fin": "PR29+0",
-          "coords": [
-            [
-              48.940023,
-              2.430767
-            ],
-            [
-              48.940952,
-              2.431649
             ]
           ]
         }
@@ -5963,9 +5940,9 @@
             "lat": 48.940952,
             "lng": 2.431649,
             "line": "350",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -10887,9 +10864,9 @@
       "lat": 48.940952,
       "lng": 2.431649,
       "line": "350",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12266,29 +12243,6 @@
         [
           48.853788,
           2.333455
-        ]
-      ]
-    },
-    {
-      "id": "15101248",
-      "lat": 48.940952,
-      "lng": 2.431649,
-      "line": "350",
-      "type": "Bouchon",
-      "desc": "A86-E/29+1030/29+0830\n",
-      "date": "2026-08-18T07:24:40",
-      "road": "11000016",
-      "sens": "⟲ Ext",
-      "pr_debut": "PR29+300",
-      "pr_fin": "PR29+0",
-      "coords": [
-        [
-          48.940023,
-          2.430767
-        ],
-        [
-          48.940952,
-          2.431649
         ]
       ]
     }
