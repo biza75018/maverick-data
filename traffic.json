@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T18:58:25Z",
+  "updated_at": "2026-08-18T19:30:52Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -9,12 +9,12 @@
           "lat": 48.934451,
           "lng": 2.268949,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟳ Int",
           "pr": "PR19+0610 → PR19+0800",
@@ -89,12 +89,12 @@
           "lat": 48.934282,
           "lng": 2.266872,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟳ Int",
           "pr": "PR19+0086 → PR19+0350",
@@ -173,12 +173,12 @@
           "lat": 48.934631,
           "lng": 2.269224,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟲ Ext",
           "pr": "PR14+0950 → PR14+0450",
@@ -241,12 +241,12 @@
           "lat": 48.922049,
           "lng": 2.365934,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟲ Ext",
           "pr": "PR20+0710 → PR20+0045",
@@ -437,12 +437,12 @@
           "lat": 48.934234,
           "lng": 2.266951,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟳ Int",
           "pr": "PR19+0350 → PR19+0610",
@@ -581,12 +581,12 @@
           "lat": 48.9335,
           "lng": 2.275534,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟳ Int",
           "pr": "PR20+0064 → PR20+0500",
@@ -717,12 +717,12 @@
           "lat": 48.934061,
           "lng": 2.277601,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟲ Ext",
           "pr": "PR15+0516 → PR15+0250",
@@ -2033,9 +2033,685 @@
           ]
         }
       ],
-      "congestion": 13,
-      "status": "green",
-      "evenements": [],
+      "congestion": 32,
+      "status": "orange",
+      "evenements": [
+        {
+          "id": "600077003",
+          "lat": 48.934282,
+          "lng": 2.266872,
+          "line": "9517",
+          "type": "Travaux",
+          "desc": ".",
+          "date": "2026-08-18T21:24:42",
+          "road": "11000016",
+          "sens": "⟳ Int",
+          "pr_debut": "PR12+575",
+          "pr_fin": "PR22+825",
+          "coords": [
+            [
+              48.835811,
+              2.541353
+            ],
+            [
+              48.835872,
+              2.542154
+            ],
+            [
+              48.835921,
+              2.54285
+            ],
+            [
+              48.835908,
+              2.546603
+            ],
+            [
+              48.71089,
+              2.599288
+            ],
+            [
+              48.708118,
+              2.598721
+            ],
+            [
+              48.706441,
+              2.598262
+            ],
+            [
+              48.705485,
+              2.597843
+            ],
+            [
+              48.704606,
+              2.597229
+            ],
+            [
+              48.790948,
+              2.109484
+            ],
+            [
+              48.791012,
+              2.109327
+            ],
+            [
+              48.791114,
+              2.109285
+            ],
+            [
+              48.791197,
+              2.109368
+            ],
+            [
+              48.791216,
+              2.109561
+            ],
+            [
+              48.873584,
+              2.292783
+            ],
+            [
+              48.873562,
+              2.292185
+            ],
+            [
+              48.873094,
+              2.287566
+            ],
+            [
+              48.871774,
+              2.27581
+            ],
+            [
+              48.829739,
+              2.710534
+            ],
+            [
+              48.829957,
+              2.706681
+            ],
+            [
+              48.85336,
+              2.332696
+            ],
+            [
+              48.85386,
+              2.333128
+            ],
+            [
+              48.887733,
+              2.895148
+            ],
+            [
+              48.887369,
+              2.894806
+            ],
+            [
+              48.886716,
+              2.894481
+            ],
+            [
+              48.886322,
+              2.893826
+            ],
+            [
+              48.88611,
+              2.893242
+            ],
+            [
+              48.886022,
+              2.892172
+            ],
+            [
+              48.885912,
+              2.891547
+            ],
+            [
+              48.885728,
+              2.89113
+            ],
+            [
+              48.885392,
+              2.89071
+            ],
+            [
+              48.884881,
+              2.890473
+            ],
+            [
+              48.884493,
+              2.890508
+            ],
+            [
+              48.884233,
+              2.890662
+            ],
+            [
+              48.883873,
+              2.89108
+            ],
+            [
+              48.883596,
+              2.891753
+            ],
+            [
+              48.88353,
+              2.892205
+            ],
+            [
+              48.883592,
+              2.89279
+            ],
+            [
+              48.883716,
+              2.893306
+            ],
+            [
+              48.883915,
+              2.893671
+            ],
+            [
+              48.884124,
+              2.893963
+            ],
+            [
+              48.884548,
+              2.894257
+            ],
+            [
+              48.884988,
+              2.894507
+            ],
+            [
+              48.885466,
+              2.89492
+            ],
+            [
+              48.88767,
+              2.898568
+            ],
+            [
+              48.891102,
+              2.903765
+            ],
+            [
+              48.888492,
+              2.899288
+            ],
+            [
+              48.888246,
+              2.898602
+            ],
+            [
+              48.888136,
+              2.89797
+            ],
+            [
+              48.888183,
+              2.897265
+            ],
+            [
+              48.888363,
+              2.896629
+            ],
+            [
+              48.88854,
+              2.896356
+            ],
+            [
+              48.888939,
+              2.895937
+            ],
+            [
+              48.889385,
+              2.895764
+            ],
+            [
+              48.890468,
+              2.895787
+            ],
+            [
+              48.890774,
+              2.895625
+            ],
+            [
+              48.852568,
+              2.333103
+            ],
+            [
+              48.852836,
+              2.335072
+            ],
+            [
+              48.853195,
+              2.335824
+            ],
+            [
+              48.837147,
+              2.318227
+            ],
+            [
+              48.843019,
+              2.312772
+            ],
+            [
+              48.892731,
+              2.395514
+            ],
+            [
+              48.895399,
+              2.394798
+            ],
+            [
+              48.897515,
+              2.394311
+            ],
+            [
+              48.898147,
+              2.394075
+            ],
+            [
+              48.898626,
+              2.393776
+            ],
+            [
+              48.899129,
+              2.393294
+            ],
+            [
+              48.899576,
+              2.392724
+            ],
+            [
+              48.899868,
+              2.392143
+            ],
+            [
+              49.03498,
+              2.099026
+            ],
+            [
+              49.034785,
+              2.099422
+            ],
+            [
+              49.034519,
+              2.100134
+            ],
+            [
+              49.034158,
+              2.100759
+            ],
+            [
+              49.038722,
+              2.086466
+            ],
+            [
+              49.037445,
+              2.09012
+            ],
+            [
+              49.036091,
+              2.094889
+            ],
+            [
+              49.03498,
+              2.099026
+            ],
+            [
+              48.901406,
+              2.20251
+            ],
+            [
+              48.902055,
+              2.20351
+            ],
+            [
+              48.902681,
+              2.204607
+            ],
+            [
+              48.903337,
+              2.205858
+            ],
+            [
+              48.622212,
+              2.464175
+            ],
+            [
+              48.623208,
+              2.466584
+            ],
+            [
+              48.624385,
+              2.469858
+            ],
+            [
+              48.844471,
+              2.827984
+            ],
+            [
+              48.842265,
+              2.824339
+            ],
+            [
+              48.840938,
+              2.82193
+            ],
+            [
+              48.903337,
+              2.205858
+            ],
+            [
+              48.904577,
+              2.208085
+            ],
+            [
+              48.905017,
+              2.208873
+            ],
+            [
+              48.915087,
+              2.220196
+            ],
+            [
+              48.9165,
+              2.222073
+            ],
+            [
+              48.906562,
+              2.193534
+            ],
+            [
+              48.908216,
+              2.191142
+            ],
+            [
+              48.90918,
+              2.189629
+            ],
+            [
+              48.909576,
+              2.1889
+            ],
+            [
+              48.910104,
+              2.187864
+            ],
+            [
+              48.871504,
+              2.323089
+            ],
+            [
+              48.871774,
+              2.322352
+            ],
+            [
+              48.871721,
+              2.32209
+            ],
+            [
+              48.932363,
+              2.248458
+            ],
+            [
+              48.932605,
+              2.249314
+            ],
+            [
+              48.933104,
+              2.251303
+            ],
+            [
+              48.887072,
+              2.252723
+            ],
+            [
+              48.886145,
+              2.255922
+            ],
+            [
+              48.933773,
+              2.254475
+            ],
+            [
+              48.934558,
+              2.258382
+            ],
+            [
+              48.934998,
+              2.26638
+            ],
+            [
+              48.934842,
+              2.26688
+            ],
+            [
+              48.934707,
+              2.267144
+            ],
+            [
+              48.934551,
+              2.26723
+            ],
+            [
+              48.934438,
+              2.267203
+            ],
+            [
+              48.934282,
+              2.266872
+            ],
+            [
+              48.934458,
+              2.266003
+            ],
+            [
+              48.93461,
+              2.265821
+            ],
+            [
+              48.934754,
+              2.265816
+            ],
+            [
+              48.934979,
+              2.265898
+            ],
+            [
+              48.934134,
+              2.265148
+            ],
+            [
+              48.934327,
+              2.265395
+            ],
+            [
+              48.934409,
+              2.265545
+            ],
+            [
+              48.934428,
+              2.265784
+            ],
+            [
+              48.9344,
+              2.266023
+            ],
+            [
+              48.9344,
+              2.266037
+            ],
+            [
+              48.934237,
+              2.266677
+            ],
+            [
+              48.934234,
+              2.266951
+            ],
+            [
+              48.934302,
+              2.267238
+            ],
+            [
+              48.934418,
+              2.267428
+            ],
+            [
+              48.934543,
+              2.267598
+            ],
+            [
+              48.934602,
+              2.267765
+            ],
+            [
+              48.934621,
+              2.268011
+            ],
+            [
+              48.934451,
+              2.268949
+            ],
+            [
+              48.934998,
+              2.26638
+            ],
+            [
+              48.934451,
+              2.268949
+            ],
+            [
+              48.600533,
+              2.062287
+            ],
+            [
+              48.599751,
+              2.05985
+            ],
+            [
+              48.599248,
+              2.058415
+            ],
+            [
+              48.59845,
+              2.056287
+            ],
+            [
+              48.597987,
+              2.055111
+            ],
+            [
+              48.597506,
+              2.053978
+            ],
+            [
+              48.596493,
+              2.051714
+            ],
+            [
+              48.595981,
+              2.050586
+            ],
+            [
+              48.594938,
+              2.048397
+            ],
+            [
+              48.93356,
+              2.273803
+            ],
+            [
+              48.933466,
+              2.274773
+            ],
+            [
+              48.9335,
+              2.275534
+            ],
+            [
+              48.933649,
+              2.276529
+            ],
+            [
+              48.933911,
+              2.277894
+            ],
+            [
+              49.121937,
+              2.252996
+            ],
+            [
+              49.124568,
+              2.253544
+            ],
+            [
+              49.125749,
+              2.253941
+            ],
+            [
+              48.93554,
+              2.615453
+            ],
+            [
+              48.934996,
+              2.604518
+            ],
+            [
+              48.951933,
+              2.27961
+            ],
+            [
+              48.950252,
+              2.280033
+            ],
+            [
+              48.949669,
+              2.280199
+            ],
+            [
+              48.949053,
+              2.280409
+            ],
+            [
+              48.948661,
+              2.280563
+            ],
+            [
+              48.948181,
+              2.280814
+            ],
+            [
+              48.934996,
+              2.604518
+            ],
+            [
+              48.934379,
+              2.599548
+            ],
+            [
+              48.933353,
+              2.589609
+            ],
+            [
+              48.933879,
+              2.585335
+            ],
+            [
+              48.934663,
+              2.579378
+            ],
+            [
+              48.934389,
+              2.572814
+            ],
+            [
+              48.933997,
+              2.569403
+            ]
+          ]
+        }
+      ],
       "aller": {
         "segments": [
           {
@@ -2205,12 +2881,12 @@
             "lat": 48.934451,
             "lng": 2.268949,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟳ Int",
             "pr": "PR19+0610 → PR19+0800",
@@ -2285,12 +2961,12 @@
             "lat": 48.934282,
             "lng": 2.266872,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟳ Int",
             "pr": "PR19+0086 → PR19+0350",
@@ -2369,12 +3045,12 @@
             "lat": 48.934631,
             "lng": 2.269224,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟲ Ext",
             "pr": "PR14+0950 → PR14+0450",
@@ -2437,12 +3113,12 @@
             "lat": 48.922049,
             "lng": 2.365934,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟲ Ext",
             "pr": "PR20+0710 → PR20+0045",
@@ -2633,12 +3309,12 @@
             "lat": 48.934234,
             "lng": 2.266951,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟳ Int",
             "pr": "PR19+0350 → PR19+0610",
@@ -2777,12 +3453,12 @@
             "lat": 48.9335,
             "lng": 2.275534,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟳ Int",
             "pr": "PR20+0064 → PR20+0500",
@@ -2913,12 +3589,12 @@
             "lat": 48.934061,
             "lng": 2.277601,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟲ Ext",
             "pr": "PR15+0516 → PR15+0250",
@@ -4073,8 +4749,8 @@
             ]
           }
         ],
-        "congestion": 13,
-        "status": "green"
+        "congestion": 36,
+        "status": "orange"
       }
     },
     "350": {
@@ -4144,12 +4820,12 @@
           "lat": 48.940066,
           "lng": 2.43068,
           "line": "350",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟲ Ext",
           "pr": "PR23+0830 → PR23+0500",
@@ -5146,7 +5822,7 @@
           ]
         }
       ],
-      "congestion": 14,
+      "congestion": 17,
       "status": "green",
       "evenements": [
         {
@@ -6073,12 +6749,12 @@
             "lat": 48.940066,
             "lng": 2.43068,
             "line": "350",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟲ Ext",
             "pr": "PR23+0830 → PR23+0500",
@@ -6855,7 +7531,7 @@
             ]
           }
         ],
-        "congestion": 15,
+        "congestion": 20,
         "status": "green"
       }
     },
@@ -7478,12 +8154,12 @@
           "lat": 48.858033,
           "lng": 2.414029,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟲ Ext",
           "pr": "PR17+0941 → PR17+0440",
@@ -7712,12 +8388,12 @@
           "lat": 48.906732,
           "lng": 2.456786,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Ferme)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "fermeture",
+          "fermeture": "Ferme",
           "road": "A86",
           "sens": "⟲ Ext",
           "pr": "PR35+0157 → PR35+0105",
@@ -8016,9 +8692,105 @@
           ]
         }
       ],
-      "congestion": 10,
+      "congestion": 19,
       "status": "green",
-      "evenements": [],
+      "evenements": [
+        {
+          "id": "600077005",
+          "lat": 48.906732,
+          "lng": 2.456786,
+          "line": "351",
+          "type": "Travaux",
+          "desc": "",
+          "date": "2026-08-18T21:25:40",
+          "road": "11000016",
+          "sens": "⟲ Ext",
+          "pr_debut": "PR36+676",
+          "pr_fin": "PR35+0",
+          "coords": [
+            [
+              48.884913,
+              2.165466
+            ],
+            [
+              48.885121,
+              2.165496
+            ],
+            [
+              48.885357,
+              2.165459
+            ],
+            [
+              48.885579,
+              2.165494
+            ],
+            [
+              48.886028,
+              2.165592
+            ],
+            [
+              48.886252,
+              2.165726
+            ],
+            [
+              48.886369,
+              2.165824
+            ],
+            [
+              48.886429,
+              2.165918
+            ],
+            [
+              48.886528,
+              2.166144
+            ],
+            [
+              48.813078,
+              2.448904
+            ],
+            [
+              48.813414,
+              2.448893
+            ],
+            [
+              48.813738,
+              2.448953
+            ],
+            [
+              48.814127,
+              2.449085
+            ],
+            [
+              48.814511,
+              2.449307
+            ],
+            [
+              48.81499,
+              2.449742
+            ],
+            [
+              48.907028,
+              2.455493
+            ],
+            [
+              48.906732,
+              2.456786
+            ],
+            [
+              48.817881,
+              2.456225
+            ],
+            [
+              48.818412,
+              2.457113
+            ],
+            [
+              48.818659,
+              2.457389
+            ]
+          ]
+        }
+      ],
       "aller": {
         "segments": [
           {
@@ -8296,12 +9068,12 @@
             "lat": 48.858033,
             "lng": 2.414029,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟲ Ext",
             "pr": "PR17+0941 → PR17+0440",
@@ -8478,12 +9250,12 @@
             "lat": 48.906732,
             "lng": 2.456786,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Ferme)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "fermeture",
+            "fermeture": "Ferme",
             "road": "A86",
             "sens": "⟲ Ext",
             "pr": "PR35+0157 → PR35+0105",
@@ -8756,7 +9528,7 @@
             ]
           }
         ],
-        "congestion": 10,
+        "congestion": 21,
         "status": "green"
       }
     }
@@ -8767,12 +9539,12 @@
       "lat": 48.934451,
       "lng": 2.268949,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟳ Int",
       "pr": "PR19+0610 → PR19+0800",
@@ -8881,12 +9653,12 @@
       "lat": 48.934282,
       "lng": 2.266872,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟳ Int",
       "pr": "PR19+0086 → PR19+0350",
@@ -8965,12 +9737,12 @@
       "lat": 48.934631,
       "lng": 2.269224,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟲ Ext",
       "pr": "PR14+0950 → PR14+0450",
@@ -9059,12 +9831,12 @@
       "lat": 48.922049,
       "lng": 2.365934,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟲ Ext",
       "pr": "PR20+0710 → PR20+0045",
@@ -9221,12 +9993,12 @@
       "lat": 48.940066,
       "lng": 2.43068,
       "line": "350",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟲ Ext",
       "pr": "PR23+0830 → PR23+0500",
@@ -9337,12 +10109,12 @@
       "lat": 48.934234,
       "lng": 2.266951,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟳ Int",
       "pr": "PR19+0350 → PR19+0610",
@@ -9745,12 +10517,12 @@
       "lat": 48.9335,
       "lng": 2.275534,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟳ Int",
       "pr": "PR20+0064 → PR20+0500",
@@ -9907,12 +10679,12 @@
       "lat": 48.934061,
       "lng": 2.277601,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟲ Ext",
       "pr": "PR15+0516 → PR15+0250",
@@ -10321,12 +11093,12 @@
       "lat": 48.858033,
       "lng": 2.414029,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟲ Ext",
       "pr": "PR17+0941 → PR17+0440",
@@ -11553,12 +12325,12 @@
       "lat": 48.906732,
       "lng": 2.456786,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Ferme)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "fermeture",
+      "fermeture": "Ferme",
       "road": "A86",
       "sens": "⟲ Ext",
       "pr": "PR35+0157 → PR35+0105",
@@ -13417,6 +14189,776 @@
         [
           48.912769,
           2.217836
+        ]
+      ]
+    },
+    {
+      "id": "600077003",
+      "lat": 48.934282,
+      "lng": 2.266872,
+      "line": "9517",
+      "type": "Travaux",
+      "desc": ".",
+      "date": "2026-08-18T21:24:42",
+      "road": "11000016",
+      "sens": "⟳ Int",
+      "pr_debut": "PR12+575",
+      "pr_fin": "PR22+825",
+      "coords": [
+        [
+          48.835811,
+          2.541353
+        ],
+        [
+          48.835872,
+          2.542154
+        ],
+        [
+          48.835921,
+          2.54285
+        ],
+        [
+          48.835908,
+          2.546603
+        ],
+        [
+          48.71089,
+          2.599288
+        ],
+        [
+          48.708118,
+          2.598721
+        ],
+        [
+          48.706441,
+          2.598262
+        ],
+        [
+          48.705485,
+          2.597843
+        ],
+        [
+          48.704606,
+          2.597229
+        ],
+        [
+          48.790948,
+          2.109484
+        ],
+        [
+          48.791012,
+          2.109327
+        ],
+        [
+          48.791114,
+          2.109285
+        ],
+        [
+          48.791197,
+          2.109368
+        ],
+        [
+          48.791216,
+          2.109561
+        ],
+        [
+          48.873584,
+          2.292783
+        ],
+        [
+          48.873562,
+          2.292185
+        ],
+        [
+          48.873094,
+          2.287566
+        ],
+        [
+          48.871774,
+          2.27581
+        ],
+        [
+          48.829739,
+          2.710534
+        ],
+        [
+          48.829957,
+          2.706681
+        ],
+        [
+          48.85336,
+          2.332696
+        ],
+        [
+          48.85386,
+          2.333128
+        ],
+        [
+          48.887733,
+          2.895148
+        ],
+        [
+          48.887369,
+          2.894806
+        ],
+        [
+          48.886716,
+          2.894481
+        ],
+        [
+          48.886322,
+          2.893826
+        ],
+        [
+          48.88611,
+          2.893242
+        ],
+        [
+          48.886022,
+          2.892172
+        ],
+        [
+          48.885912,
+          2.891547
+        ],
+        [
+          48.885728,
+          2.89113
+        ],
+        [
+          48.885392,
+          2.89071
+        ],
+        [
+          48.884881,
+          2.890473
+        ],
+        [
+          48.884493,
+          2.890508
+        ],
+        [
+          48.884233,
+          2.890662
+        ],
+        [
+          48.883873,
+          2.89108
+        ],
+        [
+          48.883596,
+          2.891753
+        ],
+        [
+          48.88353,
+          2.892205
+        ],
+        [
+          48.883592,
+          2.89279
+        ],
+        [
+          48.883716,
+          2.893306
+        ],
+        [
+          48.883915,
+          2.893671
+        ],
+        [
+          48.884124,
+          2.893963
+        ],
+        [
+          48.884548,
+          2.894257
+        ],
+        [
+          48.884988,
+          2.894507
+        ],
+        [
+          48.885466,
+          2.89492
+        ],
+        [
+          48.88767,
+          2.898568
+        ],
+        [
+          48.891102,
+          2.903765
+        ],
+        [
+          48.888492,
+          2.899288
+        ],
+        [
+          48.888246,
+          2.898602
+        ],
+        [
+          48.888136,
+          2.89797
+        ],
+        [
+          48.888183,
+          2.897265
+        ],
+        [
+          48.888363,
+          2.896629
+        ],
+        [
+          48.88854,
+          2.896356
+        ],
+        [
+          48.888939,
+          2.895937
+        ],
+        [
+          48.889385,
+          2.895764
+        ],
+        [
+          48.890468,
+          2.895787
+        ],
+        [
+          48.890774,
+          2.895625
+        ],
+        [
+          48.852568,
+          2.333103
+        ],
+        [
+          48.852836,
+          2.335072
+        ],
+        [
+          48.853195,
+          2.335824
+        ],
+        [
+          48.837147,
+          2.318227
+        ],
+        [
+          48.843019,
+          2.312772
+        ],
+        [
+          48.892731,
+          2.395514
+        ],
+        [
+          48.895399,
+          2.394798
+        ],
+        [
+          48.897515,
+          2.394311
+        ],
+        [
+          48.898147,
+          2.394075
+        ],
+        [
+          48.898626,
+          2.393776
+        ],
+        [
+          48.899129,
+          2.393294
+        ],
+        [
+          48.899576,
+          2.392724
+        ],
+        [
+          48.899868,
+          2.392143
+        ],
+        [
+          49.03498,
+          2.099026
+        ],
+        [
+          49.034785,
+          2.099422
+        ],
+        [
+          49.034519,
+          2.100134
+        ],
+        [
+          49.034158,
+          2.100759
+        ],
+        [
+          49.038722,
+          2.086466
+        ],
+        [
+          49.037445,
+          2.09012
+        ],
+        [
+          49.036091,
+          2.094889
+        ],
+        [
+          49.03498,
+          2.099026
+        ],
+        [
+          48.901406,
+          2.20251
+        ],
+        [
+          48.902055,
+          2.20351
+        ],
+        [
+          48.902681,
+          2.204607
+        ],
+        [
+          48.903337,
+          2.205858
+        ],
+        [
+          48.622212,
+          2.464175
+        ],
+        [
+          48.623208,
+          2.466584
+        ],
+        [
+          48.624385,
+          2.469858
+        ],
+        [
+          48.844471,
+          2.827984
+        ],
+        [
+          48.842265,
+          2.824339
+        ],
+        [
+          48.840938,
+          2.82193
+        ],
+        [
+          48.903337,
+          2.205858
+        ],
+        [
+          48.904577,
+          2.208085
+        ],
+        [
+          48.905017,
+          2.208873
+        ],
+        [
+          48.915087,
+          2.220196
+        ],
+        [
+          48.9165,
+          2.222073
+        ],
+        [
+          48.906562,
+          2.193534
+        ],
+        [
+          48.908216,
+          2.191142
+        ],
+        [
+          48.90918,
+          2.189629
+        ],
+        [
+          48.909576,
+          2.1889
+        ],
+        [
+          48.910104,
+          2.187864
+        ],
+        [
+          48.871504,
+          2.323089
+        ],
+        [
+          48.871774,
+          2.322352
+        ],
+        [
+          48.871721,
+          2.32209
+        ],
+        [
+          48.932363,
+          2.248458
+        ],
+        [
+          48.932605,
+          2.249314
+        ],
+        [
+          48.933104,
+          2.251303
+        ],
+        [
+          48.887072,
+          2.252723
+        ],
+        [
+          48.886145,
+          2.255922
+        ],
+        [
+          48.933773,
+          2.254475
+        ],
+        [
+          48.934558,
+          2.258382
+        ],
+        [
+          48.934998,
+          2.26638
+        ],
+        [
+          48.934842,
+          2.26688
+        ],
+        [
+          48.934707,
+          2.267144
+        ],
+        [
+          48.934551,
+          2.26723
+        ],
+        [
+          48.934438,
+          2.267203
+        ],
+        [
+          48.934282,
+          2.266872
+        ],
+        [
+          48.934458,
+          2.266003
+        ],
+        [
+          48.93461,
+          2.265821
+        ],
+        [
+          48.934754,
+          2.265816
+        ],
+        [
+          48.934979,
+          2.265898
+        ],
+        [
+          48.934134,
+          2.265148
+        ],
+        [
+          48.934327,
+          2.265395
+        ],
+        [
+          48.934409,
+          2.265545
+        ],
+        [
+          48.934428,
+          2.265784
+        ],
+        [
+          48.9344,
+          2.266023
+        ],
+        [
+          48.9344,
+          2.266037
+        ],
+        [
+          48.934237,
+          2.266677
+        ],
+        [
+          48.934234,
+          2.266951
+        ],
+        [
+          48.934302,
+          2.267238
+        ],
+        [
+          48.934418,
+          2.267428
+        ],
+        [
+          48.934543,
+          2.267598
+        ],
+        [
+          48.934602,
+          2.267765
+        ],
+        [
+          48.934621,
+          2.268011
+        ],
+        [
+          48.934451,
+          2.268949
+        ],
+        [
+          48.934998,
+          2.26638
+        ],
+        [
+          48.934451,
+          2.268949
+        ],
+        [
+          48.600533,
+          2.062287
+        ],
+        [
+          48.599751,
+          2.05985
+        ],
+        [
+          48.599248,
+          2.058415
+        ],
+        [
+          48.59845,
+          2.056287
+        ],
+        [
+          48.597987,
+          2.055111
+        ],
+        [
+          48.597506,
+          2.053978
+        ],
+        [
+          48.596493,
+          2.051714
+        ],
+        [
+          48.595981,
+          2.050586
+        ],
+        [
+          48.594938,
+          2.048397
+        ],
+        [
+          48.93356,
+          2.273803
+        ],
+        [
+          48.933466,
+          2.274773
+        ],
+        [
+          48.9335,
+          2.275534
+        ],
+        [
+          48.933649,
+          2.276529
+        ],
+        [
+          48.933911,
+          2.277894
+        ],
+        [
+          49.121937,
+          2.252996
+        ],
+        [
+          49.124568,
+          2.253544
+        ],
+        [
+          49.125749,
+          2.253941
+        ],
+        [
+          48.93554,
+          2.615453
+        ],
+        [
+          48.934996,
+          2.604518
+        ],
+        [
+          48.951933,
+          2.27961
+        ],
+        [
+          48.950252,
+          2.280033
+        ],
+        [
+          48.949669,
+          2.280199
+        ],
+        [
+          48.949053,
+          2.280409
+        ],
+        [
+          48.948661,
+          2.280563
+        ],
+        [
+          48.948181,
+          2.280814
+        ],
+        [
+          48.934996,
+          2.604518
+        ],
+        [
+          48.934379,
+          2.599548
+        ],
+        [
+          48.933353,
+          2.589609
+        ],
+        [
+          48.933879,
+          2.585335
+        ],
+        [
+          48.934663,
+          2.579378
+        ],
+        [
+          48.934389,
+          2.572814
+        ],
+        [
+          48.933997,
+          2.569403
+        ]
+      ]
+    },
+    {
+      "id": "600077005",
+      "lat": 48.906732,
+      "lng": 2.456786,
+      "line": "351",
+      "type": "Travaux",
+      "desc": "",
+      "date": "2026-08-18T21:25:40",
+      "road": "11000016",
+      "sens": "⟲ Ext",
+      "pr_debut": "PR36+676",
+      "pr_fin": "PR35+0",
+      "coords": [
+        [
+          48.884913,
+          2.165466
+        ],
+        [
+          48.885121,
+          2.165496
+        ],
+        [
+          48.885357,
+          2.165459
+        ],
+        [
+          48.885579,
+          2.165494
+        ],
+        [
+          48.886028,
+          2.165592
+        ],
+        [
+          48.886252,
+          2.165726
+        ],
+        [
+          48.886369,
+          2.165824
+        ],
+        [
+          48.886429,
+          2.165918
+        ],
+        [
+          48.886528,
+          2.166144
+        ],
+        [
+          48.813078,
+          2.448904
+        ],
+        [
+          48.813414,
+          2.448893
+        ],
+        [
+          48.813738,
+          2.448953
+        ],
+        [
+          48.814127,
+          2.449085
+        ],
+        [
+          48.814511,
+          2.449307
+        ],
+        [
+          48.81499,
+          2.449742
+        ],
+        [
+          48.907028,
+          2.455493
+        ],
+        [
+          48.906732,
+          2.456786
+        ],
+        [
+          48.817881,
+          2.456225
+        ],
+        [
+          48.818412,
+          2.457113
+        ],
+        [
+          48.818659,
+          2.457389
         ]
       ]
     }
