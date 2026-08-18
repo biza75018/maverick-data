@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T20:09:40Z",
+  "updated_at": "2026-08-18T20:38:59Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -1541,12 +1541,12 @@
           "lat": 48.936356,
           "lng": 2.406126,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Travaux)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "nocturne",
+          "fermeture": "Travaux",
           "road": "A104",
           "sens": "⟳ Int",
           "pr": "PR25+0160 → PR25+0620",
@@ -2033,7 +2033,7 @@
           ]
         }
       ],
-      "congestion": 32,
+      "congestion": 35,
       "status": "orange",
       "evenements": [
         {
@@ -2708,6 +2708,61 @@
             [
               48.933997,
               2.569403
+            ]
+          ]
+        },
+        {
+          "id": "500561187",
+          "lat": 48.936356,
+          "lng": 2.406126,
+          "line": "9517",
+          "type": "Travaux",
+          "desc": "",
+          "date": "2026-08-18T22:07:38",
+          "road": "11000015",
+          "sens": "⟳ Int",
+          "pr_debut": "PR24+500",
+          "pr_fin": "PR25+500",
+          "coords": [
+            [
+              48.835358,
+              2.281028
+            ],
+            [
+              48.835477,
+              2.280822
+            ],
+            [
+              48.836122,
+              2.278543
+            ],
+            [
+              48.836117,
+              2.278235
+            ],
+            [
+              48.836117,
+              2.278235
+            ],
+            [
+              48.835973,
+              2.278418
+            ],
+            [
+              48.835354,
+              2.280734
+            ],
+            [
+              48.835358,
+              2.281028
+            ],
+            [
+              48.937835,
+              2.412367
+            ],
+            [
+              48.936356,
+              2.406126
             ]
           ]
         }
@@ -4283,12 +4338,12 @@
             "lat": 48.936356,
             "lng": 2.406126,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Travaux)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "nocturne",
+            "fermeture": "Travaux",
             "road": "A104",
             "sens": "⟳ Int",
             "pr": "PR25+0160 → PR25+0620",
@@ -4749,7 +4804,7 @@
             ]
           }
         ],
-        "congestion": 36,
+        "congestion": 39,
         "status": "orange"
       }
     },
@@ -12377,12 +12432,12 @@
       "lat": 48.936356,
       "lng": 2.406126,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Travaux)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "nocturne",
+      "fermeture": "Travaux",
       "road": "A104",
       "sens": "⟳ Int",
       "pr": "PR25+0160 → PR25+0620",
@@ -14959,6 +15014,61 @@
         [
           48.818659,
           2.457389
+        ]
+      ]
+    },
+    {
+      "id": "500561187",
+      "lat": 48.936356,
+      "lng": 2.406126,
+      "line": "9517",
+      "type": "Travaux",
+      "desc": "",
+      "date": "2026-08-18T22:07:38",
+      "road": "11000015",
+      "sens": "⟳ Int",
+      "pr_debut": "PR24+500",
+      "pr_fin": "PR25+500",
+      "coords": [
+        [
+          48.835358,
+          2.281028
+        ],
+        [
+          48.835477,
+          2.280822
+        ],
+        [
+          48.836122,
+          2.278543
+        ],
+        [
+          48.836117,
+          2.278235
+        ],
+        [
+          48.836117,
+          2.278235
+        ],
+        [
+          48.835973,
+          2.278418
+        ],
+        [
+          48.835354,
+          2.280734
+        ],
+        [
+          48.835358,
+          2.281028
+        ],
+        [
+          48.937835,
+          2.412367
+        ],
+        [
+          48.936356,
+          2.406126
         ]
       ]
     }
