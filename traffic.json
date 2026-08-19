@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-19T21:42:46Z",
+  "updated_at": "2026-08-19T22:01:58Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -5036,9 +5036,9 @@
           "lat": 48.945902,
           "lng": 2.435715,
           "line": "350",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -5822,7 +5822,7 @@
           ]
         }
       ],
-      "congestion": 18,
+      "congestion": 17,
       "status": "green",
       "evenements": [
         {
@@ -5865,29 +5865,6 @@
             [
               48.853788,
               2.333455
-            ]
-          ]
-        },
-        {
-          "id": "15102437",
-          "lat": 48.945902,
-          "lng": 2.435715,
-          "line": "350",
-          "type": "Bouchon",
-          "desc": "",
-          "date": "2026-08-19T21:14:20",
-          "road": "N186",
-          "sens": "",
-          "pr_debut": "PR22+960",
-          "pr_fin": "PR22+580",
-          "coords": [
-            [
-              48.947707,
-              2.437356
-            ],
-            [
-              48.945902,
-              2.435715
             ]
           ]
         },
@@ -6932,9 +6909,9 @@
             "lat": 48.945902,
             "lng": 2.435715,
             "line": "350",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -7554,7 +7531,7 @@
             ]
           }
         ],
-        "congestion": 21,
+        "congestion": 20,
         "status": "green"
       }
     },
@@ -11272,9 +11249,9 @@
       "lat": 48.945902,
       "lng": 2.435715,
       "line": "350",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -14204,29 +14181,6 @@
         [
           48.933997,
           2.569403
-        ]
-      ]
-    },
-    {
-      "id": "15102437",
-      "lat": 48.945902,
-      "lng": 2.435715,
-      "line": "350",
-      "type": "Bouchon",
-      "desc": "",
-      "date": "2026-08-19T21:14:20",
-      "road": "N186",
-      "sens": "",
-      "pr_debut": "PR22+960",
-      "pr_fin": "PR22+580",
-      "coords": [
-        [
-          48.947707,
-          2.437356
-        ],
-        [
-          48.945902,
-          2.435715
         ]
       ]
     },
