@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T21:53:40Z",
+  "updated_at": "2026-08-21T22:14:51Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -1541,12 +1541,12 @@
           "lat": 48.936356,
           "lng": 2.406126,
           "line": "9517",
-          "status": "red",
-          "label": "Fermé (Securite)",
-          "congestion": 95,
-          "closed": true,
-          "closure_type": "securite",
-          "fermeture": "Securite",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false,
+          "closure_type": "",
+          "fermeture": "",
           "road": "A104",
           "sens": "⟳ Int",
           "pr": "PR25+0160 → PR25+0620",
@@ -2033,33 +2033,9 @@
           ]
         }
       ],
-      "congestion": 15,
+      "congestion": 13,
       "status": "green",
-      "evenements": [
-        {
-          "id": "500561478",
-          "lat": 48.936356,
-          "lng": 2.406126,
-          "line": "9517",
-          "type": "IncidentPanne",
-          "desc": "",
-          "date": "2026-08-21T22:19:41",
-          "road": "11000015",
-          "sens": "⟳ Int",
-          "pr_debut": "PR25+400",
-          "pr_fin": "PR25+400",
-          "coords": [
-            [
-              48.937835,
-              2.412367
-            ],
-            [
-              48.936356,
-              2.406126
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -3631,12 +3607,12 @@
             "lat": 48.936356,
             "lng": 2.406126,
             "line": "9517",
-            "status": "red",
-            "label": "Fermé (Securite)",
-            "congestion": 95,
-            "closed": true,
-            "closure_type": "securite",
-            "fermeture": "Securite",
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
+            "closed": false,
+            "closure_type": "",
+            "fermeture": "",
             "road": "A104",
             "sens": "⟳ Int",
             "pr": "PR25+0160 → PR25+0620",
@@ -4097,7 +4073,7 @@
             ]
           }
         ],
-        "congestion": 17,
+        "congestion": 13,
         "status": "green"
       }
     },
@@ -11042,12 +11018,12 @@
       "lat": 48.936356,
       "lng": 2.406126,
       "line": "9517",
-      "status": "red",
-      "label": "Fermé (Securite)",
-      "congestion": 95,
-      "closed": true,
-      "closure_type": "securite",
-      "fermeture": "Securite",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false,
+      "closure_type": "",
+      "fermeture": "",
       "road": "A104",
       "sens": "⟳ Int",
       "pr": "PR25+0160 → PR25+0620",
@@ -12267,29 +12243,6 @@
         [
           48.853788,
           2.333455
-        ]
-      ]
-    },
-    {
-      "id": "500561478",
-      "lat": 48.936356,
-      "lng": 2.406126,
-      "line": "9517",
-      "type": "IncidentPanne",
-      "desc": "",
-      "date": "2026-08-21T22:19:41",
-      "road": "11000015",
-      "sens": "⟳ Int",
-      "pr_debut": "PR25+400",
-      "pr_fin": "PR25+400",
-      "coords": [
-        [
-          48.937835,
-          2.412367
-        ],
-        [
-          48.936356,
-          2.406126
         ]
       ]
     }
