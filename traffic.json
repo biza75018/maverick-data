@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T13:53:33Z",
+  "updated_at": "2026-08-22T14:12:47Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -6891,12 +6891,12 @@
           "lat": 48.858033,
           "lng": 2.414029,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Securite)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "securite",
+          "fermeture": "Securite",
           "road": "A86",
           "sens": "⟲ Ext",
           "pr": "PR17+0941 → PR17+0440",
@@ -7429,9 +7429,49 @@
           ]
         }
       ],
-      "congestion": 10,
+      "congestion": 15,
       "status": "green",
-      "evenements": [],
+      "evenements": [
+        {
+          "id": "500561539",
+          "lat": 48.858033,
+          "lng": 2.414029,
+          "line": "351",
+          "type": "IncidentPanne",
+          "desc": "",
+          "date": "2026-08-22T15:52:35",
+          "road": "11000016",
+          "sens": "⟲ Ext",
+          "pr_debut": "PR17+941",
+          "pr_fin": "PR17+941",
+          "coords": [
+            [
+              48.863231,
+              2.413233
+            ],
+            [
+              48.85952,
+              2.414004
+            ],
+            [
+              48.858913,
+              2.41406
+            ],
+            [
+              48.858033,
+              2.414029
+            ],
+            [
+              48.857123,
+              2.413934
+            ],
+            [
+              48.856229,
+              2.413837
+            ]
+          ]
+        }
+      ],
       "aller": {
         "segments": [
           {
@@ -7709,12 +7749,12 @@
             "lat": 48.858033,
             "lng": 2.414029,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Securite)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "securite",
+            "fermeture": "Securite",
             "road": "A86",
             "sens": "⟲ Ext",
             "pr": "PR17+0941 → PR17+0440",
@@ -8169,7 +8209,7 @@
             ]
           }
         ],
-        "congestion": 10,
+        "congestion": 16,
         "status": "green"
       }
     }
@@ -9734,12 +9774,12 @@
       "lat": 48.858033,
       "lng": 2.414029,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Securite)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "securite",
+      "fermeture": "Securite",
       "road": "A86",
       "sens": "⟲ Ext",
       "pr": "PR17+0941 → PR17+0440",
@@ -12243,6 +12283,45 @@
         [
           48.853788,
           2.333455
+        ]
+      ]
+    },
+    {
+      "id": "500561539",
+      "lat": 48.858033,
+      "lng": 2.414029,
+      "line": "351",
+      "type": "IncidentPanne",
+      "desc": "",
+      "date": "2026-08-22T15:52:35",
+      "road": "11000016",
+      "sens": "⟲ Ext",
+      "pr_debut": "PR17+941",
+      "pr_fin": "PR17+941",
+      "coords": [
+        [
+          48.863231,
+          2.413233
+        ],
+        [
+          48.85952,
+          2.414004
+        ],
+        [
+          48.858913,
+          2.41406
+        ],
+        [
+          48.858033,
+          2.414029
+        ],
+        [
+          48.857123,
+          2.413934
+        ],
+        [
+          48.856229,
+          2.413837
         ]
       ]
     }
