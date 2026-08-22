@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T23:53:59Z",
+  "updated_at": "2026-08-22T00:45:27Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -35,12 +35,12 @@
           "lat": 48.935449,
           "lng": 2.264449,
           "line": "9517",
-          "status": "red",
-          "label": "Fermé (Ferme)",
-          "congestion": 95,
-          "closed": true,
-          "closure_type": "fermeture",
-          "fermeture": "Ferme",
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
+          "closed": false,
+          "closure_type": "",
+          "fermeture": "",
           "road": "S",
           "sens": "",
           "pr": "",
@@ -2033,61 +2033,9 @@
           ]
         }
       ],
-      "congestion": 15,
+      "congestion": 13,
       "status": "green",
-      "evenements": [
-        {
-          "id": "1900080400",
-          "lat": 48.935449,
-          "lng": 2.264449,
-          "line": "9517",
-          "type": "",
-          "desc": "",
-          "date": "2026-08-22T01:25:45",
-          "road": "11000016",
-          "sens": "⟳ Int",
-          "pr_debut": "PR19+701",
-          "pr_fin": "PR19+701",
-          "coords": [
-            [
-              48.935546,
-              2.261918
-            ],
-            [
-              48.935603,
-              2.262772
-            ],
-            [
-              48.935595,
-              2.263341
-            ],
-            [
-              48.935544,
-              2.263898
-            ],
-            [
-              48.935449,
-              2.264449
-            ],
-            [
-              48.935154,
-              2.265736
-            ],
-            [
-              48.935118,
-              2.265872
-            ],
-            [
-              48.935056,
-              2.266144
-            ],
-            [
-              48.934998,
-              2.26638
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -2283,12 +2231,12 @@
             "lat": 48.935449,
             "lng": 2.264449,
             "line": "9517",
-            "status": "red",
-            "label": "Fermé (Ferme)",
-            "congestion": 95,
-            "closed": true,
-            "closure_type": "fermeture",
-            "fermeture": "Ferme",
+            "status": "unknown",
+            "label": "Non renseigné",
+            "congestion": 0,
+            "closed": false,
+            "closure_type": "",
+            "fermeture": "",
             "road": "S",
             "sens": "",
             "pr": "",
@@ -4125,7 +4073,7 @@
             ]
           }
         ],
-        "congestion": 16,
+        "congestion": 13,
         "status": "green"
       }
     },
@@ -8258,12 +8206,12 @@
       "lat": 48.935449,
       "lng": 2.264449,
       "line": "9517",
-      "status": "red",
-      "label": "Fermé (Ferme)",
-      "congestion": 95,
-      "closed": true,
-      "closure_type": "fermeture",
-      "fermeture": "Ferme",
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
+      "closed": false,
+      "closure_type": "",
+      "fermeture": "",
       "road": "S",
       "sens": "",
       "pr": "",
@@ -12295,57 +12243,6 @@
         [
           48.853788,
           2.333455
-        ]
-      ]
-    },
-    {
-      "id": "1900080400",
-      "lat": 48.935449,
-      "lng": 2.264449,
-      "line": "9517",
-      "type": "",
-      "desc": "",
-      "date": "2026-08-22T01:25:45",
-      "road": "11000016",
-      "sens": "⟳ Int",
-      "pr_debut": "PR19+701",
-      "pr_fin": "PR19+701",
-      "coords": [
-        [
-          48.935546,
-          2.261918
-        ],
-        [
-          48.935603,
-          2.262772
-        ],
-        [
-          48.935595,
-          2.263341
-        ],
-        [
-          48.935544,
-          2.263898
-        ],
-        [
-          48.935449,
-          2.264449
-        ],
-        [
-          48.935154,
-          2.265736
-        ],
-        [
-          48.935118,
-          2.265872
-        ],
-        [
-          48.935056,
-          2.266144
-        ],
-        [
-          48.934998,
-          2.26638
         ]
       ]
     }
