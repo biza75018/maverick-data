@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T11:29:37Z",
+  "updated_at": "2026-08-22T11:49:00Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -2035,7 +2035,31 @@
       ],
       "congestion": 13,
       "status": "green",
-      "evenements": [],
+      "evenements": [
+        {
+          "id": "500561523",
+          "lat": 48.918738,
+          "lng": 2.357347,
+          "line": "9517",
+          "type": "IncidentPanne",
+          "desc": "",
+          "date": "2026-08-22T13:42:38",
+          "road": "11000029",
+          "sens": "↓ Province",
+          "pr_debut": "PR10+0",
+          "pr_fin": "PR10+0",
+          "coords": [
+            [
+              48.920529,
+              2.35722
+            ],
+            [
+              48.918738,
+              2.357347
+            ]
+          ]
+        }
+      ],
       "aller": {
         "segments": [
           {
@@ -5202,9 +5226,17 @@
           "date": "2026-08-22T12:25:40",
           "road": "11000016",
           "sens": "⟲ Ext",
-          "pr_debut": "PR29+1030",
+          "pr_debut": "PR30+105",
           "pr_fin": "PR26+860",
           "coords": [
+            [
+              48.870938,
+              2.3226
+            ],
+            [
+              48.86995,
+              2.323327
+            ],
             [
               48.832317,
               2.781266
@@ -7152,9 +7184,9 @@
           "lat": 48.864265,
           "lng": 2.413322,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7178,9 +7210,9 @@
           "lat": 48.863243,
           "lng": 2.413371,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7628,9 +7660,9 @@
             "lat": 48.864265,
             "lng": 2.413322,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
+            "status": "unknown",
+            "label": "Non renseigné",
+            "congestion": 0,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -7970,9 +8002,9 @@
             "lat": 48.863243,
             "lng": 2.413371,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
+            "status": "unknown",
+            "label": "Non renseigné",
+            "congestion": 0,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -10663,9 +10695,9 @@
       "lat": 48.864265,
       "lng": 2.413322,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -10689,9 +10721,9 @@
       "lat": 48.863243,
       "lng": 2.413371,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12395,9 +12427,17 @@
       "date": "2026-08-22T12:25:40",
       "road": "11000016",
       "sens": "⟲ Ext",
-      "pr_debut": "PR29+1030",
+      "pr_debut": "PR30+105",
       "pr_fin": "PR26+860",
       "coords": [
+        [
+          48.870938,
+          2.3226
+        ],
+        [
+          48.86995,
+          2.323327
+        ],
         [
           48.832317,
           2.781266
@@ -12521,6 +12561,29 @@
         [
           48.540929,
           1.897222
+        ]
+      ]
+    },
+    {
+      "id": "500561523",
+      "lat": 48.918738,
+      "lng": 2.357347,
+      "line": "9517",
+      "type": "IncidentPanne",
+      "desc": "",
+      "date": "2026-08-22T13:42:38",
+      "road": "11000029",
+      "sens": "↓ Province",
+      "pr_debut": "PR10+0",
+      "pr_fin": "PR10+0",
+      "coords": [
+        [
+          48.920529,
+          2.35722
+        ],
+        [
+          48.918738,
+          2.357347
         ]
       ]
     }
