@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T11:30:37Z",
+  "updated_at": "2026-08-23T11:50:38Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -5080,12 +5080,12 @@
           "lat": 48.95958,
           "lng": 2.472171,
           "line": "350",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Securite)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "securite",
+          "fermeture": "Securite",
           "road": "A13",
           "sens": "↓ Province",
           "pr": "PR05+0305 → PR05+0803",
@@ -5146,7 +5146,7 @@
           ]
         }
       ],
-      "congestion": 14,
+      "congestion": 17,
       "status": "green",
       "evenements": [
         {
@@ -5189,6 +5189,73 @@
             [
               48.853788,
               2.333455
+            ]
+          ]
+        },
+        {
+          "id": "500561597",
+          "lat": 48.95958,
+          "lng": 2.472171,
+          "line": "350",
+          "type": "",
+          "desc": "",
+          "date": "2026-08-23T13:38:29",
+          "road": "11000029",
+          "sens": "↓ Province",
+          "pr_debut": "PR5+305",
+          "pr_fin": "PR5+305",
+          "coords": [
+            [
+              48.960904,
+              2.46928
+            ],
+            [
+              48.960607,
+              2.470044
+            ],
+            [
+              48.960138,
+              2.471093
+            ],
+            [
+              48.960021,
+              2.471407
+            ],
+            [
+              48.959885,
+              2.471653
+            ],
+            [
+              48.95975,
+              2.471912
+            ],
+            [
+              48.95958,
+              2.472171
+            ],
+            [
+              48.959409,
+              2.472388
+            ],
+            [
+              48.959229,
+              2.472539
+            ],
+            [
+              48.958995,
+              2.472701
+            ],
+            [
+              48.958743,
+              2.47281
+            ],
+            [
+              48.958474,
+              2.47289
+            ],
+            [
+              48.957403,
+              2.473116
             ]
           ]
         }
@@ -5350,12 +5417,12 @@
             "lat": 48.95958,
             "lng": 2.472171,
             "line": "350",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Securite)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "securite",
+            "fermeture": "Securite",
             "road": "A13",
             "sens": "↓ Province",
             "pr": "PR05+0305 → PR05+0803",
@@ -5416,7 +5483,7 @@
             ]
           }
         ],
-        "congestion": 10,
+        "congestion": 24,
         "status": "green"
       },
       "retour": {
@@ -12098,12 +12165,12 @@
       "lat": 48.95958,
       "lng": 2.472171,
       "line": "350",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Securite)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "securite",
+      "fermeture": "Securite",
       "road": "A13",
       "sens": "↓ Province",
       "pr": "PR05+0305 → PR05+0803",
@@ -12243,6 +12310,73 @@
         [
           48.853788,
           2.333455
+        ]
+      ]
+    },
+    {
+      "id": "500561597",
+      "lat": 48.95958,
+      "lng": 2.472171,
+      "line": "350",
+      "type": "",
+      "desc": "",
+      "date": "2026-08-23T13:38:29",
+      "road": "11000029",
+      "sens": "↓ Province",
+      "pr_debut": "PR5+305",
+      "pr_fin": "PR5+305",
+      "coords": [
+        [
+          48.960904,
+          2.46928
+        ],
+        [
+          48.960607,
+          2.470044
+        ],
+        [
+          48.960138,
+          2.471093
+        ],
+        [
+          48.960021,
+          2.471407
+        ],
+        [
+          48.959885,
+          2.471653
+        ],
+        [
+          48.95975,
+          2.471912
+        ],
+        [
+          48.95958,
+          2.472171
+        ],
+        [
+          48.959409,
+          2.472388
+        ],
+        [
+          48.959229,
+          2.472539
+        ],
+        [
+          48.958995,
+          2.472701
+        ],
+        [
+          48.958743,
+          2.47281
+        ],
+        [
+          48.958474,
+          2.47289
+        ],
+        [
+          48.957403,
+          2.473116
         ]
       ]
     }
