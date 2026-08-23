@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T15:56:22Z",
+  "updated_at": "2026-08-23T16:23:07Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -6522,9 +6522,9 @@
           "lat": 48.991742,
           "lng": 2.47667,
           "line": "9509",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -6588,31 +6588,7 @@
       ],
       "congestion": 10,
       "status": "green",
-      "evenements": [
-        {
-          "id": "15104715",
-          "lat": 48.991742,
-          "lng": 2.47667,
-          "line": "9509",
-          "type": "Bouchon",
-          "desc": "",
-          "date": "2026-08-23T17:38:00",
-          "road": "11000043",
-          "sens": "W",
-          "pr_debut": "PR15+679",
-          "pr_fin": "PR15+659",
-          "coords": [
-            [
-              48.995235,
-              2.479747
-            ],
-            [
-              48.991742,
-              2.47667
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [],
         "congestion": 0,
@@ -6761,9 +6737,9 @@
             "lat": 48.991742,
             "lng": 2.47667,
             "line": "9509",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -10577,9 +10553,9 @@
       "lat": 48.991742,
       "lng": 2.47667,
       "line": "9509",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12374,29 +12350,6 @@
         [
           48.853788,
           2.333455
-        ]
-      ]
-    },
-    {
-      "id": "15104715",
-      "lat": 48.991742,
-      "lng": 2.47667,
-      "line": "9509",
-      "type": "Bouchon",
-      "desc": "",
-      "date": "2026-08-23T17:38:00",
-      "road": "11000043",
-      "sens": "W",
-      "pr_debut": "PR15+679",
-      "pr_fin": "PR15+659",
-      "coords": [
-        [
-          48.995235,
-          2.479747
-        ],
-        [
-          48.991742,
-          2.47667
         ]
       ]
     },
