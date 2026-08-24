@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T11:05:04Z",
+  "updated_at": "2026-08-24T11:39:22Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -1515,12 +1515,12 @@
           "lat": 48.935907,
           "lng": 2.404186,
           "line": "9517",
-          "status": "red",
-          "label": "Fermé (Securite)",
-          "congestion": 95,
-          "closed": true,
-          "closure_type": "securite",
-          "fermeture": "Securite",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false,
+          "closure_type": "",
+          "fermeture": "",
           "road": "S",
           "sens": "",
           "pr": "",
@@ -2033,33 +2033,9 @@
           ]
         }
       ],
-      "congestion": 13,
+      "congestion": 12,
       "status": "green",
-      "evenements": [
-        {
-          "id": "500561693",
-          "lat": 48.935907,
-          "lng": 2.404186,
-          "line": "9517",
-          "type": "Travaux",
-          "desc": "",
-          "date": "2026-08-24T12:46:32",
-          "road": "S",
-          "sens": "",
-          "pr_debut": "PR25+163",
-          "pr_fin": "PR25+403",
-          "coords": [
-            [
-              48.936356,
-              2.406126
-            ],
-            [
-              48.935907,
-              2.404186
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -3605,12 +3581,12 @@
             "lat": 48.935907,
             "lng": 2.404186,
             "line": "9517",
-            "status": "red",
-            "label": "Fermé (Securite)",
-            "congestion": 95,
-            "closed": true,
-            "closure_type": "securite",
-            "fermeture": "Securite",
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
+            "closed": false,
+            "closure_type": "",
+            "fermeture": "",
             "road": "S",
             "sens": "",
             "pr": "",
@@ -4097,7 +4073,7 @@
             ]
           }
         ],
-        "congestion": 14,
+        "congestion": 12,
         "status": "green"
       }
     },
@@ -5257,45 +5233,9 @@
           "date": "2026-08-24T11:26:40",
           "road": "11000016",
           "sens": "⟲ Ext",
-          "pr_debut": "PR30+801",
+          "pr_debut": "PR29+830",
           "pr_fin": "PR26+0",
           "coords": [
-            [
-              48.932845,
-              2.423845
-            ],
-            [
-              48.93316,
-              2.424201
-            ],
-            [
-              48.5506,
-              1.921892
-            ],
-            [
-              48.551243,
-              1.923751
-            ],
-            [
-              48.552939,
-              1.930505
-            ],
-            [
-              48.870938,
-              2.3226
-            ],
-            [
-              48.86995,
-              2.323327
-            ],
-            [
-              48.832317,
-              2.781266
-            ],
-            [
-              48.833016,
-              2.790266
-            ],
             [
               48.860397,
               2.486437
@@ -11438,12 +11378,12 @@
       "lat": 48.935907,
       "lng": 2.404186,
       "line": "9517",
-      "status": "red",
-      "label": "Fermé (Securite)",
-      "congestion": 95,
-      "closed": true,
-      "closure_type": "securite",
-      "fermeture": "Securite",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false,
+      "closure_type": "",
+      "fermeture": "",
       "road": "S",
       "sens": "",
       "pr": "",
@@ -12693,29 +12633,6 @@
       ]
     },
     {
-      "id": "500561693",
-      "lat": 48.935907,
-      "lng": 2.404186,
-      "line": "9517",
-      "type": "Travaux",
-      "desc": "",
-      "date": "2026-08-24T12:46:32",
-      "road": "S",
-      "sens": "",
-      "pr_debut": "PR25+163",
-      "pr_fin": "PR25+403",
-      "coords": [
-        [
-          48.936356,
-          2.406126
-        ],
-        [
-          48.935907,
-          2.404186
-        ]
-      ]
-    },
-    {
       "id": "15105341",
       "lat": 48.940023,
       "lng": 2.430767,
@@ -12756,45 +12673,9 @@
       "date": "2026-08-24T11:26:40",
       "road": "11000016",
       "sens": "⟲ Ext",
-      "pr_debut": "PR30+801",
+      "pr_debut": "PR29+830",
       "pr_fin": "PR26+0",
       "coords": [
-        [
-          48.932845,
-          2.423845
-        ],
-        [
-          48.93316,
-          2.424201
-        ],
-        [
-          48.5506,
-          1.921892
-        ],
-        [
-          48.551243,
-          1.923751
-        ],
-        [
-          48.552939,
-          1.930505
-        ],
-        [
-          48.870938,
-          2.3226
-        ],
-        [
-          48.86995,
-          2.323327
-        ],
-        [
-          48.832317,
-          2.781266
-        ],
-        [
-          48.833016,
-          2.790266
-        ],
         [
           48.860397,
           2.486437
