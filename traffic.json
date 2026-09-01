@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T20:56:59Z",
+  "updated_at": "2026-09-01T00:24:38Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -1443,12 +1443,12 @@
           "lat": 48.935955,
           "lng": 2.404142,
           "line": "9517",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Travaux)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "nocturne",
+          "fermeture": "Travaux",
           "road": "N104",
           "sens": "⟳ Int",
           "pr": "PR13+0547 → PR13+1077",
@@ -2033,9 +2033,53 @@
           ]
         }
       ],
-      "congestion": 13,
+      "congestion": 15,
       "status": "green",
-      "evenements": [],
+      "evenements": [
+        {
+          "id": "500562526",
+          "lat": 48.935955,
+          "lng": 2.404142,
+          "line": "9517",
+          "type": "Travaux",
+          "desc": "",
+          "date": "2026-08-31T23:08:56",
+          "road": "11000018",
+          "sens": "⟳ Int",
+          "pr_debut": "PR12+0",
+          "pr_fin": "PR16+500",
+          "coords": [
+            [
+              48.936831,
+              2.407493
+            ],
+            [
+              48.936492,
+              2.405915
+            ],
+            [
+              48.936206,
+              2.404855
+            ],
+            [
+              48.935955,
+              2.404142
+            ],
+            [
+              48.935664,
+              2.403663
+            ],
+            [
+              48.935316,
+              2.403265
+            ],
+            [
+              48.934914,
+              2.403109
+            ]
+          ]
+        }
+      ],
       "aller": {
         "segments": [
           {
@@ -3535,12 +3579,12 @@
             "lat": 48.935955,
             "lng": 2.404142,
             "line": "9517",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Travaux)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "nocturne",
+            "fermeture": "Travaux",
             "road": "N104",
             "sens": "⟳ Int",
             "pr": "PR13+0547 → PR13+1077",
@@ -4073,7 +4117,7 @@
             ]
           }
         ],
-        "congestion": 13,
+        "congestion": 17,
         "status": "green"
       }
     },
@@ -10809,12 +10853,12 @@
       "lat": 48.935955,
       "lng": 2.404142,
       "line": "9517",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Travaux)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "nocturne",
+      "fermeture": "Travaux",
       "road": "N104",
       "sens": "⟳ Int",
       "pr": "PR13+0547 → PR13+1077",
@@ -12329,6 +12373,49 @@
         [
           48.853788,
           2.333455
+        ]
+      ]
+    },
+    {
+      "id": "500562526",
+      "lat": 48.935955,
+      "lng": 2.404142,
+      "line": "9517",
+      "type": "Travaux",
+      "desc": "",
+      "date": "2026-08-31T23:08:56",
+      "road": "11000018",
+      "sens": "⟳ Int",
+      "pr_debut": "PR12+0",
+      "pr_fin": "PR16+500",
+      "coords": [
+        [
+          48.936831,
+          2.407493
+        ],
+        [
+          48.936492,
+          2.405915
+        ],
+        [
+          48.936206,
+          2.404855
+        ],
+        [
+          48.935955,
+          2.404142
+        ],
+        [
+          48.935664,
+          2.403663
+        ],
+        [
+          48.935316,
+          2.403265
+        ],
+        [
+          48.934914,
+          2.403109
         ]
       ]
     }
