@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T22:37:42Z",
+  "updated_at": "2026-09-03T00:38:25Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -4938,12 +4938,12 @@
           "lat": 48.926673,
           "lng": 2.404396,
           "line": "350",
-          "status": "red",
-          "label": "Fermé (Securite)",
-          "congestion": 95,
-          "closed": true,
-          "closure_type": "securite",
-          "fermeture": "Securite",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false,
+          "closure_type": "",
+          "fermeture": "",
           "road": "A15",
           "sens": "↓ Province",
           "pr": "PR13+0750 → PR14+0515",
@@ -5754,7 +5754,7 @@
           ]
         }
       ],
-      "congestion": 17,
+      "congestion": 14,
       "status": "green",
       "evenements": [
         {
@@ -5799,33 +5799,6 @@
               2.333455
             ]
           ]
-        },
-        {
-          "id": "500562801",
-          "lat": 48.926673,
-          "lng": 2.404396,
-          "line": "350",
-          "type": "IncidentPanne",
-          "desc": "",
-          "date": "2026-09-03T00:08:59",
-          "road": "11000031",
-          "sens": "↓ Province",
-          "pr_debut": "PR13+750",
-          "pr_fin": "PR13+750",
-          "coords": [
-            [
-              48.92652,
-              2.403601
-            ],
-            [
-              48.926673,
-              2.404396
-            ],
-            [
-              48.926796,
-              2.404966
-            ]
-          ]
         }
       ],
       "aller": {
@@ -5861,12 +5834,12 @@
             "lat": 48.926673,
             "lng": 2.404396,
             "line": "350",
-            "status": "red",
-            "label": "Fermé (Securite)",
-            "congestion": 95,
-            "closed": true,
-            "closure_type": "securite",
-            "fermeture": "Securite",
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
+            "closed": false,
+            "closure_type": "",
+            "fermeture": "",
             "road": "A15",
             "sens": "↓ Province",
             "pr": "PR13+0750 → PR14+0515",
@@ -6051,7 +6024,7 @@
             ]
           }
         ],
-        "congestion": 24,
+        "congestion": 10,
         "status": "green"
       },
       "retour": {
@@ -10763,12 +10736,12 @@
       "lat": 48.926673,
       "lng": 2.404396,
       "line": "350",
-      "status": "red",
-      "label": "Fermé (Securite)",
-      "congestion": 95,
-      "closed": true,
-      "closure_type": "securite",
-      "fermeture": "Securite",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false,
+      "closure_type": "",
+      "fermeture": "",
       "road": "A15",
       "sens": "↓ Province",
       "pr": "PR13+0750 → PR14+0515",
@@ -14188,33 +14161,6 @@
         [
           49.068425,
           2.385912
-        ]
-      ]
-    },
-    {
-      "id": "500562801",
-      "lat": 48.926673,
-      "lng": 2.404396,
-      "line": "350",
-      "type": "IncidentPanne",
-      "desc": "",
-      "date": "2026-09-03T00:08:59",
-      "road": "11000031",
-      "sens": "↓ Province",
-      "pr_debut": "PR13+750",
-      "pr_fin": "PR13+750",
-      "coords": [
-        [
-          48.92652,
-          2.403601
-        ],
-        [
-          48.926673,
-          2.404396
-        ],
-        [
-          48.926796,
-          2.404966
         ]
       ]
     }
