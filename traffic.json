@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T19:09:22Z",
+  "updated_at": "2026-09-07T22:00:12Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -8004,12 +8004,12 @@
           "lat": 48.865935,
           "lng": 2.421324,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Securite)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "securite",
+          "fermeture": "Securite",
           "road": "N104",
           "sens": "⟲ Ext",
           "pr": "PR52+0420 → PR51+0200",
@@ -8142,9 +8142,9 @@
           "lat": 48.865813,
           "lng": 2.419632,
           "line": "351",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -8368,41 +8368,37 @@
           ]
         }
       ],
-      "congestion": 10,
+      "congestion": 14,
       "status": "green",
       "evenements": [
         {
-          "id": "15125059",
-          "lat": 48.865813,
-          "lng": 2.419632,
+          "id": "500563372",
+          "lat": 48.865935,
+          "lng": 2.421324,
           "line": "351",
-          "type": "Bouchon",
-          "desc": "N13-W/21+0320/21+0000\n",
-          "date": "2026-09-07T17:00:40",
-          "road": "11001050",
-          "sens": "W",
-          "pr_debut": "PR20+500",
-          "pr_fin": "PR20+200",
+          "type": "IncidentPanne",
+          "desc": "",
+          "date": "2026-09-07T22:57:01",
+          "road": "11000018",
+          "sens": "⟲ Ext",
+          "pr_debut": "PR52+420",
+          "pr_fin": "PR52+420",
           "coords": [
             [
-              48.865859,
-              2.420446
+              48.86626,
+              2.422722
             ],
             [
-              48.865839,
-              2.420191
+              48.866197,
+              2.422457
             ],
             [
-              48.865813,
-              2.419632
+              48.865935,
+              2.421324
             ],
             [
-              48.865834,
-              2.418914
-            ],
-            [
-              48.866162,
-              2.416823
+              48.865773,
+              2.420475
             ]
           ]
         }
@@ -8832,12 +8828,12 @@
             "lat": 48.865935,
             "lng": 2.421324,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Securite)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "securite",
+            "fermeture": "Securite",
             "road": "N104",
             "sens": "⟲ Ext",
             "pr": "PR52+0420 → PR51+0200",
@@ -8944,9 +8940,9 @@
             "lat": 48.865813,
             "lng": 2.419632,
             "line": "351",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -9144,7 +9140,7 @@
             ]
           }
         ],
-        "congestion": 10,
+        "congestion": 15,
         "status": "green"
       }
     }
@@ -11551,12 +11547,12 @@
       "lat": 48.865935,
       "lng": 2.421324,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Securite)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "securite",
+      "fermeture": "Securite",
       "road": "N104",
       "sens": "⟲ Ext",
       "pr": "PR52+0420 → PR51+0200",
@@ -12237,9 +12233,9 @@
       "lat": 48.865813,
       "lng": 2.419632,
       "line": "351",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -13222,41 +13218,6 @@
       ]
     },
     {
-      "id": "15125059",
-      "lat": 48.865813,
-      "lng": 2.419632,
-      "line": "351",
-      "type": "Bouchon",
-      "desc": "N13-W/21+0320/21+0000\n",
-      "date": "2026-09-07T17:00:40",
-      "road": "11001050",
-      "sens": "W",
-      "pr_debut": "PR20+500",
-      "pr_fin": "PR20+200",
-      "coords": [
-        [
-          48.865859,
-          2.420446
-        ],
-        [
-          48.865839,
-          2.420191
-        ],
-        [
-          48.865813,
-          2.419632
-        ],
-        [
-          48.865834,
-          2.418914
-        ],
-        [
-          48.866162,
-          2.416823
-        ]
-      ]
-    },
-    {
       "id": "600077483",
       "lat": 48.950436,
       "lng": 2.447323,
@@ -14192,6 +14153,37 @@
         [
           48.816095,
           2.359836
+        ]
+      ]
+    },
+    {
+      "id": "500563372",
+      "lat": 48.865935,
+      "lng": 2.421324,
+      "line": "351",
+      "type": "IncidentPanne",
+      "desc": "",
+      "date": "2026-09-07T22:57:01",
+      "road": "11000018",
+      "sens": "⟲ Ext",
+      "pr_debut": "PR52+420",
+      "pr_fin": "PR52+420",
+      "coords": [
+        [
+          48.86626,
+          2.422722
+        ],
+        [
+          48.866197,
+          2.422457
+        ],
+        [
+          48.865935,
+          2.421324
+        ],
+        [
+          48.865773,
+          2.420475
         ]
       ]
     }
