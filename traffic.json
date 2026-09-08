@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T09:02:33Z",
+  "updated_at": "2026-09-08T13:30:55Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "9517": {
@@ -35,9 +35,9 @@
           "lat": 48.935449,
           "lng": 2.264449,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -147,9 +147,9 @@
           "lat": 48.950654,
           "lng": 2.440104,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -511,9 +511,9 @@
           "lat": 48.934003,
           "lng": 2.280223,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -853,9 +853,9 @@
           "lat": 48.95996,
           "lng": 2.466937,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -995,9 +995,9 @@
           "lat": 48.964291,
           "lng": 2.473946,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -1175,9 +1175,9 @@
           "lat": 48.950515,
           "lng": 2.439802,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -1339,9 +1339,9 @@
           "lat": 48.964251,
           "lng": 2.472948,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -1515,9 +1515,9 @@
           "lat": 48.935907,
           "lng": 2.404186,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -1635,9 +1635,9 @@
           "lat": 48.935829,
           "lng": 2.264285,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -1689,9 +1689,9 @@
           "lat": 48.966847,
           "lng": 2.478493,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -1815,9 +1815,9 @@
           "lat": 48.965482,
           "lng": 2.476185,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -1877,9 +1877,9 @@
           "lat": 48.934407,
           "lng": 2.278846,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -1919,9 +1919,9 @@
           "lat": 48.935822,
           "lng": 2.262891,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -1953,9 +1953,9 @@
           "lat": 48.935553,
           "lng": 2.26481,
           "line": "9517",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -2033,7 +2033,7 @@
           ]
         }
       ],
-      "congestion": 13,
+      "congestion": 12,
       "status": "green",
       "evenements": [],
       "aller": {
@@ -2231,9 +2231,9 @@
             "lat": 48.935449,
             "lng": 2.264449,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -2343,9 +2343,9 @@
             "lat": 48.950654,
             "lng": 2.440104,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -2707,9 +2707,9 @@
             "lat": 48.934003,
             "lng": 2.280223,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3049,9 +3049,9 @@
             "lat": 48.95996,
             "lng": 2.466937,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3113,9 +3113,9 @@
             "lat": 48.964291,
             "lng": 2.473946,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3293,9 +3293,9 @@
             "lat": 48.950515,
             "lng": 2.439802,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3431,9 +3431,9 @@
             "lat": 48.964251,
             "lng": 2.472948,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3581,9 +3581,9 @@
             "lat": 48.935907,
             "lng": 2.404186,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3701,9 +3701,9 @@
             "lat": 48.935829,
             "lng": 2.264285,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3755,9 +3755,9 @@
             "lat": 48.966847,
             "lng": 2.478493,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3855,9 +3855,9 @@
             "lat": 48.965482,
             "lng": 2.476185,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3917,9 +3917,9 @@
             "lat": 48.934407,
             "lng": 2.278846,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3959,9 +3959,9 @@
             "lat": 48.935822,
             "lng": 2.262891,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -3993,9 +3993,9 @@
             "lat": 48.935553,
             "lng": 2.26481,
             "line": "9517",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -4073,7 +4073,7 @@
             ]
           }
         ],
-        "congestion": 13,
+        "congestion": 12,
         "status": "green"
       }
     },
@@ -4084,9 +4084,9 @@
           "lat": 48.958504,
           "lng": 2.473124,
           "line": "350",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -4118,9 +4118,9 @@
           "lat": 48.941865,
           "lng": 2.431814,
           "line": "350",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -4196,9 +4196,9 @@
           "lat": 48.941942,
           "lng": 2.431476,
           "line": "350",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -4655,7 +4655,7 @@
           "lng": 2.430767,
           "line": "350",
           "status": "unknown",
-          "label": "Non renseigné",
+          "label": "bouchon",
           "congestion": 0,
           "closed": false,
           "closure_type": "",
@@ -4740,9 +4740,9 @@
           "lat": 48.942377,
           "lng": 2.431861,
           "line": "350",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -4812,9 +4812,9 @@
           "lat": 48.900656,
           "lng": 2.366631,
           "line": "350",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -5146,7 +5146,7 @@
           ]
         }
       ],
-      "congestion": 14,
+      "congestion": 13,
       "status": "green",
       "evenements": [
         {
@@ -5576,85 +5576,424 @@
           ]
         },
         {
-          "id": "15125600",
-          "lat": 48.900656,
-          "lng": 2.366631,
+          "id": "15126544",
+          "lat": 48.940023,
+          "lng": 2.430767,
           "line": "350",
           "type": "Bouchon",
-          "desc": "N315-W/02+0950/02+0700\n",
-          "date": "2026-09-08T06:10:00",
-          "road": "11001049",
-          "sens": "W",
-          "pr_debut": "PR2+950",
-          "pr_fin": "PR1+245",
+          "desc": "",
+          "date": "2026-09-08T11:48:00",
+          "road": "E",
+          "sens": "",
+          "pr_debut": "PR29+440",
+          "pr_fin": "PR29+0",
           "coords": [
             [
-              49.032253,
-              2.10872
+              48.938891,
+              2.429703
             ],
             [
-              49.032466,
-              2.109644
+              48.940023,
+              2.430767
             ],
             [
-              49.032823,
-              2.110435
+              48.936812,
+              2.427802
             ],
             [
-              49.033172,
-              2.110876
+              48.93809,
+              2.42897
+            ]
+          ]
+        },
+        {
+          "id": "15126554",
+          "lat": 48.940952,
+          "lng": 2.431649,
+          "line": "350",
+          "type": "Bouchon",
+          "desc": "A86-E/26+0260/26+0000\nA86-E/29+0000/28+0500\n",
+          "date": "2026-09-08T11:48:00",
+          "road": "11000016",
+          "sens": "⟲ Ext",
+          "pr_debut": "PR30+801",
+          "pr_fin": "PR26+0",
+          "coords": [
+            [
+              48.932845,
+              2.423845
             ],
             [
-              48.915593,
-              2.309464
+              48.93316,
+              2.424201
             ],
             [
-              48.915674,
-              2.30935
+              48.5506,
+              1.921892
             ],
             [
-              48.900735,
-              2.364703
+              48.551243,
+              1.923751
             ],
             [
-              48.900656,
-              2.366631
+              48.552939,
+              1.930505
             ],
             [
-              48.84217,
-              2.095039
+              48.870938,
+              2.3226
             ],
             [
-              48.842619,
-              2.093643
+              48.86995,
+              2.323327
             ],
             [
-              48.842941,
-              2.092783
+              48.832317,
+              2.781266
             ],
             [
-              48.843773,
-              2.090982
+              48.833016,
+              2.790266
             ],
             [
-              48.844184,
-              2.089958
+              48.860397,
+              2.486437
             ],
             [
-              48.844362,
-              2.089649
+              48.860444,
+              2.486071
             ],
             [
-              49.031886,
-              2.10603
+              48.860589,
+              2.485453
             ],
             [
-              49.031764,
-              2.105753
+              48.86082,
+              2.484858
             ],
             [
-              49.031108,
-              2.104638
+              48.861321,
+              2.483952
+            ],
+            [
+              48.859955,
+              2.489741
+            ],
+            [
+              48.860046,
+              2.489597
+            ],
+            [
+              48.860108,
+              2.489417
+            ],
+            [
+              48.860205,
+              2.489125
+            ],
+            [
+              48.860271,
+              2.488792
+            ],
+            [
+              48.860328,
+              2.48844
+            ],
+            [
+              48.860351,
+              2.488114
+            ],
+            [
+              48.860356,
+              2.487415
+            ],
+            [
+              48.860397,
+              2.486437
+            ],
+            [
+              48.940023,
+              2.430767
+            ],
+            [
+              48.940952,
+              2.431649
+            ],
+            [
+              48.532536,
+              1.858642
+            ],
+            [
+              48.531205,
+              1.852302
+            ],
+            [
+              48.529586,
+              1.845806
+            ],
+            [
+              49.170328,
+              2.228581
+            ],
+            [
+              49.172494,
+              2.227714
+            ],
+            [
+              49.174841,
+              2.226288
+            ],
+            [
+              48.865008,
+              2.413122
+            ],
+            [
+              48.863231,
+              2.413233
+            ],
+            [
+              48.538609,
+              1.88434
+            ],
+            [
+              48.537342,
+              1.877923
+            ],
+            [
+              48.535545,
+              1.87136
+            ],
+            [
+              48.542037,
+              1.902982
+            ],
+            [
+              48.540929,
+              1.897222
+            ],
+            [
+              48.527549,
+              1.833003
+            ],
+            [
+              48.527365,
+              1.833125
+            ],
+            [
+              48.525454,
+              1.834093
+            ],
+            [
+              48.525272,
+              1.834285
+            ],
+            [
+              48.525136,
+              1.834559
+            ],
+            [
+              48.525076,
+              1.834882
+            ],
+            [
+              48.525095,
+              1.835216
+            ],
+            [
+              48.525194,
+              1.835513
+            ],
+            [
+              48.525369,
+              1.835739
+            ],
+            [
+              48.525576,
+              1.835865
+            ],
+            [
+              48.525802,
+              1.835914
+            ],
+            [
+              48.526031,
+              1.835962
+            ],
+            [
+              48.526245,
+              1.836038
+            ],
+            [
+              48.526471,
+              1.836228
+            ],
+            [
+              48.526616,
+              1.836405
+            ],
+            [
+              48.526752,
+              1.836678
+            ],
+            [
+              48.526925,
+              1.837214
+            ],
+            [
+              48.527042,
+              1.837313
+            ],
+            [
+              48.527549,
+              1.833003
+            ],
+            [
+              48.527142,
+              1.833055
+            ],
+            [
+              48.526849,
+              1.832994
+            ],
+            [
+              48.526657,
+              1.83288
+            ],
+            [
+              48.526452,
+              1.832739
+            ],
+            [
+              48.52628,
+              1.832556
+            ],
+            [
+              48.526128,
+              1.832315
+            ],
+            [
+              48.525986,
+              1.832031
+            ],
+            [
+              48.525883,
+              1.831709
+            ],
+            [
+              48.525658,
+              1.830877
+            ],
+            [
+              48.525576,
+              1.830751
+            ],
+            [
+              48.533698,
+              1.829302
+            ],
+            [
+              48.53365,
+              1.829221
+            ],
+            [
+              48.533515,
+              1.829207
+            ],
+            [
+              48.5333,
+              1.829173
+            ],
+            [
+              48.533098,
+              1.829047
+            ],
+            [
+              48.532926,
+              1.828842
+            ],
+            [
+              48.532774,
+              1.828602
+            ],
+            [
+              48.532505,
+              1.828118
+            ],
+            [
+              48.532413,
+              1.827969
+            ],
+            [
+              48.532271,
+              1.827845
+            ],
+            [
+              48.532134,
+              1.827778
+            ],
+            [
+              48.531964,
+              1.827774
+            ],
+            [
+              48.531367,
+              1.827866
+            ],
+            [
+              48.531218,
+              1.827886
+            ],
+            [
+              48.531001,
+              1.827993
+            ],
+            [
+              48.531075,
+              1.828122
+            ],
+            [
+              48.531221,
+              1.827935
+            ],
+            [
+              48.531909,
+              1.827877
+            ],
+            [
+              48.532136,
+              1.82786
+            ],
+            [
+              48.532281,
+              1.827955
+            ],
+            [
+              48.532467,
+              1.828146
+            ],
+            [
+              48.532528,
+              1.828409
+            ],
+            [
+              48.532542,
+              1.828715
+            ],
+            [
+              48.532523,
+              1.829062
+            ],
+            [
+              48.532386,
+              1.829312
+            ],
+            [
+              48.532232,
+              1.829474
+            ],
+            [
+              48.531798,
+              1.829671
             ]
           ]
         }
@@ -5892,9 +6231,9 @@
             "lat": 48.958504,
             "lng": 2.473124,
             "line": "350",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -5926,9 +6265,9 @@
             "lat": 48.941865,
             "lng": 2.431814,
             "line": "350",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -6004,9 +6343,9 @@
             "lat": 48.941942,
             "lng": 2.431476,
             "line": "350",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -6381,7 +6720,7 @@
             "lng": 2.430767,
             "line": "350",
             "status": "unknown",
-            "label": "Non renseigné",
+            "label": "bouchon",
             "congestion": 0,
             "closed": false,
             "closure_type": "",
@@ -6432,9 +6771,9 @@
             "lat": 48.942377,
             "lng": 2.431861,
             "line": "350",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -6470,9 +6809,9 @@
             "lat": 48.900656,
             "lng": 2.366631,
             "line": "350",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -6734,7 +7073,7 @@
             ]
           }
         ],
-        "congestion": 16,
+        "congestion": 14,
         "status": "green"
       }
     },
@@ -6843,9 +7182,9 @@
           "lat": 48.999641,
           "lng": 2.519585,
           "line": "9509",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -6907,9 +7246,9 @@
           "lat": 49.002986,
           "lng": 2.524541,
           "line": "9509",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7058,9 +7397,9 @@
             "lat": 48.999641,
             "lng": 2.519585,
             "line": "9509",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -7122,9 +7461,9 @@
             "lat": 49.002986,
             "lng": 2.524541,
             "line": "9509",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -7441,9 +7780,9 @@
           "lat": 48.927524,
           "lng": 2.481363,
           "line": "351",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7591,9 +7930,9 @@
           "lat": 48.906732,
           "lng": 2.456786,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
+          "status": "unknown",
+          "label": "bouchon",
+          "congestion": 0,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7669,9 +8008,9 @@
           "lat": 48.865813,
           "lng": 2.419632,
           "line": "351",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7745,9 +8084,9 @@
           "lat": 48.862749,
           "lng": 2.413717,
           "line": "351",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7801,9 +8140,9 @@
           "lat": 48.865722,
           "lng": 2.420229,
           "line": "351",
-          "status": "unknown",
-          "label": "Non renseigné",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7952,6 +8291,29 @@
               2.416823
             ]
           ]
+        },
+        {
+          "id": "15126861",
+          "lat": 48.906732,
+          "lng": 2.456786,
+          "line": "351",
+          "type": "Bouchon",
+          "desc": "A86-E/35+0157/35+0105\n",
+          "date": "2026-09-08T15:18:00",
+          "road": "11000016",
+          "sens": "⟲ Ext",
+          "pr_debut": "PR35+157",
+          "pr_fin": "PR35+105",
+          "coords": [
+            [
+              48.907028,
+              2.455493
+            ],
+            [
+              48.906732,
+              2.456786
+            ]
+          ]
         }
       ],
       "aller": {
@@ -8063,9 +8425,9 @@
             "lat": 48.865722,
             "lng": 2.420229,
             "line": "351",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8315,9 +8677,9 @@
             "lat": 48.927524,
             "lng": 2.481363,
             "line": "351",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8413,9 +8775,9 @@
             "lat": 48.906732,
             "lng": 2.456786,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
+            "status": "unknown",
+            "label": "bouchon",
+            "congestion": 0,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8491,9 +8853,9 @@
             "lat": 48.865813,
             "lng": 2.419632,
             "line": "351",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8567,9 +8929,9 @@
             "lat": 48.862749,
             "lng": 2.413717,
             "line": "351",
-            "status": "unknown",
-            "label": "Non renseigné",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8728,9 +9090,9 @@
       "lat": 48.935449,
       "lng": 2.264449,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -8782,9 +9144,9 @@
       "lat": 48.958504,
       "lng": 2.473124,
       "line": "350",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -8874,9 +9236,9 @@
       "lat": 48.950654,
       "lng": 2.440104,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -8968,9 +9330,9 @@
       "lat": 48.941865,
       "lng": 2.431814,
       "line": "350",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -9464,9 +9826,9 @@
       "lat": 48.999641,
       "lng": 2.519585,
       "line": "9509",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -9502,9 +9864,9 @@
       "lat": 48.941942,
       "lng": 2.431476,
       "line": "350",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -9610,9 +9972,9 @@
       "lat": 48.934003,
       "lng": 2.280223,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -9978,9 +10340,9 @@
       "lat": 48.95996,
       "lng": 2.466937,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -10328,9 +10690,9 @@
       "lat": 48.964291,
       "lng": 2.473946,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -10576,9 +10938,9 @@
       "lat": 48.950515,
       "lng": 2.439802,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -10628,9 +10990,9 @@
       "lat": 48.927524,
       "lng": 2.481363,
       "line": "351",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11184,9 +11546,9 @@
       "lat": 48.964251,
       "lng": 2.472948,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11361,7 +11723,7 @@
       "lng": 2.430767,
       "line": "350",
       "status": "unknown",
-      "label": "Non renseigné",
+      "label": "bouchon",
       "congestion": 0,
       "closed": false,
       "closure_type": "",
@@ -11412,9 +11774,9 @@
       "lat": 49.002986,
       "lng": 2.524541,
       "line": "9509",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11488,9 +11850,9 @@
       "lat": 48.906732,
       "lng": 2.456786,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
+      "status": "unknown",
+      "label": "bouchon",
+      "congestion": 0,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11514,9 +11876,9 @@
       "lat": 48.935907,
       "lng": 2.404186,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11592,9 +11954,9 @@
       "lat": 48.942377,
       "lng": 2.431861,
       "line": "350",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11758,9 +12120,9 @@
       "lat": 48.900656,
       "lng": 2.366631,
       "line": "350",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11784,9 +12146,9 @@
       "lat": 48.865813,
       "lng": 2.419632,
       "line": "351",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11886,9 +12248,9 @@
       "lat": 48.935829,
       "lng": 2.264285,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11940,9 +12302,9 @@
       "lat": 48.862749,
       "lng": 2.413717,
       "line": "351",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12048,9 +12410,9 @@
       "lat": 48.966847,
       "lng": 2.478493,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12110,9 +12472,9 @@
       "lat": 48.865722,
       "lng": 2.420229,
       "line": "351",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12436,9 +12798,9 @@
       "lat": 48.965482,
       "lng": 2.476185,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12498,9 +12860,9 @@
       "lat": 48.934407,
       "lng": 2.278846,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12540,9 +12902,9 @@
       "lat": 48.935822,
       "lng": 2.262891,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12574,9 +12936,9 @@
       "lat": 48.935553,
       "lng": 2.26481,
       "line": "9517",
-      "status": "unknown",
-      "label": "Non renseigné",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -13207,85 +13569,447 @@
       ]
     },
     {
-      "id": "15125600",
-      "lat": 48.900656,
-      "lng": 2.366631,
+      "id": "15126544",
+      "lat": 48.940023,
+      "lng": 2.430767,
       "line": "350",
       "type": "Bouchon",
-      "desc": "N315-W/02+0950/02+0700\n",
-      "date": "2026-09-08T06:10:00",
-      "road": "11001049",
-      "sens": "W",
-      "pr_debut": "PR2+950",
-      "pr_fin": "PR1+245",
+      "desc": "",
+      "date": "2026-09-08T11:48:00",
+      "road": "E",
+      "sens": "",
+      "pr_debut": "PR29+440",
+      "pr_fin": "PR29+0",
       "coords": [
         [
-          49.032253,
-          2.10872
+          48.938891,
+          2.429703
         ],
         [
-          49.032466,
-          2.109644
+          48.940023,
+          2.430767
         ],
         [
-          49.032823,
-          2.110435
+          48.936812,
+          2.427802
         ],
         [
-          49.033172,
-          2.110876
+          48.93809,
+          2.42897
+        ]
+      ]
+    },
+    {
+      "id": "15126554",
+      "lat": 48.940952,
+      "lng": 2.431649,
+      "line": "350",
+      "type": "Bouchon",
+      "desc": "A86-E/26+0260/26+0000\nA86-E/29+0000/28+0500\n",
+      "date": "2026-09-08T11:48:00",
+      "road": "11000016",
+      "sens": "⟲ Ext",
+      "pr_debut": "PR30+801",
+      "pr_fin": "PR26+0",
+      "coords": [
+        [
+          48.932845,
+          2.423845
         ],
         [
-          48.915593,
-          2.309464
+          48.93316,
+          2.424201
         ],
         [
-          48.915674,
-          2.30935
+          48.5506,
+          1.921892
         ],
         [
-          48.900735,
-          2.364703
+          48.551243,
+          1.923751
         ],
         [
-          48.900656,
-          2.366631
+          48.552939,
+          1.930505
         ],
         [
-          48.84217,
-          2.095039
+          48.870938,
+          2.3226
         ],
         [
-          48.842619,
-          2.093643
+          48.86995,
+          2.323327
         ],
         [
-          48.842941,
-          2.092783
+          48.832317,
+          2.781266
         ],
         [
-          48.843773,
-          2.090982
+          48.833016,
+          2.790266
         ],
         [
-          48.844184,
-          2.089958
+          48.860397,
+          2.486437
         ],
         [
-          48.844362,
-          2.089649
+          48.860444,
+          2.486071
         ],
         [
-          49.031886,
-          2.10603
+          48.860589,
+          2.485453
         ],
         [
-          49.031764,
-          2.105753
+          48.86082,
+          2.484858
         ],
         [
-          49.031108,
-          2.104638
+          48.861321,
+          2.483952
+        ],
+        [
+          48.859955,
+          2.489741
+        ],
+        [
+          48.860046,
+          2.489597
+        ],
+        [
+          48.860108,
+          2.489417
+        ],
+        [
+          48.860205,
+          2.489125
+        ],
+        [
+          48.860271,
+          2.488792
+        ],
+        [
+          48.860328,
+          2.48844
+        ],
+        [
+          48.860351,
+          2.488114
+        ],
+        [
+          48.860356,
+          2.487415
+        ],
+        [
+          48.860397,
+          2.486437
+        ],
+        [
+          48.940023,
+          2.430767
+        ],
+        [
+          48.940952,
+          2.431649
+        ],
+        [
+          48.532536,
+          1.858642
+        ],
+        [
+          48.531205,
+          1.852302
+        ],
+        [
+          48.529586,
+          1.845806
+        ],
+        [
+          49.170328,
+          2.228581
+        ],
+        [
+          49.172494,
+          2.227714
+        ],
+        [
+          49.174841,
+          2.226288
+        ],
+        [
+          48.865008,
+          2.413122
+        ],
+        [
+          48.863231,
+          2.413233
+        ],
+        [
+          48.538609,
+          1.88434
+        ],
+        [
+          48.537342,
+          1.877923
+        ],
+        [
+          48.535545,
+          1.87136
+        ],
+        [
+          48.542037,
+          1.902982
+        ],
+        [
+          48.540929,
+          1.897222
+        ],
+        [
+          48.527549,
+          1.833003
+        ],
+        [
+          48.527365,
+          1.833125
+        ],
+        [
+          48.525454,
+          1.834093
+        ],
+        [
+          48.525272,
+          1.834285
+        ],
+        [
+          48.525136,
+          1.834559
+        ],
+        [
+          48.525076,
+          1.834882
+        ],
+        [
+          48.525095,
+          1.835216
+        ],
+        [
+          48.525194,
+          1.835513
+        ],
+        [
+          48.525369,
+          1.835739
+        ],
+        [
+          48.525576,
+          1.835865
+        ],
+        [
+          48.525802,
+          1.835914
+        ],
+        [
+          48.526031,
+          1.835962
+        ],
+        [
+          48.526245,
+          1.836038
+        ],
+        [
+          48.526471,
+          1.836228
+        ],
+        [
+          48.526616,
+          1.836405
+        ],
+        [
+          48.526752,
+          1.836678
+        ],
+        [
+          48.526925,
+          1.837214
+        ],
+        [
+          48.527042,
+          1.837313
+        ],
+        [
+          48.527549,
+          1.833003
+        ],
+        [
+          48.527142,
+          1.833055
+        ],
+        [
+          48.526849,
+          1.832994
+        ],
+        [
+          48.526657,
+          1.83288
+        ],
+        [
+          48.526452,
+          1.832739
+        ],
+        [
+          48.52628,
+          1.832556
+        ],
+        [
+          48.526128,
+          1.832315
+        ],
+        [
+          48.525986,
+          1.832031
+        ],
+        [
+          48.525883,
+          1.831709
+        ],
+        [
+          48.525658,
+          1.830877
+        ],
+        [
+          48.525576,
+          1.830751
+        ],
+        [
+          48.533698,
+          1.829302
+        ],
+        [
+          48.53365,
+          1.829221
+        ],
+        [
+          48.533515,
+          1.829207
+        ],
+        [
+          48.5333,
+          1.829173
+        ],
+        [
+          48.533098,
+          1.829047
+        ],
+        [
+          48.532926,
+          1.828842
+        ],
+        [
+          48.532774,
+          1.828602
+        ],
+        [
+          48.532505,
+          1.828118
+        ],
+        [
+          48.532413,
+          1.827969
+        ],
+        [
+          48.532271,
+          1.827845
+        ],
+        [
+          48.532134,
+          1.827778
+        ],
+        [
+          48.531964,
+          1.827774
+        ],
+        [
+          48.531367,
+          1.827866
+        ],
+        [
+          48.531218,
+          1.827886
+        ],
+        [
+          48.531001,
+          1.827993
+        ],
+        [
+          48.531075,
+          1.828122
+        ],
+        [
+          48.531221,
+          1.827935
+        ],
+        [
+          48.531909,
+          1.827877
+        ],
+        [
+          48.532136,
+          1.82786
+        ],
+        [
+          48.532281,
+          1.827955
+        ],
+        [
+          48.532467,
+          1.828146
+        ],
+        [
+          48.532528,
+          1.828409
+        ],
+        [
+          48.532542,
+          1.828715
+        ],
+        [
+          48.532523,
+          1.829062
+        ],
+        [
+          48.532386,
+          1.829312
+        ],
+        [
+          48.532232,
+          1.829474
+        ],
+        [
+          48.531798,
+          1.829671
+        ]
+      ]
+    },
+    {
+      "id": "15126861",
+      "lat": 48.906732,
+      "lng": 2.456786,
+      "line": "351",
+      "type": "Bouchon",
+      "desc": "A86-E/35+0157/35+0105\n",
+      "date": "2026-09-08T15:18:00",
+      "road": "11000016",
+      "sens": "⟲ Ext",
+      "pr_debut": "PR35+157",
+      "pr_fin": "PR35+105",
+      "coords": [
+        [
+          48.907028,
+          2.455493
+        ],
+        [
+          48.906732,
+          2.456786
         ]
       ]
     }
