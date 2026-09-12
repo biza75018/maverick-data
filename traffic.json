@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T09:43:37Z",
+  "updated_at": "2026-09-12T13:09:54Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "350": {
@@ -1251,9 +1251,21 @@
           "date": "2026-09-12T09:57:00",
           "road": "11000016",
           "sens": "⟲ Ext",
-          "pr_debut": "PR30+105",
-          "pr_fin": "PR25+190",
+          "pr_debut": "PR30+379",
+          "pr_fin": "PR26+0",
           "coords": [
+            [
+              48.5506,
+              1.921892
+            ],
+            [
+              48.551243,
+              1.923751
+            ],
+            [
+              48.552939,
+              1.930505
+            ],
             [
               48.881911,
               2.366944
@@ -1661,14 +1673,6 @@
             [
               48.531798,
               1.829671
-            ],
-            [
-              48.936621,
-              2.427435
-            ],
-            [
-              48.935646,
-              2.426486
             ]
           ]
         }
@@ -4783,9 +4787,9 @@
           "lat": 48.934407,
           "lng": 2.278846,
           "line": "9517",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -5083,47 +5087,7 @@
       ],
       "congestion": 13,
       "status": "green",
-      "evenements": [
-        {
-          "id": "15135010",
-          "lat": 48.934407,
-          "lng": 2.278846,
-          "line": "9517",
-          "type": "Bouchon",
-          "desc": "",
-          "date": "2026-09-12T11:04:40",
-          "road": "E",
-          "sens": "",
-          "pr_debut": "PR32+360",
-          "pr_fin": "PR32+560",
-          "coords": [
-            [
-              48.934721,
-              2.28006
-            ],
-            [
-              48.934605,
-              2.279555
-            ],
-            [
-              48.934559,
-              2.27935
-            ],
-            [
-              48.934407,
-              2.278846
-            ],
-            [
-              48.934131,
-              2.277691
-            ],
-            [
-              48.933758,
-              2.2761
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -6689,9 +6653,9 @@
             "lat": 48.934407,
             "lng": 2.278846,
             "line": "9517",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -7422,9 +7386,9 @@
           "lat": 48.864265,
           "lng": 2.413322,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
+          "status": "unknown",
+          "label": "Non renseigné",
+          "congestion": 0,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7580,9 +7544,9 @@
           "lat": 48.865439,
           "lng": 2.419903,
           "line": "351",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7762,31 +7726,7 @@
       ],
       "congestion": 10,
       "status": "green",
-      "evenements": [
-        {
-          "id": "15134953",
-          "lat": 48.865439,
-          "lng": 2.419903,
-          "line": "351",
-          "type": "Bouchon",
-          "desc": "N13-W/21+0320/21+0000\n",
-          "date": "2026-09-12T10:02:20",
-          "road": "11001050",
-          "sens": "W",
-          "pr_debut": "PR21+320",
-          "pr_fin": "PR21+0",
-          "coords": [
-            [
-              48.865353,
-              2.419071
-            ],
-            [
-              48.865439,
-              2.419903
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -7844,9 +7784,9 @@
             "lat": 48.864265,
             "lng": 2.413322,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
+            "status": "unknown",
+            "label": "Non renseigné",
+            "congestion": 0,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8408,9 +8348,9 @@
             "lat": 48.865439,
             "lng": 2.419903,
             "line": "351",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -11063,9 +11003,9 @@
       "lat": 48.864265,
       "lng": 2.413322,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
+      "status": "unknown",
+      "label": "Non renseigné",
+      "congestion": 0,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11885,9 +11825,9 @@
       "lat": 48.934407,
       "lng": 2.278846,
       "line": "9517",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12167,9 +12107,9 @@
       "lat": 48.865439,
       "lng": 2.419903,
       "line": "351",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -12628,68 +12568,6 @@
       ]
     },
     {
-      "id": "15134953",
-      "lat": 48.865439,
-      "lng": 2.419903,
-      "line": "351",
-      "type": "Bouchon",
-      "desc": "N13-W/21+0320/21+0000\n",
-      "date": "2026-09-12T10:02:20",
-      "road": "11001050",
-      "sens": "W",
-      "pr_debut": "PR21+320",
-      "pr_fin": "PR21+0",
-      "coords": [
-        [
-          48.865353,
-          2.419071
-        ],
-        [
-          48.865439,
-          2.419903
-        ]
-      ]
-    },
-    {
-      "id": "15135010",
-      "lat": 48.934407,
-      "lng": 2.278846,
-      "line": "9517",
-      "type": "Bouchon",
-      "desc": "",
-      "date": "2026-09-12T11:04:40",
-      "road": "E",
-      "sens": "",
-      "pr_debut": "PR32+360",
-      "pr_fin": "PR32+560",
-      "coords": [
-        [
-          48.934721,
-          2.28006
-        ],
-        [
-          48.934605,
-          2.279555
-        ],
-        [
-          48.934559,
-          2.27935
-        ],
-        [
-          48.934407,
-          2.278846
-        ],
-        [
-          48.934131,
-          2.277691
-        ],
-        [
-          48.933758,
-          2.2761
-        ]
-      ]
-    },
-    {
       "id": "15134942",
       "lat": 48.940952,
       "lng": 2.431649,
@@ -12699,9 +12577,21 @@
       "date": "2026-09-12T09:57:00",
       "road": "11000016",
       "sens": "⟲ Ext",
-      "pr_debut": "PR30+105",
-      "pr_fin": "PR25+190",
+      "pr_debut": "PR30+379",
+      "pr_fin": "PR26+0",
       "coords": [
+        [
+          48.5506,
+          1.921892
+        ],
+        [
+          48.551243,
+          1.923751
+        ],
+        [
+          48.552939,
+          1.930505
+        ],
         [
           48.881911,
           2.366944
@@ -13109,14 +12999,6 @@
         [
           48.531798,
           1.829671
-        ],
-        [
-          48.936621,
-          2.427435
-        ],
-        [
-          48.935646,
-          2.426486
         ]
       ]
     }
