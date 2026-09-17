@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T22:48:51Z",
+  "updated_at": "2026-09-17T00:55:02Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "350": {
@@ -7905,9 +7905,9 @@
           "lat": 48.863231,
           "lng": 2.413233,
           "line": "351",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7931,9 +7931,9 @@
           "lat": 48.858033,
           "lng": 2.414029,
           "line": "351",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -8313,86 +8313,7 @@
       ],
       "congestion": 10,
       "status": "green",
-      "evenements": [
-        {
-          "id": "15143483",
-          "lat": 48.858033,
-          "lng": 2.414029,
-          "line": "351",
-          "type": "Bouchon",
-          "desc": "",
-          "date": "2026-09-16T21:56:40",
-          "road": "11000026",
-          "sens": "↓ Province",
-          "pr_debut": "PR7+900",
-          "pr_fin": "PR9+0",
-          "coords": [
-            [
-              48.863231,
-              2.413233
-            ],
-            [
-              48.85952,
-              2.414004
-            ],
-            [
-              48.858913,
-              2.41406
-            ],
-            [
-              48.858033,
-              2.414029
-            ],
-            [
-              48.857123,
-              2.413934
-            ],
-            [
-              48.856229,
-              2.413837
-            ],
-            [
-              48.835326,
-              2.271917
-            ],
-            [
-              48.835527,
-              2.270992
-            ],
-            [
-              48.835513,
-              2.269936
-            ],
-            [
-              48.835434,
-              2.268882
-            ]
-          ]
-        },
-        {
-          "id": "15143523",
-          "lat": 48.863231,
-          "lng": 2.413233,
-          "line": "351",
-          "type": "Bouchon",
-          "desc": "",
-          "date": "2026-09-17T00:42:20",
-          "road": "11000026",
-          "sens": "↓ Province",
-          "pr_debut": "PR7+469",
-          "pr_fin": "PR7+700",
-          "coords": [
-            [
-              48.865008,
-              2.413122
-            ],
-            [
-              48.863231,
-              2.413233
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -8852,9 +8773,9 @@
             "lat": 48.863231,
             "lng": 2.413233,
             "line": "351",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8878,9 +8799,9 @@
             "lat": 48.858033,
             "lng": 2.414029,
             "line": "351",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -11571,9 +11492,9 @@
       "lat": 48.863231,
       "lng": 2.413233,
       "line": "351",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11597,9 +11518,9 @@
       "lat": 48.858033,
       "lng": 2.414029,
       "line": "351",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -14251,84 +14172,6 @@
         [
           48.940952,
           2.431649
-        ]
-      ]
-    },
-    {
-      "id": "15143483",
-      "lat": 48.858033,
-      "lng": 2.414029,
-      "line": "351",
-      "type": "Bouchon",
-      "desc": "",
-      "date": "2026-09-16T21:56:40",
-      "road": "11000026",
-      "sens": "↓ Province",
-      "pr_debut": "PR7+900",
-      "pr_fin": "PR9+0",
-      "coords": [
-        [
-          48.863231,
-          2.413233
-        ],
-        [
-          48.85952,
-          2.414004
-        ],
-        [
-          48.858913,
-          2.41406
-        ],
-        [
-          48.858033,
-          2.414029
-        ],
-        [
-          48.857123,
-          2.413934
-        ],
-        [
-          48.856229,
-          2.413837
-        ],
-        [
-          48.835326,
-          2.271917
-        ],
-        [
-          48.835527,
-          2.270992
-        ],
-        [
-          48.835513,
-          2.269936
-        ],
-        [
-          48.835434,
-          2.268882
-        ]
-      ]
-    },
-    {
-      "id": "15143523",
-      "lat": 48.863231,
-      "lng": 2.413233,
-      "line": "351",
-      "type": "Bouchon",
-      "desc": "",
-      "date": "2026-09-17T00:42:20",
-      "road": "11000026",
-      "sens": "↓ Province",
-      "pr_debut": "PR7+469",
-      "pr_fin": "PR7+700",
-      "coords": [
-        [
-          48.865008,
-          2.413122
-        ],
-        [
-          48.863231,
-          2.413233
         ]
       ]
     }
