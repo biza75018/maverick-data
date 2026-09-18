@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T22:05:28Z",
+  "updated_at": "2026-09-18T00:11:00Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "350": {
@@ -6996,9 +6996,9 @@
           "lat": 48.865008,
           "lng": 2.413122,
           "line": "351",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7022,9 +7022,9 @@
           "lat": 48.863231,
           "lng": 2.413233,
           "line": "351",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7048,9 +7048,9 @@
           "lat": 48.858033,
           "lng": 2.414029,
           "line": "351",
-          "status": "unknown",
-          "label": "bouchon",
-          "congestion": 0,
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
           "closed": false,
           "closure_type": "",
           "fermeture": "",
@@ -7428,7 +7428,7 @@
           ]
         }
       ],
-      "congestion": 15,
+      "congestion": 14,
       "status": "green",
       "evenements": [
         {
@@ -7989,77 +7989,6 @@
               2.340369
             ]
           ]
-        },
-        {
-          "id": "15145669",
-          "lat": 48.865008,
-          "lng": 2.413122,
-          "line": "351",
-          "type": "Bouchon",
-          "desc": "A6b-Y/08+0414/08+0708\n",
-          "date": "2026-09-17T21:52:20",
-          "road": "11000026",
-          "sens": "↓ Province",
-          "pr_debut": "PR6+700",
-          "pr_fin": "PR9+0",
-          "coords": [
-            [
-              48.867196,
-              2.41317
-            ],
-            [
-              48.865008,
-              2.413122
-            ],
-            [
-              48.865008,
-              2.413122
-            ],
-            [
-              48.863231,
-              2.413233
-            ],
-            [
-              48.863231,
-              2.413233
-            ],
-            [
-              48.85952,
-              2.414004
-            ],
-            [
-              48.858913,
-              2.41406
-            ],
-            [
-              48.858033,
-              2.414029
-            ],
-            [
-              48.857123,
-              2.413934
-            ],
-            [
-              48.856229,
-              2.413837
-            ],
-            [
-              48.835326,
-              2.271917
-            ],
-            [
-              48.835527,
-              2.270992
-            ],
-            [
-              48.835513,
-              2.269936
-            ],
-            [
-              48.835434,
-              2.268882
-            ]
-          ]
         }
       ],
       "aller": {
@@ -8495,9 +8424,9 @@
             "lat": 48.865008,
             "lng": 2.413122,
             "line": "351",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8521,9 +8450,9 @@
             "lat": 48.863231,
             "lng": 2.413233,
             "line": "351",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8547,9 +8476,9 @@
             "lat": 48.858033,
             "lng": 2.414029,
             "line": "351",
-            "status": "unknown",
-            "label": "bouchon",
-            "congestion": 0,
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
             "closed": false,
             "closure_type": "",
             "fermeture": "",
@@ -8863,7 +8792,7 @@
             ]
           }
         ],
-        "congestion": 16,
+        "congestion": 15,
         "status": "green"
       }
     }
@@ -11214,9 +11143,9 @@
       "lat": 48.865008,
       "lng": 2.413122,
       "line": "351",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11240,9 +11169,9 @@
       "lat": 48.863231,
       "lng": 2.413233,
       "line": "351",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -11266,9 +11195,9 @@
       "lat": 48.858033,
       "lng": 2.414029,
       "line": "351",
-      "status": "unknown",
-      "label": "bouchon",
-      "congestion": 0,
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
       "closed": false,
       "closure_type": "",
       "fermeture": "",
@@ -13597,77 +13526,6 @@
         [
           48.940952,
           2.431649
-        ]
-      ]
-    },
-    {
-      "id": "15145669",
-      "lat": 48.865008,
-      "lng": 2.413122,
-      "line": "351",
-      "type": "Bouchon",
-      "desc": "A6b-Y/08+0414/08+0708\n",
-      "date": "2026-09-17T21:52:20",
-      "road": "11000026",
-      "sens": "↓ Province",
-      "pr_debut": "PR6+700",
-      "pr_fin": "PR9+0",
-      "coords": [
-        [
-          48.867196,
-          2.41317
-        ],
-        [
-          48.865008,
-          2.413122
-        ],
-        [
-          48.865008,
-          2.413122
-        ],
-        [
-          48.863231,
-          2.413233
-        ],
-        [
-          48.863231,
-          2.413233
-        ],
-        [
-          48.85952,
-          2.414004
-        ],
-        [
-          48.858913,
-          2.41406
-        ],
-        [
-          48.858033,
-          2.414029
-        ],
-        [
-          48.857123,
-          2.413934
-        ],
-        [
-          48.856229,
-          2.413837
-        ],
-        [
-          48.835326,
-          2.271917
-        ],
-        [
-          48.835527,
-          2.270992
-        ],
-        [
-          48.835513,
-          2.269936
-        ],
-        [
-          48.835434,
-          2.268882
         ]
       ]
     }
