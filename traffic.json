@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T21:50:59Z",
+  "updated_at": "2026-09-18T23:40:07Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "350": {
@@ -3596,12 +3596,12 @@
           "lat": 48.922049,
           "lng": 2.365934,
           "line": "9517",
-          "status": "red",
-          "label": "Fermé (Securite)",
-          "congestion": 95,
-          "closed": true,
-          "closure_type": "securite",
-          "fermeture": "Securite",
+          "status": "green",
+          "label": "Fluide",
+          "congestion": 10,
+          "closed": false,
+          "closure_type": "",
+          "fermeture": "",
           "road": "A86",
           "sens": "⟲ Ext",
           "pr": "PR20+0710 → PR20+0045",
@@ -4650,37 +4650,9 @@
           ]
         }
       ],
-      "congestion": 16,
+      "congestion": 13,
       "status": "green",
-      "evenements": [
-        {
-          "id": "1900081147",
-          "lat": 48.922049,
-          "lng": 2.365934,
-          "line": "9517",
-          "type": "IncidentPanne",
-          "desc": "",
-          "date": "2026-09-18T23:32:42",
-          "road": "11000016",
-          "sens": "⟲ Ext",
-          "pr_debut": "PR20+638",
-          "pr_fin": "PR20+638",
-          "coords": [
-            [
-              48.921938,
-              2.36619
-            ],
-            [
-              48.922049,
-              2.365934
-            ],
-            [
-              48.922371,
-              2.363097
-            ]
-          ]
-        }
-      ],
+      "evenements": [],
       "aller": {
         "segments": [
           {
@@ -5516,12 +5488,12 @@
             "lat": 48.922049,
             "lng": 2.365934,
             "line": "9517",
-            "status": "red",
-            "label": "Fermé (Securite)",
-            "congestion": 95,
-            "closed": true,
-            "closure_type": "securite",
-            "fermeture": "Securite",
+            "status": "green",
+            "label": "Fluide",
+            "congestion": 10,
+            "closed": false,
+            "closure_type": "",
+            "fermeture": "",
             "road": "A86",
             "sens": "⟲ Ext",
             "pr": "PR20+0710 → PR20+0045",
@@ -6518,7 +6490,7 @@
             ]
           }
         ],
-        "congestion": 17,
+        "congestion": 14,
         "status": "green"
       }
     },
@@ -9628,12 +9600,12 @@
       "lat": 48.922049,
       "lng": 2.365934,
       "line": "9517",
-      "status": "red",
-      "label": "Fermé (Securite)",
-      "congestion": 95,
-      "closed": true,
-      "closure_type": "securite",
-      "fermeture": "Securite",
+      "status": "green",
+      "label": "Fluide",
+      "congestion": 10,
+      "closed": false,
+      "closure_type": "",
+      "fermeture": "",
       "road": "A86",
       "sens": "⟲ Ext",
       "pr": "PR20+0710 → PR20+0045",
@@ -12157,33 +12129,6 @@
         [
           48.853788,
           2.333455
-        ]
-      ]
-    },
-    {
-      "id": "1900081147",
-      "lat": 48.922049,
-      "lng": 2.365934,
-      "line": "9517",
-      "type": "IncidentPanne",
-      "desc": "",
-      "date": "2026-09-18T23:32:42",
-      "road": "11000016",
-      "sens": "⟲ Ext",
-      "pr_debut": "PR20+638",
-      "pr_fin": "PR20+638",
-      "coords": [
-        [
-          48.921938,
-          2.36619
-        ],
-        [
-          48.922049,
-          2.365934
-        ],
-        [
-          48.922371,
-          2.363097
         ]
       ]
     }
