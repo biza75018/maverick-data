@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T20:26:44Z",
+  "updated_at": "2026-09-23T23:03:46Z",
   "source": "Sytadin / DiRIF",
   "lines": {
     "350": {
@@ -9501,12 +9501,12 @@
           "lat": 48.864265,
           "lng": 2.413322,
           "line": "351",
-          "status": "green",
-          "label": "Fluide",
-          "congestion": 10,
-          "closed": false,
-          "closure_type": "",
-          "fermeture": "",
+          "status": "red",
+          "label": "Fermé (Travaux)",
+          "congestion": 95,
+          "closed": true,
+          "closure_type": "nocturne",
+          "fermeture": "Travaux",
           "road": "N118",
           "sens": "↓ Province",
           "pr": "PR00+0250 → PR00+0550",
@@ -9839,7 +9839,7 @@
           ]
         }
       ],
-      "congestion": 18,
+      "congestion": 23,
       "status": "green",
       "evenements": [
         {
@@ -10864,6 +10864,53 @@
               2.720235
             ]
           ]
+        },
+        {
+          "id": "500565290",
+          "lat": 48.864265,
+          "lng": 2.413322,
+          "line": "351",
+          "type": "Travaux",
+          "desc": "",
+          "date": "2026-09-23T22:31:23",
+          "road": "11000043",
+          "sens": "↓ Province",
+          "pr_debut": "PR0+400",
+          "pr_fin": "PR1+100",
+          "coords": [
+            [
+              48.867217,
+              2.413215
+            ],
+            [
+              48.864265,
+              2.413322
+            ],
+            [
+              48.880608,
+              2.405128
+            ],
+            [
+              48.880439,
+              2.405656
+            ],
+            [
+              48.880184,
+              2.406267
+            ],
+            [
+              48.879573,
+              2.407257
+            ],
+            [
+              48.878841,
+              2.407998
+            ],
+            [
+              48.875484,
+              2.409972
+            ]
+          ]
         }
       ],
       "aller": {
@@ -10923,12 +10970,12 @@
             "lat": 48.864265,
             "lng": 2.413322,
             "line": "351",
-            "status": "green",
-            "label": "Fluide",
-            "congestion": 10,
-            "closed": false,
-            "closure_type": "",
-            "fermeture": "",
+            "status": "red",
+            "label": "Fermé (Travaux)",
+            "congestion": 95,
+            "closed": true,
+            "closure_type": "nocturne",
+            "fermeture": "Travaux",
             "road": "N118",
             "sens": "↓ Province",
             "pr": "PR00+0250 → PR00+0550",
@@ -10983,8 +11030,8 @@
             ]
           }
         ],
-        "congestion": 10,
-        "status": "green"
+        "congestion": 38,
+        "status": "orange"
       },
       "retour": {
         "segments": [
@@ -14142,12 +14189,12 @@
       "lat": 48.864265,
       "lng": 2.413322,
       "line": "351",
-      "status": "green",
-      "label": "Fluide",
-      "congestion": 10,
-      "closed": false,
-      "closure_type": "",
-      "fermeture": "",
+      "status": "red",
+      "label": "Fermé (Travaux)",
+      "congestion": 95,
+      "closed": true,
+      "closure_type": "nocturne",
+      "fermeture": "Travaux",
       "road": "N118",
       "sens": "↓ Province",
       "pr": "PR00+0250 → PR00+0550",
@@ -19275,6 +19322,53 @@
         [
           48.829016,
           2.720235
+        ]
+      ]
+    },
+    {
+      "id": "500565290",
+      "lat": 48.864265,
+      "lng": 2.413322,
+      "line": "351",
+      "type": "Travaux",
+      "desc": "",
+      "date": "2026-09-23T22:31:23",
+      "road": "11000043",
+      "sens": "↓ Province",
+      "pr_debut": "PR0+400",
+      "pr_fin": "PR1+100",
+      "coords": [
+        [
+          48.867217,
+          2.413215
+        ],
+        [
+          48.864265,
+          2.413322
+        ],
+        [
+          48.880608,
+          2.405128
+        ],
+        [
+          48.880439,
+          2.405656
+        ],
+        [
+          48.880184,
+          2.406267
+        ],
+        [
+          48.879573,
+          2.407257
+        ],
+        [
+          48.878841,
+          2.407998
+        ],
+        [
+          48.875484,
+          2.409972
         ]
       ]
     }
