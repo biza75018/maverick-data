@@ -1,335 +1,304 @@
 #!/usr/bin/env python3
 """
-Maverick — Collecteur Sytadin DiRIF
-Filtre strictement sur le tracé des lignes (distance au segment de ligne, pas au point)
+Maverick — collecteur Sytadin (DiRIF), version 2.
+
+Ne conserve que ce qui se trouve SUR le tracé des lignes et DANS le sens de
+circulation concerné (aller ou retour) :
+  - état du trafic par tronçon (fluide / dense / saturé),
+  - fermetures (totales, sécurité, travaux) et voies fermées,
+  - événements en cours (accidents, bouchons, travaux, chantiers, exceptionnels).
+
+Tracés aller et retour : lines.json (issus du référentiel IDFM).
+Sortie : traffic.json, lu par l'appli Maverick.
 """
 
-import urllib.request
-import xml.etree.ElementTree as ET
 import json
 import math
 import re
-from datetime import datetime
+import unicodedata
+import urllib.request
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone
+
 from pyproj import Transformer
 
-transformer = Transformer.from_crs("EPSG:27572","EPSG:4326",always_xy=True)
-
 BASE = "https://www.sytadin.fr/diffusion"
-URLS = {
-    "segments":    f"{BASE}/xml/segments_dyn.xml",
-    "evenements":  f"{BASE}/xml/evenements.xml",
-    "geom_seg":    f"{BASE}/mifmid/modelisation/Segment.mif",
-    "geom_seg_id": f"{BASE}/mifmid/modelisation/Segment.mid",
-}
+URL_SEGMENTS = f"{BASE}/xml/segments_dyn.xml"
+URL_EVENEMENTS = f"{BASE}/xml/evenements.xml"
+URL_MIF = f"{BASE}/mifmid/modelisation/Segment.mif"
+URL_MID = f"{BASE}/mifmid/modelisation/Segment.mid"
 
-BBOX = {"min_lat":48.830,"max_lat":49.020,"min_lng":2.240,"max_lng":2.580}
+MAX_DIST = 35      # m : distance maximale entre un point Sytadin et le tracé de la ligne
+MIN_SHARE = 0.6    # part minimale des points du tronçon situés sur le tracé
+MIN_ALIGN = 0.5    # cosinus minimal entre le sens du tronçon et le sens de circulation de la ligne
 
-# Tracés complets des lignes (sous-échantillonnés depuis GeoJSON)
-LINE_TRACES = {
-    "9509": [[48.980,2.271],[48.992,2.285],[48.995,2.303],[48.993,2.320],
-             [48.991,2.374],[48.977,2.392],[48.974,2.401],[49.010,2.559]],
-    "9517": [[48.948,2.255],[48.937,2.259],[48.920,2.344],[48.918,2.344],
-             [48.918,2.352],[48.920,2.361],[48.976,2.506],[48.991,2.516],[49.011,2.559]],
-    "350":  [[48.898,2.360],[48.943,2.434],[48.948,2.438],[48.950,2.450],
-             [48.957,2.461],[48.961,2.489],[48.973,2.511],[48.984,2.516],
-             [49.011,2.559],[49.003,2.564],[49.004,2.571]],
-    "351":  [[48.848,2.398],[48.847,2.410],[48.865,2.412],[48.858,2.415],
-             [48.922,2.470],[48.925,2.474],[48.929,2.480],[48.918,2.485],
-             [48.995,2.524],[49.011,2.559],[49.003,2.564]],
-}
+TRANSFORMER = Transformer.from_crs("EPSG:27572", "EPSG:4326", always_xy=True)
+LAT0 = 48.93
+KX = 111320 * math.cos(math.radians(LAT0))
+KY = 111320
+CELL = 100         # m : taille des cases de l'index spatial
 
-ETAT_MAP = {
-    "fluide":        {"label":"Fluide",       "congestion":10,"status":"green"},
-    "pre-sature":    {"label":"Pré-saturé",   "congestion":50,"status":"orange"},
-    "sature":        {"label":"Saturé",       "congestion":80,"status":"red"},
-    "non renseigne": {"label":"Non renseigné","congestion":0, "status":"unknown"},
-}
+ETAT_VALEUR = {"fluide": 10, "dense": 50, "sature": 80, "nd": 0}
+SENS_LIBELLE = {"X": "vers Paris", "Y": "vers province", "I": "intérieur", "E": "extérieur"}
 
-SENS_MAP = {"Y":"↓ Province","X":"↑ Paris","I":"⟳ Int","E":"⟲ Ext"}
 
+# ── Outils ─────────────────────────────────────────────────────────────
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent":"Maverick/1.0"})
-    with urllib.request.urlopen(req, timeout=60) as r:
+    req = urllib.request.Request(url, headers={"User-Agent": "Maverick/2.0 (Transdev Express Roissy)"})
+    with urllib.request.urlopen(req, timeout=90) as r:
         return r.read()
 
-def dist_m(a1,o1,a2,o2):
-    """Distance en mètres entre deux points GPS."""
-    d1=(a2-a1)*111320; d2=(o2-o1)*111320*math.cos(math.radians(a1))
-    return math.sqrt(d1*d1+d2*d2)
 
-def point_to_segment_dist(px, py, ax, ay, bx, by):
-    """Distance en mètres d'un point P au segment [A,B]."""
-    # Convertir en mètres approximatifs
-    scale_lat = 111320
-    scale_lng = 111320 * math.cos(math.radians(px))
-    pxm, pym = px * scale_lat, py * scale_lng
-    axm, aym = ax * scale_lat, ay * scale_lng
-    bxm, bym = bx * scale_lat, by * scale_lng
-    
-    dx, dy = bxm - axm, bym - aym
-    len_sq = dx*dx + dy*dy
-    if len_sq == 0:
-        return math.sqrt((pxm-axm)**2 + (pym-aym)**2)
-    t = max(0, min(1, ((pxm-axm)*dx + (pym-aym)*dy) / len_sq))
-    proj_x = axm + t * dx
-    proj_y = aym + t * dy
-    return math.sqrt((pxm-proj_x)**2 + (pym-proj_y)**2)
+def xy(p):
+    """[lat, lng] → mètres locaux."""
+    return (p[1] * KX, p[0] * KY)
 
-def on_line(lat, lng, max_dist=150):
-    """Vérifie si un point est à moins de max_dist mètres du TRACÉ d'une ligne.
-    Teste la distance perpendiculaire à chaque segment du tracé, pas juste aux points."""
-    for lid, pts in LINE_TRACES.items():
-        for i in range(len(pts)-1):
-            d = point_to_segment_dist(lat, lng, pts[i][0], pts[i][1], pts[i+1][0], pts[i+1][1])
-            if d < max_dist:
-                return lid
-    return None
 
-def in_bbox(lat,lng):
-    return BBOX["min_lat"]<=lat<=BBOX["max_lat"] and BBOX["min_lng"]<=lng<=BBOX["max_lng"]
+def sans_accents(s):
+    return "".join(c for c in unicodedata.normalize("NFD", s or "") if unicodedata.category(c) != "Mn").lower()
+
+
+def etat(texte):
+    t = sans_accents(texte)
+    if "fluide" in t:
+        return "fluide"
+    if "pre" in t:
+        return "dense"
+    if "satur" in t:
+        return "sature"
+    return "nd"
+
+
+# ── Index spatial des tracés ───────────────────────────────────────────
+class Traces:
+    def __init__(self, lines):
+        self.edges = []      # (ligne, sens, ax, ay, bx, by)
+        self.grid = {}
+        for lid, dirs in lines.items():
+            for sens, pts in dirs.items():
+                for a, b in zip(pts, pts[1:]):
+                    (ax, ay), (bx, by) = xy(a), xy(b)
+                    k = len(self.edges)
+                    self.edges.append((lid, sens, ax, ay, bx, by))
+                    for cx in range(int(min(ax, bx) // CELL) - 1, int(max(ax, bx) // CELL) + 2):
+                        for cy in range(int(min(ay, by) // CELL) - 1, int(max(ay, by) // CELL) + 2):
+                            self.grid.setdefault((cx, cy), []).append(k)
+
+    def nearest(self, p):
+        """Arête la plus proche par (ligne, sens) : {(lid, sens): (distance, vecteur de l'arête)}."""
+        px, py = xy(p)
+        best = {}
+        for k in self.grid.get((int(px // CELL), int(py // CELL)), []):
+            lid, sens, ax, ay, bx, by = self.edges[k]
+            dx, dy = bx - ax, by - ay
+            L = dx * dx + dy * dy
+            u = max(0.0, min(1.0, ((px - ax) * dx + (py - ay) * dy) / L)) if L else 0.0
+            d = math.hypot(px - ax - u * dx, py - ay - u * dy)
+            key = (lid, sens)
+            if key not in best or d < best[key][0]:
+                best[key] = (d, (dx, dy))
+        return best
+
+    def match(self, coords):
+        """Liste des (ligne, sens) dont le tracé porte ce tronçon, dans le même sens de circulation."""
+        if len(coords) < 2:
+            return []
+        hits, vecs = {}, {}
+        for p in coords:
+            for key, (d, v) in self.nearest(p).items():
+                if d <= MAX_DIST:
+                    hits[key] = hits.get(key, 0) + 1
+                    vx, vy = vecs.get(key, (0.0, 0.0))
+                    vecs[key] = (vx + v[0], vy + v[1])
+        (sx, sy), (ex, ey) = xy(coords[0]), xy(coords[-1])
+        seg = (ex - sx, ey - sy)
+        nseg = math.hypot(*seg)
+        out = []
+        for key, n in hits.items():
+            if n < max(2, math.ceil(len(coords) * MIN_SHARE)):
+                continue
+            tv = vecs[key]
+            nt = math.hypot(*tv)
+            if nseg < 1 or nt < 1:
+                continue
+            if (seg[0] * tv[0] + seg[1] * tv[1]) / (nseg * nt) >= MIN_ALIGN:
+                out.append(key)
+        return out
+
+
+# ── Référentiel géométrique Sytadin ────────────────────────────────────
+def parse_mif(lines, start):
+    """Lit les objets MapInfo dans l'ordre (un objet par ligne du fichier MID).
+    Gère NONE, POINT, LINE, PLINE, PLINE MULTIPLE et REGION ; ignore les lignes de style."""
+    def pt(x, y):
+        lon, lat = TRANSFORMER.transform(float(x), float(y))
+        return [round(lat, 6), round(lon, 6)]
+
+    def read(i, k):
+        return [pt(*lines[i + j].split()[:2]) for j in range(k)], i + k
+
+    objs, i, n = [], start, len(lines)
+    while i < n:
+        tok = lines[i].split()
+        if not tok:
+            i += 1
+            continue
+        kw = tok[0].upper()
+        if kw == "NONE":
+            objs.append([]); i += 1
+        elif kw == "POINT":
+            objs.append([[pt(tok[1], tok[2])]]); i += 1
+        elif kw == "LINE":
+            objs.append([[pt(tok[1], tok[2]), pt(tok[3], tok[4])]]); i += 1
+        elif kw == "PLINE":
+            if len(tok) > 1 and tok[1].upper() == "MULTIPLE":
+                sections, i = [], i + 1
+                for _ in range(int(tok[2])):
+                    k = int(lines[i].split()[0]); i += 1
+                    sec, i = read(i, k); sections.append(sec)
+                objs.append(sections)
+            else:
+                if len(tok) > 1:
+                    k, i = int(tok[1]), i + 1
+                else:
+                    k, i = int(lines[i + 1].split()[0]), i + 2
+                sec, i = read(i, k)
+                objs.append([sec])
+        elif kw == "REGION":
+            sections, i = [], i + 1
+            for _ in range(int(tok[1])):
+                k = int(lines[i].split()[0]); i += 1
+                sec, i = read(i, k); sections.append(sec)
+            objs.append(sections)
+        else:
+            i += 1          # PEN, BRUSH, SYMBOL, SMOOTH, CENTER…
+    return objs
+
 
 def load_geometry():
+    mif = fetch(URL_MIF).decode("latin-1", errors="replace").splitlines()
+    mid = [l.strip() for l in fetch(URL_MID).decode("latin-1", errors="replace").splitlines() if l.strip()]
+    start = next(i for i, l in enumerate(mif) if l.strip().upper() == "DATA") + 1
+    objs = parse_mif(mif, start)
+    if len(objs) != len(mid):
+        print(f"  ATTENTION : {len(objs)} objets MIF pour {len(mid)} lignes MID — géométrie peut-être décalée")
+
     geom = {}
-    try:
-        mif_raw = fetch(URLS["geom_seg"]).decode("latin-1",errors="replace")
-        mid_raw = fetch(URLS["geom_seg_id"]).decode("latin-1",errors="replace")
-
-        mif_lines = mif_raw.splitlines()
-        header_end = 0
-        for i, l in enumerate(mif_lines):
-            if l.strip().upper() == "DATA":
-                header_end = i + 1
-                break
-
-        mid_lines = [l.strip() for l in mid_raw.splitlines() if l.strip()]
-
-        seg_info = {}
-        for ml in mid_lines:
-            parts = ml.split(",")
-            sid = parts[0].strip().strip('"')
-            desc = parts[1].strip().strip('"') if len(parts) > 1 else ""
-            road, sens, pr_range = "", "", ""
-            m = re.match(r'SEG/([A-Z0-9]+)-([XYIE])/([\d+]+)/([\d+]+)', desc)
-            if m:
-                road, sens = m.group(1), m.group(2)
-                pr_range = f"PR{m.group(3)} → PR{m.group(4)}"
-            else:
-                m2 = re.match(r'([A-Z0-9]+)', desc.replace("SEG/",""))
-                if m2: road = m2.group(1)
-            secteur = parts[-1].strip().strip('"') if len(parts) > 5 else ""
-            seg_info[sid] = {"desc":desc,"road":road,"sens":sens,"pr":pr_range,"secteur":secteur}
-
-        idx = 0
-        i = header_end
-        while i < len(mif_lines) and idx < len(mid_lines):
-            l = mif_lines[i].strip().upper()
-            sid = mid_lines[idx].split(",")[0].strip().strip('"') if idx < len(mid_lines) else ""
-
-            if l.startswith("PLINE"):
-                parts = mif_lines[i].strip().split()
-                n = int(parts[1]) if len(parts) > 1 else 0
-                coords = []
-                for j in range(1, n+1):
-                    if i+j < len(mif_lines):
-                        xy = mif_lines[i+j].strip().split()
-                        if len(xy) >= 2:
-                            try:
-                                x, y = float(xy[0]), float(xy[1])
-                                lon, lat = transformer.transform(x, y)
-                                coords.append([round(lat,6), round(lon,6)])
-                            except: pass
-                if coords:
-                    mid_pt = coords[len(coords)//2]
-                    info = seg_info.get(sid, {})
-                    geom[sid] = {
-                        "lat":mid_pt[0],"lng":mid_pt[1],"coords":coords,
-                        "road":info.get("road",""),"sens":info.get("sens",""),
-                        "pr":info.get("pr",""),"desc":info.get("desc",""),
-                    }
-                idx += 1
-                i += n + 1
-                continue
-            elif l.startswith("LINE"):
-                parts = mif_lines[i].strip().split()
-                if len(parts) >= 5:
-                    try:
-                        x1,y1,x2,y2 = float(parts[1]),float(parts[2]),float(parts[3]),float(parts[4])
-                        lon1,lat1 = transformer.transform(x1,y1)
-                        lon2,lat2 = transformer.transform(x2,y2)
-                        info = seg_info.get(sid, {})
-                        geom[sid] = {
-                            "lat":round((lat1+lat2)/2,6),"lng":round((lon1+lon2)/2,6),
-                            "coords":[[round(lat1,6),round(lon1,6)],[round(lat2,6),round(lon2,6)]],
-                            "road":info.get("road",""),"sens":info.get("sens",""),
-                            "pr":info.get("pr",""),"desc":info.get("desc",""),
-                        }
-                    except: pass
-                idx += 1
-            i += 1
-
-        in_bbox_count = sum(1 for g in geom.values() if in_bbox(g["lat"],g["lng"]))
-        on_line_count = sum(1 for g in geom.values() if in_bbox(g["lat"],g["lng"]) and on_line(g["lat"],g["lng"]))
-        print(f"  {len(geom)} segments total, {in_bbox_count} bbox, {on_line_count} sur les tracés")
-    except Exception as e:
-        import traceback; traceback.print_exc()
+    for line, paths in zip(mid, objs):
+        parts = [p.strip().strip('"') for p in line.split(",")]
+        desc = parts[1] if len(parts) > 1 else ""
+        road, sens, pr = "", "", ""
+        m = re.match(r"SEG/([A-Z]+\d+[A-Z]?)-([A-Z])/([\d+]+)/([\d+]+)", desc)
+        if m:
+            road, sens = m.group(1), m.group(2)
+            pr = f"PR{m.group(3)} → PR{m.group(4)}"
+        paths = [p for p in paths if len(p) > 1]
+        if paths:
+            geom[parts[0]] = {"id": parts[0], "desc": desc, "road": road, "sens": sens, "pr": pr,
+                              "paths": paths, "coords": [c for p in paths for c in p]}
     return geom
 
-def parse_segments(geom):
-    out = []
-    try:
-        raw = fetch(URLS["segments"])
-        root = ET.fromstring(raw)
-        for seg in root.findall("SegmentDynamique"):
-            sid = seg.get("ID_SEGMENT")
-            etat_el = seg.find("EtatTrafic")
-            etat = etat_el.text.strip().lower() if etat_el is not None and etat_el.text else ""
-            fermeture_el = seg.find(".//EtatFermeture")
-            fermeture = fermeture_el.text.strip() if fermeture_el is not None and fermeture_el.text else ""
-            if not sid or sid not in geom: continue
-            g = geom[sid]
-            if not in_bbox(g["lat"],g["lng"]): continue
-            lid = on_line(g["lat"],g["lng"])
-            if not lid: continue
-            info = ETAT_MAP.get(etat, {"label":etat or "Inconnu","congestion":0,"status":"unknown"})
-            is_closed = fermeture not in ("Nominal","")
-            # Type de fermeture : nocturne (Travaux) vs urgence (Ferme/Securite)
-            closure_type = ""
-            if is_closed:
-                if fermeture.lower() in ("travaux","chantier"):
-                    closure_type = "nocturne"
-                elif fermeture.lower() in ("securite","securité"):
-                    closure_type = "securite"
-                else:
-                    closure_type = "fermeture"
-            out.append({
-                "id":sid,"lat":g["lat"],"lng":g["lng"],"line":lid,
-                "status":"red" if is_closed else info["status"],
-                "label":f"Fermé ({fermeture})" if is_closed else info["label"],
-                "congestion":95 if is_closed else info["congestion"],
-                "closed":is_closed,
-                "closure_type":closure_type,
-                "fermeture":fermeture if is_closed else "",
-                "road":g["road"],"sens":SENS_MAP.get(g["sens"],g["sens"]),
-                "pr":g["pr"],"desc":g["desc"],"coords":g["coords"],
-            })
-        print(f"  {len(out)} segments sur les tracés")
-        closed = [s for s in out if s["closed"]]
-        if closed:
-            print(f"  dont {len(closed)} fermés:")
-            for c in closed[:5]:
-                print(f"    {c['road']} {c['sens']} {c['pr']} — {c['fermeture']}")
-    except Exception as e:
-        import traceback; traceback.print_exc()
-    return out
 
-def parse_evenements(geom):
-    out = []
-    try:
-        raw = fetch(URLS["evenements"])
-        root = ET.fromstring(raw)
-        for evt in root.findall("Evenement"):
-            evt_id = evt.get("ID_EVT","")
-            qual = evt.findtext("QualificationEvenement","")
-            if qual != "EnCours": continue
-            type_el = evt.find("TypeEvenement")
-            evt_type = ""
-            if type_el is not None:
-                for child in type_el:
-                    if child.tag in ("Bouchon","IncidentPanne","Travaux","ChantierFixe","EvenementExceptionnel","General"):
-                        evt_type = child.tag; break
-            commentaire = evt.findtext("Commentaire","")
-            date_debut = evt.findtext("DateDebut","")
-            loc = evt.find("Localisation")
-            axe, sens, pr_debut, pr_fin = "", "", "", ""
-            if loc is not None:
-                sc = loc.find("SectionCourante")
-                if sc is not None:
-                    a = sc.find("Axe"); axe = a.text.strip() if a is not None and a.text else ""
-                    s = sc.find("Sens"); sens = s.text.strip() if s is not None and s.text else ""
-                pr_d = loc.find("PRDebut")
-                if pr_d is not None:
-                    pr_debut = f"PR{pr_d.findtext('NumPR','')}+{pr_d.findtext('Abscisse','')}"
-                pr_f = loc.find("PRFin")
-                if pr_f is not None:
-                    pr_fin = f"PR{pr_f.findtext('NumPR','')}+{pr_f.findtext('Abscisse','')}"
-            segments_el = evt.find(".//Segments")
-            seg_ids, evt_coords = [], []
-            if segments_el is not None:
-                for s in segments_el.findall("Segment"):
-                    sid = s.text.strip() if s.text else ""
-                    if sid:
-                        seg_ids.append(sid)
-                        if sid in geom: evt_coords.extend(geom[sid]["coords"])
-            for sid in seg_ids:
-                if sid in geom:
-                    g = geom[sid]
-                    if not in_bbox(g["lat"],g["lng"]): continue
-                    lid = on_line(g["lat"],g["lng"])
-                    if lid:
-                        road = axe or g["road"]
-                        out.append({
-                            "id":evt_id,"lat":g["lat"],"lng":g["lng"],
-                            "line":lid,"type":evt_type,
-                            "desc":commentaire[:150],"date":date_debut,
-                            "road":road,"sens":SENS_MAP.get(sens,sens),
-                            "pr_debut":pr_debut,"pr_fin":pr_fin,
-                            "coords":evt_coords,
-                        })
-                        break
-        print(f"  {len(out)} événements sur les tracés")
-        for e in out[:3]:
-            print(f"    {e['type']} — {e['road']} {e['sens']} {e['pr_debut']}→{e['pr_fin']}")
-    except Exception as e:
-        import traceback; traceback.print_exc()
-    return out
-
+# ── Collecte ───────────────────────────────────────────────────────────
 def main():
-    print("=== Chargement géométrie ===")
+    lines = json.load(open("lines.json", encoding="utf-8"))
+    traces = Traces(lines)
+
+    print("Géométrie Sytadin…")
     geom = load_geometry()
-    print("\n=== Segments trafic ===")
-    segments = parse_segments(geom)
-    print("\n=== Événements ===")
-    evenements = parse_evenements(geom)
+    seg_lines = {sid: traces.match(g["coords"]) for sid, g in geom.items()}
+    # contrôle de cohérence : quelques tronçons retenus, avec leur route et leur position
+    for sid in list(k for k, v in seg_lines.items() if v)[:8]:
+        g = geom[sid]; c = g["coords"][len(g["coords"]) // 2]
+        print(f"    {sid} {g['desc'][:32]:<32} {c[0]:.4f},{c[1]:.4f} → {seg_lines[sid]}")
+    sur_trace = {sid: m for sid, m in seg_lines.items() if m}
+    print(f"  {len(geom)} tronçons, {len(sur_trace)} sur le tracé des lignes")
 
-    by_line = {}
-    def mkline():
-        return {"segments":[],"congestion":0,"status":"green","evenements":[],"aller":{"segments":[],"congestion":0,"status":"green"},"retour":{"segments":[],"congestion":0,"status":"green"}}
-    for s in segments:
-        lid = s["line"]
-        by_line.setdefault(lid, mkline())
-        by_line[lid]["segments"].append(s)
-        sens = s.get("sens","")
-        if "Province" in sens or chr(8595) in sens:
-            by_line[lid]["aller"]["segments"].append(s)
-        else:
-            by_line[lid]["retour"]["segments"].append(s)
-    for e in evenements:
-        lid = e["line"]
-        by_line.setdefault(lid, mkline())
-        by_line[lid]["evenements"].append(e)
+    out = {lid: {"aller": {"segments": []}, "retour": {"segments": []}, "segments": [], "evenements": []} for lid in lines}
 
-    print("\n=== Résultats ===")
-    for lid,d in by_line.items():
-        vals = [s["congestion"] for s in d["segments"] if s["congestion"]>0]
-        avg = round(sum(vals)/len(vals)) if vals else 0
-        d["congestion"] = avg
-        d["status"] = "green" if avg<30 else "orange" if avg<60 else "red"
-        for dr in ("aller","retour"):
-            dd=d[dr]; vv=[x["congestion"] for x in dd["segments"] if x["congestion"]>0]
-            dd["congestion"]=round(sum(vv)/len(vv)) if vv else 0
-            dd["status"]="green" if dd["congestion"]<30 else "orange" if dd["congestion"]<60 else "red"
-        closed = sum(1 for s in d["segments"] if s.get("closed"))
-        a,r=d["aller"],d["retour"]
-        print(f"  Ligne {lid}: Aller {a['congestion']}% ({len(a['segments'])}) | Retour {r['congestion']}% ({len(r['segments'])}) | {closed} fermés")
+    print("État du trafic…")
+    root = ET.fromstring(fetch(URL_SEGMENTS))
+    for s in root.iter("SegmentDynamique"):
+        sid = s.get("ID_SEGMENT")
+        if sid not in sur_trace:
+            continue
+        g = geom[sid]
+        fermeture = (s.findtext(".//EtatFermeture") or "Nominal").strip()
+        voies = sum(int(s.findtext(f".//{t}") or 0) for t in ("NbVoiesFermeesDroite", "NbVoiesFermeesCentre", "NbVoiesFermeesGauche"))
+        bau = (s.findtext(".//BAUFermee") or "0").strip() not in ("0", "", "false")
+        e = etat(s.findtext("EtatTrafic"))
+        closed = fermeture.lower() != "nominal"
+        f = sans_accents(fermeture)
+        closure_type = ("nocturne" if "travaux" in f or "chantier" in f else "securite" if "secur" in f else "fermeture") if closed else ""
+        for lid, sens in sur_trace[sid]:
+            rec = {
+                "id": sid, "dir": sens, "etat": e,
+                "congestion": 95 if closed else ETAT_VALEUR[e],
+                "closed": closed, "closure_type": closure_type, "fermeture": fermeture if closed else "",
+                "voies_fermees": voies, "bau_fermee": bau,
+                "road": g["road"], "sens": SENS_LIBELLE.get(g["sens"], ""), "pr": g["pr"],
+                "paths": g["paths"],
+                "lat": g["coords"][len(g["coords"]) // 2][0], "lng": g["coords"][len(g["coords"]) // 2][1],
+            }
+            out[lid]["segments"].append(rec)
+            out[lid][sens]["segments"].append(rec)
 
-    output = {
-        "updated_at":datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "source":"Sytadin / DiRIF",
-        "lines":by_line,"segments":segments,"evenements":evenements,
-    }
-    with open("traffic.json","w",encoding="utf-8") as f:
-        json.dump(output,f,ensure_ascii=False,indent=2)
-    print("\ntraffic.json écrit !")
+    print("Événements en cours…")
+    root = ET.fromstring(fetch(URL_EVENEMENTS))
+    for ev in root.iter("Evenement"):
+        if (ev.findtext("QualificationEvenement") or "") != "EnCours":
+            continue
+        typ = ""
+        te = ev.find("TypeEvenement")
+        if te is not None:
+            for c in te:
+                if c.tag in ("Bouchon", "IncidentPanne", "Travaux", "ChantierFixe", "EvenementExceptionnel", "General"):
+                    typ = c.tag
+                    break
+        ids = [x.text.strip() for x in ev.iter("Segment") if x.text and x.text.strip()]
+        by_line = {}
+        for sid in ids:
+            for key in sur_trace.get(sid, []):
+                by_line.setdefault(key, []).append(geom[sid])
+        if not by_line:
+            continue
+        pd, pf = ev.find(".//PRDebut"), ev.find(".//PRFin")
+        prd = f"PR{pd.findtext('NumPR')}+{pd.findtext('Abscisse')}" if pd is not None and pd.findtext("NumPR") else ""
+        prf = f"PR{pf.findtext('NumPR')}+{pf.findtext('Abscisse')}" if pf is not None and pf.findtext("NumPR") else ""
+        for (lid, sens), segs in by_line.items():
+            coords = [c for g in segs for c in g["coords"]]
+            road = next((g["road"] for g in segs if g["road"]), "")
+            out[lid]["evenements"].append({
+                "id": ev.get("ID_EVT", ""), "dir": sens, "type": typ,
+                "road": road, "sens": SENS_LIBELLE.get(segs[0]["sens"], ""),
+                "pr_debut": prd, "pr_fin": prf,
+                "date": ev.findtext("DateDebut") or "", "fin_prevue": ev.findtext("DateFinPrevue") or "",
+                "desc": (ev.findtext("Commentaire") or "")[:200],
+                "paths": [p for g in segs for p in g["paths"]],
+                "lat": coords[len(coords) // 2][0], "lng": coords[len(coords) // 2][1],
+            })
 
-if __name__=="__main__":
+    print("Synthèse :")
+    for lid, d in out.items():
+        for sens in ("aller", "retour"):
+            vals = [s["congestion"] for s in d[sens]["segments"] if s["congestion"] > 0]
+            c = round(sum(vals) / len(vals)) if vals else 0
+            d[sens]["congestion"] = c
+            d[sens]["status"] = "unknown" if not vals else "green" if c < 30 else "orange" if c < 60 else "red"
+            del d[sens]["segments"]
+        n_ferm = sum(1 for s in d["segments"] if s["closed"])
+        n_dense = sum(1 for s in d["segments"] if s["etat"] in ("dense", "sature"))
+        print(f"  {lid}: aller {d['aller']['congestion']} % | retour {d['retour']['congestion']} % | "
+              f"{len(d['segments'])} tronçons, {n_dense} denses/saturés, {n_ferm} fermés, {len(d['evenements'])} événements")
+
+    json.dump({
+        "version": 2,
+        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "source": "Sytadin / DiRIF",
+        "lines": out,
+    }, open("traffic.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    print("traffic.json écrit.")
+
+
+if __name__ == "__main__":
     main()
