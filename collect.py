@@ -12,6 +12,8 @@ Tracés aller et retour : lines.json (issus du référentiel IDFM).
 Sortie : traffic.json, lu par l'appli Maverick.
 """
 
+import csv
+import io
 import json
 import math
 import re
@@ -177,15 +179,19 @@ def parse_mif(lines, start):
 
 def load_geometry():
     mif = fetch(URL_MIF).decode("latin-1", errors="replace").splitlines()
-    mid = [l.strip() for l in fetch(URL_MID).decode("latin-1", errors="replace").splitlines() if l.strip()]
     start = next(i for i, l in enumerate(mif) if l.strip().upper() == "DATA") + 1
+    delim = next((l.split(None, 1)[1].strip().strip('"') for l in mif[:start] if l.strip().lower().startswith("delimiter")), "\t")
+    # le MID se lit comme un CSV : un libellé entre guillemets peut contenir des virgules ou des retours à la ligne
+    mid_txt = fetch(URL_MID).decode("latin-1", errors="replace")
+    mid = [r for r in csv.reader(io.StringIO(mid_txt), delimiter=delim) if any(c.strip() for c in r)]
     objs = parse_mif(mif, start)
+    print(f"  {len(objs)} objets MIF, {len(mid)} enregistrements MID (séparateur {delim!r})")
     if len(objs) != len(mid):
-        print(f"  ATTENTION : {len(objs)} objets MIF pour {len(mid)} lignes MID — géométrie peut-être décalée")
+        raise SystemExit("ERREUR : géométrie et attributs Sytadin désalignés — collecte interrompue pour ne pas afficher de positions fausses")
 
     geom = {}
-    for line, paths in zip(mid, objs):
-        parts = [p.strip().strip('"') for p in line.split(",")]
+    for parts, paths in zip(mid, objs):
+        parts = [p.strip() for p in parts]
         desc = parts[1] if len(parts) > 1 else ""
         road, sens, pr = "", "", ""
         m = re.match(r"SEG/([A-Z]+\d+[A-Z]?)-([A-Z])/([\d+]+)/([\d+]+)", desc)
