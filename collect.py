@@ -181,6 +181,27 @@ def parse_mif(lines, start):
 parse_mif.autres = {}
 
 
+def parse_road_fallback(desc):
+    """Libellés hors format standard : bretelles (SEG/E/A1-W-08+0420/…, SEG/S/…),
+    routes départementales (SEG/93D933-W/…), plateformes (ADP_CDG…)."""
+    body = desc[4:] if desc.upper().startswith("SEG/") else desc
+    kind = ""
+    mk = re.match(r"([ES])/", body)
+    if mk:
+        kind = "entrée" if mk.group(1) == "E" else "sortie"
+        body = body[2:]
+    m = re.search(r"(?<![A-Z])(?:\d{2,3})?((?:A|N|D|RN|RD)\d{1,4}[A-Z]?)(?:-([A-Z]))?(?:[-/](\d+\+\d+))?", body)
+    if m:
+        road = m.group(1).replace("RN", "N").replace("RD", "D")
+        pr = f"PR{m.group(3)}" if m.group(3) else ""
+        if kind:
+            pr = (f"{kind} · " + pr).strip(" ·")
+        return road, m.group(2) or "", pr
+    if "ADP" in body.upper() or "CDG" in body.upper():
+        return "ADP", "", "Plateforme aéroportuaire"
+    return "", "", ""
+
+
 def load_geometry():
     mif = fetch(URL_MIF).decode("latin-1", errors="replace").splitlines()
     start = next(i for i, l in enumerate(mif) if l.strip().upper() == "DATA") + 1
@@ -204,6 +225,8 @@ def load_geometry():
         if m:
             road, sens = m.group(1), m.group(2)
             pr = f"PR{m.group(3)} → PR{m.group(4)}"
+        else:
+            road, sens, pr = parse_road_fallback(desc)
         paths = [p for p in paths if len(p) > 1]
         if paths:
             geom[parts[0]] = {"id": parts[0], "desc": desc, "road": road, "sens": sens, "pr": pr,
