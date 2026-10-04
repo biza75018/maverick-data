@@ -173,8 +173,12 @@ def parse_mif(lines, start):
                 sec, i = read(i, k); sections.append(sec)
             objs.append(sections)
         else:
-            i += 1          # PEN, BRUSH, SYMBOL, SMOOTH, CENTER…
+            parse_mif.autres[kw] = parse_mif.autres.get(kw, 0) + 1   # PEN, BRUSH, SYMBOL, SMOOTH…
+            i += 1
     return objs
+
+
+parse_mif.autres = {}
 
 
 def load_geometry():
@@ -187,6 +191,8 @@ def load_geometry():
     objs = parse_mif(mif, start)
     print(f"  {len(objs)} objets MIF, {len(mid)} enregistrements MID (séparateur {delim!r})")
     if len(objs) != len(mid):
+        print("  Mots-clés MIF ignorés :", sorted(parse_mif.autres.items(), key=lambda x: -x[1])[:15])
+        print("  Exemples MID :", [r[:3] for r in mid[:2]], "…", [r[:3] for r in mid[-2:]])
         raise SystemExit("ERREUR : géométrie et attributs Sytadin désalignés — collecte interrompue pour ne pas afficher de positions fausses")
 
     geom = {}
